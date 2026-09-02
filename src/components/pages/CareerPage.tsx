@@ -248,7 +248,7 @@ export default function CareerPage() {
                               {/* About Company */}
                               <div>
                                 <h4 className="font-normal text-lg mb-3 text-gray-900 border-l-2 border-red-500 pl-3">
-                                  About Yummfeast
+                                  About NGU Foods
                                 </h4>
                                 <p className="text-muted-foreground leading-relaxed font-normal">
                                   {job.about}

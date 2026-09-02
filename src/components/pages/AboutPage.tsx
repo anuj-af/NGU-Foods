@@ -8,8 +8,8 @@ import HeroSection from "../HeroSection";
 export default function AboutPage() {
 
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/about/left.png",
+    bg: "/images/blue-bg.png",
+    image1: "/images/banners/about/left-blue1.png",
     image2: "/images/banners/about/right.png"
   }
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
       {/* Hero Section with enhanced effects */}
       <HeroSection banner={bannerData} />
 
-      {/* Our Story with distressed border */}
+      {/* Crafting Possibilities in Every Shape with distressed border */}
       <section className="py-16 relative"
       style={{
           backgroundImage: "url('/images/white-bg.jpg')",
@@ -35,8 +35,8 @@ export default function AboutPage() {
               transition={{ duration: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-normal mb-6 relative text-red-600 inline-block">
-                Our Story
+              <h2 className="text-3xl font-normal mb-6 relative text-blue-600 inline-block">
+                Crafting Possibilities in Every Shape
                 {/* Handwritten underline effect */}
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
@@ -53,21 +53,9 @@ export default function AboutPage() {
                   />
                 </svg>
               </h2>
-              <p className="text-muted-foreground mb-4">
-                Established in 2019, Ambey Food Products, a unit of Micro Commercial Pvt. Ltd., set out with a simple
-                mission — to deliver delicious, high-quality snacks under the vibrant brand name Yummfeast.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                In just a short span, Yummfeast has become a favorite among children and families alike, thanks to its commitment 
-                to flavor, freshness, and consistency. Our snacks — from crispy chips to savory namkeen and fryums — are made using 
-                carefully selected ingredients in our state-of-the-art, fully automated facility located in Darbhanga, Bihar, India.
-              </p>
-              <p className="text-muted-foreground">
-                With a strong and growing distribution network across Bihar, Jharkhand, West Bengal and Uttar Pradesh, Yummfeast 
-                continues to reach more snack lovers every day. Behind the brand’s steady rise are four visionary directors — Mr. 
-                Manish Pansari, Mr. Ajay Pansari, Mr. Dipak Pansari, and Mr. Lakshman Pansari — whose leadership and passion for 
-                quality are driving Yummfeast toward becoming a household name in the world of snacks.
-              </p>
+              <p className="text-muted-foreground mb-4">At NGU Foods & Beverages LLP, we bring together decades of experience, innovation and manufacturing excellence to create high-quality snack products that meet the evolving needs of modern food businesses.</p>
+              <p className="text-muted-foreground mb-4">Operating under the brand N.G.U. Creative Snacks, we specialize in the manufacturing of Fryums, Snack Pellets, Papad, Pasta Shapes and Ready-to-Fry Products. With a strong focus on quality, consistency and product innovation, we serve customers across India and cater to the requirements of international markets.</p>
+              <p className="text-muted-foreground">Our journey began in 1996, with a vision to create quality snack products backed by reliable manufacturing and a commitment to customer satisfaction. For nearly three decades, our commitment has remained constant — to manufacture products that deliver consistent quality, excellent performance and dependable value to our customers.</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -78,8 +66,8 @@ export default function AboutPage() {
             >
               <div className="aspect-video mt-4 rounded-lg overflow-hidden relative z-10">
                 <img
-                  src="images/about/about.png"
-                  alt="Our Story"
+                  src="/placeholder.svg"
+                  alt="Crafting Possibilities in Every Shape"
                   className="h-full object-cover"
                 />
               </div>
@@ -89,7 +77,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission */}
-      <section className="relative overflow-hidden py-16 bg-red-600">
+      <section className="relative overflow-hidden py-16 bg-blue-600">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
@@ -133,15 +121,15 @@ export default function AboutPage() {
                 />
               </svg>
             </h2>
-            <p className="text-white max-w-2xl mx-auto">Where we're headed and what we stand for.</p>
+            <p className="text-white max-w-2xl mx-auto">Innovation, manufacturing excellence, and customer-focused solutions.</p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             {[
               {
-                title: "Crafted to delight, made to munch. ❤️",
+                title: "Quality is our recipe. ❤️",
                 description:
-                  "We are on a mission to create high-quality, exciting snacks using fresh ingredients, innovative recipes, and cutting-edge technology — reaching every corner of India through strong distribution and delightful taste.",
+                  "To deliver high-quality snack products through innovation, manufacturing excellence, disciplined quality practices and customer-focused solutions, while continuously expanding our capabilities to meet the evolving requirements of domestic and international markets.",
                 icon: <Heart className="w-8 h-8" />,
                 color: "from-red-400 to-pink-400",
                 bgColor: "from-red-50 to-pink-50",
@@ -207,15 +195,15 @@ export default function AboutPage() {
                 />
               </svg>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Our vision for the future of snacking.</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">To become a trusted and innovative food manufacturing partner.</p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             {[
               {
-                title: "Leading India's snack revolution. 👁️",
+                title: "Trust is our brand. 👁️",
                 description:
-                  "To become India's most beloved snack brand, setting new standards for quality, taste, and innovation while building a sustainable future for snacking that brings joy to every household across the nation.",
+                  "To become a trusted and innovative food manufacturing partner, recognized for quality, reliability and the ability to transform ideas into products that create lasting value for customers and consumers.",
                 icon: <Eye className="w-8 h-8" />,
                 color: "from-blue-400 to-indigo-400",
                 bgColor: "from-blue-50 to-indigo-50",
@@ -252,8 +240,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* certificate section */}
-      <section className="relative overflow-hidden py-16 bg-red-600">
+      {false && ( <>
+{/* certificate section */}
+      <section className="relative overflow-hidden py-16 bg-blue-600">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
@@ -354,7 +343,7 @@ export default function AboutPage() {
 
                         {/* Actual certificate image */}
                         <img
-                          src="/images/about/Gold_certificate.jpg"
+                          src="/placeholder.svg"
                           alt="ZED Gold Certificate - MICRO COMMERCIAL PVT. LTD."
                           className="w-full max-w-md h-auto rounded-md transition-transform duration-300 group-hover:scale-105"
                         />
@@ -432,7 +421,7 @@ export default function AboutPage() {
           </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-8">
-            <h2 className="text-3xl text-black font-normal text-red-600 mb-4 relative inline-block">
+            <h2 className="text-3xl text-black font-normal text-blue-600 mb-4 relative inline-block">
               Meet Our Team
               {/* Handwritten underline */}
               <svg
@@ -489,6 +478,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    
+</> )}
+</div>
   );
 }

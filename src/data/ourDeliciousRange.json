@@ -1,30 +1,30 @@
 [
   {
-    "name": "Yummfeast Rings",
-    "description": "Crunchy rings with a burst of tangy masala flavor",
-    "image": "/images/products/cream-and-onion.png",
+    "name": "Aeroplane Snacks",
+    "description": "Fun aeroplane shaped crunchy snacks",
+    "image": "/images/NGU/AEROPLANE B.png",
+    "price": "₹10",
+    "category": "Fryums"
+  },
+  {
+    "name": "Alphabet Snacks",
+    "description": "Learn and munch with alphabet shaped crisps",
+    "image": "/images/NGU/ALPHABET B.png",
+    "price": "₹5",
+    "category": "Fryums"
+  },
+  {
+    "name": "Aloo Tikki",
+    "description": "Delicious aloo tikki flavor in every bite",
+    "image": "/images/NGU/Aloo Tikki.png",
     "price": "₹10",
     "category": "Chips"
   },
   {
-    "name": "Hara Matar",
-    "description": "Crispy pasta snacks with Italian herbs seasoning",
-    "image": "/images/chips5.png",
-    "price": "₹5",
-    "category": "Namkeen"
-  },
-  {
-    "name": "Yummfeast All-in-One",
-    "description": "A delightful mix of various namkeen for the perfect snack time",
-    "image": "/images/chips6.png",
-    "price": "₹20",
-    "category": "Extruded"
-  },
-  {
-    "name": "Yummfeast Rings",
+    "name": "Baby Rings",
     "description": "Crunchy rings with a burst of tangy masala flavor",
-    "image": "/images/chips7.png",
+    "image": "/images/NGU/BABY RING B.png",
     "price": "₹10",
-    "category": "Fryums"
+    "category": "Extruded"
   }
 ]

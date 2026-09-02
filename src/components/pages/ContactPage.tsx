@@ -93,7 +93,7 @@ ${message}
               {
                 title: "Customer Support 💬",
                 description: "Questions about our yummy snacks? We've got answers!",
-                contact: "customercare@yummfeast.in",
+                contact: "customercare@ngufoods.in",
                 phone: "18001020602",
                 icon: <Heart className="w-8 h-8" />,
                 color: "from-pink-400 to-red-400",
@@ -102,7 +102,7 @@ ${message}
               {
                 title: "Sales Team 📈",
                 description: "Ready for bulk orders? Let's make it happen!",
-                contact: "sales@yummfeast.in",
+                contact: "sales@ngufoods.in",
                 phone: "+91 9334469490",
                 icon: <Star className="w-8 h-8" />,
                 color: "from-yellow-400 to-orange-400",
@@ -111,7 +111,7 @@ ${message}
               {
                 title: "Partnership Hub 🤝",
                 description: "Want to partner with us? We'd love to collaborate!",
-                contact: "info@ambeyfood.in",
+                contact: "info@ngu.in",
                 phone: "+91 9334469505",
                 icon: <Zap className="w-8 h-8" />,
                 color: "from-green-400 to-blue-400",
@@ -336,7 +336,7 @@ ${message}
                   Our Snack Factory 🏭
                 </h3>
                 <address className="not-italic text-gray-600 space-y-2 mb-6 text-lg">
-                  <p>Ambey Food Products</p>
+                  <p>NGU Food Products</p>
                   <p>Plot no 55, B (53) P, B(58) P Industrial Area Donar Darbhanga Bihar 846004</p>
                   <p>Darbhanga, Bihar, India 846004</p>
                 </address>
@@ -355,7 +355,7 @@ ${message}
                   <Mail className="w-6 h-6 text-blue-500 mr-4" />
                   <div>
                     <p className="font-normal text-gray-800">Email Us! 💌</p>
-                    <p className="text-gray-600">customercare@yummfeast.in</p>
+                    <p className="text-gray-600">customercare@ngufoods.in</p>
                   </div>
                 </div>
 

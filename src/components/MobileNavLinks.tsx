@@ -41,8 +41,8 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
             navigateTo(link.key)
           }}
           className={cn(
-            "text-lg font-normal transition-colors hover:text-red-600 flex items-center justify-between",
-            currentPage === link.key ? "text-red-600" : "text-muted-foreground",
+            "text-lg font-normal transition-colors hover:text-blue-600 flex items-center justify-between",
+            currentPage === link.key ? "text-blue-600" : "text-muted-foreground",
           )}
         >
           {link.name}
@@ -51,7 +51,7 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
       ))}
 
       <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-full">
-        <CollapsibleTrigger className="flex w-full items-center justify-between text-lg font-normal transition-colors hover:text-red-600 text-muted-foreground py-2">
+        <CollapsibleTrigger className="flex w-full items-center justify-between text-lg font-normal transition-colors hover:text-blue-600 text-muted-foreground py-2">
           More Pages
           {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
         </CollapsibleTrigger>
@@ -65,8 +65,8 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
                 navigateTo(link.key)
               }}
               className={cn(
-                "text-lg font-normal transition-colors hover:text-red-600 flex items-center justify-between",
-                currentPage === link.key ? "text-red-600" : "text-muted-foreground",
+                "text-lg font-normal transition-colors hover:text-blue-600 flex items-center justify-between",
+                currentPage === link.key ? "text-blue-600" : "text-muted-foreground",
               )}
             >
               {link.name}
@@ -83,8 +83,8 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
           navigateTo("contact")
         }}
         className={cn(
-          "text-lg font-normal transition-colors hover:text-red-600 flex items-center justify-between",
-          currentPage === "contact" ? "text-red-600" : "text-muted-foreground",
+          "text-lg font-normal transition-colors hover:text-blue-600 flex items-center justify-between",
+          currentPage === "contact" ? "text-blue-600" : "text-muted-foreground",
         )}
       >
         Contact Us

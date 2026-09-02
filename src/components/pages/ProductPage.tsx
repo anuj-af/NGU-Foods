@@ -417,7 +417,7 @@ export default function ProductPage({category} : any) {
               className="bg-white text-blue-600 hover:bg-white/90 group relative overflow-hidden"
               onClick={() => {
                 triggerConfetti()
-                window.location.href = "mailto:customercare@yummfeast.in"
+                window.location.href = "mailto:customercare@ngufoods.in"
               }}
             >
               <span className="relative z-10 group-hover:text-blue-600">Contact Us</span>

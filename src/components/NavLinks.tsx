@@ -41,8 +41,8 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
             navigateTo(link.key)
           }}
           className={cn(
-            "text-md font-normal transition-colors hover:text-red-600",
-            currentPage === link.key ? "text-red-600" : "text-muted-foreground",
+            "text-md font-normal transition-colors hover:text-blue-600",
+            currentPage === link.key ? "text-blue-600" : "text-muted-foreground",
           )}
         >
           {link.name}
@@ -50,14 +50,14 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
       ))}
 
       <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger className="flex items-center text-md font-normal transition-colors hover:text-red-600 text-muted-foreground">
+        <DropdownMenuTrigger className="flex items-center text-md font-normal transition-colors hover:text-blue-600 text-muted-foreground">
           More <ChevronDown className="ml-1 h-4 w-4" />
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           {secondaryLinks.map((link) => (
             <DropdownMenuItem
               key={link.key}
-              className={cn("cursor-pointer", currentPage === link.key ? "text-red-600" : "")}
+              className={cn("cursor-pointer", currentPage === link.key ? "text-blue-600" : "")}
               onClick={() => {
                 navigateTo(link.key)
                 setOpen(false)
@@ -76,8 +76,8 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
           navigateTo("contact")
         }}
         className={cn(
-          "text-md font-normal transition-colors hover:text-red-600",
-          currentPage === "contact" ? "text-red-600" : "text-muted-foreground",
+          "text-md font-normal transition-colors hover:text-blue-600",
+          currentPage === "contact" ? "text-blue-600" : "text-muted-foreground",
         )}
       >
         Contact Us

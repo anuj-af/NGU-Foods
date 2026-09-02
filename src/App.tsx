@@ -19,7 +19,7 @@ import ContactPage from "./components/pages/ContactPage";
 import { AccessRestriction } from "./components/access-restriction";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import NewYearCelebrationOverlay from '@/components/new-year-celebration-overlay';
+// import NewYearCelebrationOverlay from '@/components/new-year-celebration-overlay';
 
 // Main App Component
 export default function App() {
@@ -39,6 +39,9 @@ export default function App() {
 
   // Function to handle page navigation
   const navigateTo = (page: string, category?:any) => {
+    if (page !== "home" && page !== "about") {
+      return;
+    }
     setCurrentPage(page);
     if(category){
       setCategory(category);

@@ -8,7 +8,7 @@
     "title": "Why Join Our Team?",
     "image": "/images/carrers/team.png",
     "paragraphs": [
-      "At Yummfeast, we believe that our team is the backbone of our success. We're looking for passionate, driven individuals who are excited about our products and eager to help customers find the right solutions for their needs.",
+      "At NGU Foods, we believe that our team is the backbone of our success. We're looking for passionate, driven individuals who are excited about our products and eager to help customers find the right solutions for their needs.",
       "As a member of our team, you'll have the opportunity to grow professionally, earn competitive compensation, and work in a supportive, collaborative environment.",
       "We invest in our team members through comprehensive training, mentorship programs, and clear paths for advancement."
     ]
@@ -64,7 +64,7 @@
   "jobOpenings": {
     "title": "Current Openings",
     "subtitle": "Explore our available positions and find the right fit for your skills and career goals.",
-    "email": "customercare@yummfeast.in",
+    "email": "customercare@ngufoods.in",
     "jobs": [
       {
         "id": 1,
@@ -72,9 +72,9 @@
         "location": "Gorakhpur, Uttar Pradesh (Field-based)",
         "type": "Full-Time",
         "department": "Sales",
-        "shortDescription": "Lead and scale Yummfeast's sales and distribution operations in the Gorakhpur region.",
-        "about": "Yummfeast is a rapidly growing packaged snacks brand bringing delicious, affordable, and high-quality snacks to consumers across India. As we expand our national footprint, we are looking for dynamic professionals who thrive in fast-paced environments and are excited to grow with us.",
-        "roleOverview": "As the Area Sales Manager for Gorakhpur, you will be responsible for leading and scaling Yummfeast's sales and distribution operations in the region. You'll manage distributor networks, mentor sales teams, and drive strategic initiatives to enhance our market presence and boost revenue growth.",
+        "shortDescription": "Lead and scale NGU Foods's sales and distribution operations in the Gorakhpur region.",
+        "about": "NGU Foods is a rapidly growing packaged snacks brand bringing delicious, affordable, and high-quality snacks to consumers across India. As we expand our national footprint, we are looking for dynamic professionals who thrive in fast-paced environments and are excited to grow with us.",
+        "roleOverview": "As the Area Sales Manager for Gorakhpur, you will be responsible for leading and scaling NGU Foods's sales and distribution operations in the region. You'll manage distributor networks, mentor sales teams, and drive strategic initiatives to enhance our market presence and boost revenue growth.",
         "responsibilities": [
           "Drive both primary and secondary sales to achieve volume and revenue targets.",
           "Build and manage an efficient network of distributors and retailers across urban and rural Gorakhpur.",
@@ -111,8 +111,8 @@
         "type": "Full-Time",
         "department": "Sales",
         "shortDescription": "Execute end-to-end retail strategy across Bihar state and lead high-performing sales teams.",
-        "about": "Yummfeast is an innovative and fast-scaling brand in India's packaged snacks industry, focused on combining authentic flavours with modern convenience. We're expanding rapidly and looking for leaders who can accelerate our growth across various regions.",
-        "roleOverview": "As the Retail Sales Manager for Bihar, you will be responsible for the end-to-end execution of Yummfeast's retail strategy across the state. From increasing product visibility to building strong retail relationships and leading sales teams, you will play a key role in shaping our market presence in Bihar.",
+        "about": "NGU Foods is an innovative and fast-scaling brand in India's packaged snacks industry, focused on combining authentic flavours with modern convenience. We're expanding rapidly and looking for leaders who can accelerate our growth across various regions.",
+        "roleOverview": "As the Retail Sales Manager for Bihar, you will be responsible for the end-to-end execution of NGU Foods's retail strategy across the state. From increasing product visibility to building strong retail relationships and leading sales teams, you will play a key role in shaping our market presence in Bihar.",
         "responsibilities": [
           "Develop and execute retail sales strategies for market expansion and revenue growth.",
           "Establish and nurture relationships with retailers across urban and rural Bihar.",
@@ -149,7 +149,7 @@
         "type": "Full-Time",
         "department": "Customer Service",
         "shortDescription": "Handle customer queries and provide exceptional service via toll-free helpline.",
-        "about": "Yummfeast is one of India's fastest-growing snack brands, known for quality, taste, and a strong customer focus. We are currently looking for a personable and dedicated Female Customer Service Executive to join our Darbhanga office and handle inbound calls via our toll-free helpline.",
+        "about": "NGU Foods is one of India's fastest-growing snack brands, known for quality, taste, and a strong customer focus. We are currently looking for a personable and dedicated Female Customer Service Executive to join our Darbhanga office and handle inbound calls via our toll-free helpline.",
         "roleOverview": "As a Toll-Free Customer Service Executive, you'll be the first point of contact for customer queries, complaints, and feedback. Your role will be essential in building trust and ensuring a smooth, helpful, and professional communication experience for our consumers.",
         "responsibilities": [
           "Handle incoming customer calls on the toll-free helpline.",
@@ -182,7 +182,7 @@
   },
   "applicationProcess": {
     "title": "Our Application Process",
-    "subtitle": "Here's what to expect when you apply for a position with Yummfeast.",
+    "subtitle": "Here's what to expect when you apply for a position with NGU Foods.",
     "steps": [
       {
         "title": "Application Review",

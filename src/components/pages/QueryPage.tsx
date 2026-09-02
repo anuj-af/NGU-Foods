@@ -177,7 +177,7 @@ ${message}
                     </h3>
                     <p className="text-gray-600">
                       {queryType === "dealership" &&
-                        "Join our dealer network and bring Yummfeast magic to your neighborhood! 🌟"}
+                        "Join our dealer network and bring NGU Foods magic to your neighborhood! 🌟"}
                       {queryType === "distributorship" &&
                         "Become a distribution superhero and spread snack joy across regions! 🦸‍♂️"}
                       {queryType === "super" &&
@@ -322,7 +322,7 @@ ${message}
                       <Textarea
                         id="message"
                         name="message"
-                        placeholder="Share your business dreams, why you want to partner with Yummfeast, and what makes you awesome! We love hearing success stories in the making! ✨"
+                        placeholder="Share your business dreams, why you want to partner with NGU Foods, and what makes you awesome! We love hearing success stories in the making! ✨"
                         rows={5}
                         className="border-2 border-orange-200 focus:border-orange-400 rounded-lg p-3 bg-white"
                       />
@@ -486,7 +486,7 @@ ${message}
             </h2>
             <p className="text-xl mb-8 text-purple-100">
               Our partners are crushing it! From small shops to distribution
-              empires, everyone's winning with Yummfeast! Your success story
+              empires, everyone's winning with NGU Foods! Your success story
               starts here! 🎯
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -533,7 +533,7 @@ ${message}
             </h2>
             <p className="text-xl mb-8 text-orange-100">
               The snack revolution is underway—why just watch, when you can
-              lead? Partner with Yummfeast and turn bold ideas into
+              lead? Partner with NGU Foods and turn bold ideas into
               mouthwatering success! 🚀✨
             </p>
             <div className="transition-transform duration-100 hover:scale-[1.03]">

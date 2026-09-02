@@ -102,13 +102,13 @@ const NewsModal = ({
               <div className="p-6 md:p-8">
                 {/* Date and Title */}
                 <div className="mb-6">
-                  <p className="text-sm text-red-600 font-medium mb-2 uppercase tracking-wide">
+                  <p className="text-sm text-blue-600 font-medium mb-2 uppercase tracking-wide">
                     {news.date}
                   </p>
                   <h2 className="text-2xl md:text-3xl font-normal text-gray-900 mb-4 leading-tight">
                     {news.title}
                   </h2>
-                  <div className="w-12 h-1 bg-red-600 rounded-full"></div>
+                  <div className="w-12 h-1 bg-blue-600 rounded-full"></div>
                 </div>
 
                 {/* Description */}
@@ -127,7 +127,7 @@ const NewsModal = ({
 
                 {/* Action Button */}
                 <Button
-                  className="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-lg transition-colors"
+                  className="w-full md:w-auto bg-blue-600 hover:bg-red-700 text-white py-2 px-6 rounded-lg transition-colors"
                   onClick={onClose}
                 >
                   Close
@@ -161,7 +161,7 @@ const ProductCircle = ({
   return (
     <div className="flex flex-col items-center gap-4">
       <motion.img
-        src="/images/patch3.png"
+        src="/images/patch.png"
         alt=""
         className="absolute top-6 h-52 w-52"
         animate={{ rotate: 360 }}
@@ -181,13 +181,13 @@ const ProductCircle = ({
         whileHover={{ scale: 1.2 }}
         src={product.image}
         alt={product.name}
-        className="w-48 h-48 object-contain -rotate-12 mb-12"
+        className="w-56 h-48 object-contain -rotate-12 mb-12"
       />
 
       {/* Label/Button */}
       <CustomButton
         navigateTo={navigateTo}
-        className="bg-orange-500"
+        className="bg-red-500"
         value={product.category}
       />
     </div>
@@ -200,8 +200,8 @@ const ProductCircle = ({
       title: "Incredible Variety",
       description: "From classic to exotic, we offer an incredible variety of flavors to satisfy every craving.",
       image: "/placeholder.svg",
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-gradient-to-br from-orange-50 to-red-50",
+      color: "from-red-500 to-red-500",
+      bgColor: "bg-gradient-to-br from-red-50 to-red-50",
     },
     {
       icon: Heart,
@@ -396,9 +396,9 @@ export default function HomePage({ navigateTo }: HomePageProps) {
 
   const chipColorMap = {
     "images/chips1.png": {
-      bg: "bg-red-600",
+      bg: "bg-blue-600",
       ring: "border-red-400",
-      text: "text-red-600",
+      text: "text-blue-600",
       shadow: "red",
     },
     "images/chips2.png": {
@@ -452,8 +452,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       title: "Incredible Variety",
       description: "From classic to exotic, we offer an incredible variety of flavors to satisfy every craving.",
       image: "/placeholder.svg",
-      color: "from-orange-500 to-red-500",
-      bgColor: "bg-gradient-to-br from-orange-50 to-red-50",
+      color: "from-red-500 to-red-500",
+      bgColor: "bg-gradient-to-br from-red-50 to-red-50",
     },
     {
       icon: Heart,
@@ -473,32 +473,12 @@ export default function HomePage({ navigateTo }: HomePageProps) {
     },
   ];
 
-  const banners = [
+    const banners = [
     {
       id: 0,
-      image1: "/images/banners/main.jpg",
-      image2: "/images/banners/mob-main.jpg",
-    },
-    {
-      id: 1,
-      image1: "/images/b1l.png",
-      image2: "/images/b1r.png",
-    },
-    {
-      id: 2,
-      image1: "/images/banners/right2.png",
-      image2: "/images/banners/left2.png",
-    },
-    {
-      id: 3,
-      image1: "/images/banners/left1.png",
-      image2: "/images/banners/right1.png",
-    },
-    {
-      id: 4,
-      image1: "/images/b2r.png",
-      image2: "/images/b2l.png",
-    },
+      image1: "/images/Banner.jpg",
+      image2: "/images/Banner.jpg",
+    }
   ];
 
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -717,7 +697,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         {/* Cursor glow effect */}
         <CursorGlow />
 
-        {/* <section className="py-24 bg-red-600 relative overflow-hidden">
+        {false && ( <>
+<section className="py-24 bg-blue-600 relative overflow-hidden">
           {/* Subtle background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <motion.div
@@ -810,7 +791,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                           </div>
-                          <div className="p-4 bg-red-600 opacity-90">
+                          <div className="p-4 bg-blue-600 opacity-90">
                             <p className=" font-normal text-md line-clamp-2 text-white">
                               {item.title}
                             </p>
@@ -839,7 +820,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             setIsNewsModalOpen(false);
             setSelectedNews(null);
           }}
-        /> */}
+        />
+</> )}
       </div>
 
       {/* Fun Facts Section */}
@@ -906,7 +888,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       </section>
 
       {/* Fun interactive section */}
-      <section className="py-24 bg-gradient-to-r from-red-600 to-red-700 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
@@ -921,11 +903,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
 
         <div className="container mx-auto my-16 px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            {/*<img
+            {/*{false && ( <img
               src="/images/rollerCoaster4.png"
               alt="Roller Coaster Image"
               className="hidden md:block absolute -top-32 right-16 h-80 w-80 z-20"
-            />*/}
+            /> )}*/}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -940,7 +922,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <PartyPopper className="w-12 h-12 mx-auto mb-4 text-yellow-300" />
+                  <PartyPopper className="w-12 h-12 mx-auto mb-4 text-red-400" />
                   <h2 className="text-3xl md:text-4xl font-normal mb-4 z-30">
                     Snack Time Fun Facts
                   </h2>
@@ -1001,7 +983,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-red-500/20"
+                    className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-500/20"
                     animate={{
                       background: [
                         "linear-gradient(to right, rgba(234, 179, 8, 0.2), rgba(239, 68, 68, 0.2))",
@@ -1053,18 +1035,18 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 viewport={{ once: true }}
               >
                 <div className="transition-transform duration-100 hover:scale-[1.1]">
-                  <div className="bg-red-500 text-white text-lg font-normal w-56 mx-auto px-6 py-2 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600">
+                  <div className="bg-red-500 text-white text-lg font-normal w-56 mx-auto px-6 py-2 rounded-md shadow-md border-2 border-black relative hover:bg-red-600">
                     Learn Our Story
                     <div className="absolute -bottom-1 left-0 w-56 h-full mx-auto rounded-md bg-black -z-10 translate-y-1 translate-x-1"></div>
                   </div>
                 </div>
               </motion.div>
             </motion.div>
-            {/*<img
+            {/*{false && ( <img
               src="/images/packet.png"
               alt="Chips Packet"
               className="hidden md:block absolute -bottom-32 left-16 h-64 w-64 z-20"
-            />*/}
+            /> )}*/}
           </div>
         </div>
       </section>
@@ -1098,11 +1080,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  <Heart className="w-4 h-4 mr-1 inline text-orange-500" />
+                  <Heart className="w-4 h-4 mr-1 inline text-red-600" />
                 </motion.span>
                 FOLLOW US
               </Badge>
-              <h2 className="text-3xl md:text-4xl pb-2 mb-4 bg-clip-text text-transparent bg-orange-500">
+              <h2 className="text-3xl md:text-4xl pb-2 mb-4 bg-clip-text text-transparent bg-red-500">
                 @ngufoods
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -1191,10 +1173,10 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600"
+                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-red-600"
                   onClick={() =>
                     window.open(
-                      "https://www.instagram.com/yummfeast.in/",
+                      "https://www.instagram.com/ngufoods/",
                       "_blank"
                     )
                   }
@@ -1215,9 +1197,9 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600"
+                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-red-600"
                   onClick={() =>
-                    window.open("https://www.facebook.com/yummfeast/", "_blank")
+                    window.open("https://www.facebook.com/ngufoods/", "_blank")
                   }
                 >
                   <span className="relative z-10 flex items-center gap-2 transition-transform duration-100 hover:scale-[1.1]">
@@ -1236,10 +1218,10 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600"
+                  className="bg-red-500 text-white px-6 py-2 w-44 rounded-md shadow-md border-2 border-black relative hover:bg-red-600"
                   onClick={() =>
                     window.open(
-                      "https://www.linkedin.com/company/yummfeast/",
+                      "https://www.linkedin.com/company/ngufoods/",
                       "_blank"
                     )
                   }
@@ -1260,9 +1242,9 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-red-500 text-white px-6 py-2 w-48 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600"
+                  className="bg-red-500 text-white px-6 py-2 w-48 rounded-md shadow-md border-2 border-black relative hover:bg-red-600"
                   onClick={() =>
-                    window.open("https://www.youtube.com/@yummfeast", "_blank")
+                    window.open("https://www.youtube.com/@ngufoods", "_blank")
                   }
                 >
                   <span className="relative z-10 flex items-center gap-2 transition-transform duration-100 hover:scale-[1.1]">
@@ -1284,7 +1266,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       </section>
 
       {/* CTA Section with animated background */}
-      <section className="py-24 bg-gradient-to-r from-red-600 to-red-700 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
@@ -1310,11 +1292,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             repeatType: "reverse",
           }}
         >
-          {/*<img
+          {/*{false && ( <img
             src="/images/twister.png"
             alt="Floating chip"
             className="w-full h-full object-contain drop-shadow-lg"
-          />*/}
+          /> )}*/}
         </motion.div>
 
         <motion.div
@@ -1330,11 +1312,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             delay: 1,
           }}
         >
-          {/*<img
+          {/*{false && ( <img
             src="/images/kurkure.png"
             alt="Floating chip"
             className="w-full h-full object-contain drop-shadow-lg"
-          />*/}
+          /> )}*/}
         </motion.div>
 
         <div className="container mx-auto px-4 mt-8 relative z-10">
@@ -1354,17 +1336,17 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             </p>
             {/* <Button
               size="lg"
-              className="bg-white text-red-600 hover:bg-white/90 group relative overflow-hidden"
+              className="bg-white text-blue-600 hover:bg-white/90 group relative overflow-hidden"
               onClick={() => {
                 triggerConfetti();
                 navigateTo("product");
               }}
             >
-              <span className="relative z-10 group-hover:text-red-600">
+              <span className="relative z-10 group-hover:text-blue-600">
                 Shop Now
               </span>
               <motion.span
-                className="absolute inset-0 bg-yellow-300 transform origin-left"
+                className="absolute inset-0 bg-red-400 transform origin-left"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
@@ -1375,7 +1357,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 href="/NGU-catalogue.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-500 text-white text-lg font-normal w-56 mx-auto px-6 py-2 rounded-md shadow-md border-2 border-black relative hover:bg-orange-600 inline-flex items-center justify-center"
+                className="bg-red-500 text-white text-lg font-normal w-56 mx-auto px-6 py-2 rounded-md shadow-md border-2 border-black relative hover:bg-red-600 inline-flex items-center justify-center"
               >
                 Download Brochure
                 <div className="absolute -bottom-1 left-0 w-56 h-full mx-auto rounded-md bg-black -z-10 translate-y-1 translate-x-1"></div>

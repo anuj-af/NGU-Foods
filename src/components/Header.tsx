@@ -24,7 +24,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
             <Menu className="h-6 w-6" />
           </Button>
           <div className="flex items-center cursor-pointer" onClick={() => navigateTo("home")}>
-            <img src="/images/newlogo.png" alt="Yummfeast Logo" className="h-16 m-4" />
+            <div className="text-2xl font-bold text-blue-600 font-poetsenone">NGU Foods</div>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center">
-                <img src="/images/logo.png" alt="Yummfeast Logo" className="h-12 mr-2" />
+                <div className="text-2xl font-bold text-blue-600 font-poetsenone">NGU Foods</div>
               </div>
               {/* <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                 <X className="h-5 w-5" />
@@ -56,7 +56,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
             <div className="mt-auto py-6">
               <div className="flex space-x-4 justify-center">
                 <Link
-                  href="https://www.instagram.com/yummfeast.in/"
+                  href="https://www.instagram.com/ngufoods.in/"
                   external
                   className="text-red-600 hover:text-red-700"
                 >
@@ -77,7 +77,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </Link>
-                <Link href="https://www.facebook.com/yummfeast" external className="text-blue-600 hover:text-blue-700">
+                <Link href="https://www.facebook.com/ngufoods" external className="text-blue-600 hover:text-blue-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -94,7 +94,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
                   </svg>
                 </Link>
                 <Link
-                  href="https://linkedin.com/company/yummfeast"
+                  href="https://linkedin.com/company/ngufoods"
                   external
                   className="text-blue-400 hover:text-blue-500"
                 >

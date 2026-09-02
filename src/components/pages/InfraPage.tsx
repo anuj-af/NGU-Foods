@@ -43,7 +43,7 @@ export default function InfraPage() {
                 manufacturing units are built for efficiency, scale, and
                 uncompromising quality. Each facility is outfitted with
                 cutting-edge machinery that enables high-volume production
-                without sacrificing the authenticity and taste that define Ambey
+                without sacrificing the authenticity and taste that define NGU
                 Food Products.
               </p>
               <p className=" mb-4">
@@ -198,7 +198,7 @@ export default function InfraPage() {
               </h2>
 
               <p className=" mb-6">
-                At Ambey Food Products, we’ve built a strong regional
+                At NGU Food Products, we’ve built a strong regional
                 distribution network, centered in Bihar and steadily expanding
                 into the neighboring states. This enables us to deliver fresh,
                 delicious snacks quickly and consistently.
