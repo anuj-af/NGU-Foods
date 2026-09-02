@@ -507,7 +507,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative min-h-[45vh] md:min-h-[75vh] flex place-items-center justify-between px-6 md:px-60 overflow-hidden bg-[url('/images/bg.png')]"
+        className="relative min-h-[45vh] md:min-h-[75vh] flex place-items-center justify-between px-6 md:px-60 overflow-hidden bg-[url('/images/bg-blue.png')]"
       >
         {/* Navigation Buttons */}
         <button
