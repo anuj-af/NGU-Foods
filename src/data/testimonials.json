@@ -1,0 +1,93 @@
+{
+  "heroSection": {
+    "bg": "/images/bg.png",
+    "image1": "/images/banners/testimonial/left.png",
+    "image2": "/images/banners/testimonial/right.png"
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Eshita",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev1.png",
+      "quote": "The All-in-One mix is perfect for parties. Everyone loves the variety. Will definitely keep ordering! It's become a staple at all our family gatherings and everyone always asks where we got it from."
+    },
+    {
+      "id": 2,
+      "name": "Bidappa Bolthanda",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev2.png",
+      "quote": "YummFeast namkeen is my go-to snack! Super crunchy, full of flavor, and always fresh. Perfect for every mood — once you start, you just can't stop kudos to the Yumm Feast team for making such brilliant snacks!"
+    },
+    {
+      "id": 3,
+      "name": "Sohini Dutta",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev3.png",
+      "quote": "Yummfeast snacks have made a significant difference in my snacking habits. They're tasty, well-packaged, and satisfy my cravings without feeling too heavy. I've recommended them to all my friends and family."
+    },
+    {
+      "id": 4,
+      "name": "Priya Sinha",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev4.png",
+      "quote": "I've tried many similar snacks from other brands, but none compare to the quality and taste I get from Yummfeast. Their Palak Paneer is the best I've ever had - perfectly spiced and always fresh."
+    },
+    {
+      "id": 5,
+      "name": "Saniya Verma",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev5.png",
+      "quote": "I've been buying Yummfeast products since 2020, and I can confidently say they maintain consistent taste and hygiene. It's one of the few brands I trust for my family's snacks."
+    },
+    {
+      "id": 6,
+      "name": "Vachan Chopra",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev6.png",
+      "quote": "I love the Chinese Pasta snacks from Yummfeast. They're perfectly seasoned and always fresh. My go-to evening snack with chai! The packaging keeps them fresh for a long time, and the price is very reasonable."
+    },
+    {
+      "id": 7,
+      "name": "Swakshi Jha",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev7.png",
+      "quote": "I recently tried Yummfeast snacks, and honestly, I'm so impressed! 💛 Each bite is full of flavor, freshness, and that perfect crunch that instantly lifts your mood. Whether it's their chips, fryums, or namkeens — everything tastes authentic and made with so much care. You can actually feel the quality and love that goes into every packet! 💫."
+    },
+    {
+      "id": 8,
+      "name": "Harshit Chhalani",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev8.png",
+      "quote": "Yummfeast truly lives up to its name! Their delicious range of snacks—from crispy spring rolls to flavorful bhel mudhi—never disappoints. Fresh, hygienic, and absolutely tasty. A perfect go-to for quick bites!."
+    },
+    {
+      "id": 9,
+      "name": "Sahaana",
+      "role": "Verified Customer",
+      "image": "/images/reviews/rev9.png",
+      "quote": "Yummfeast truly lives up to its name — every bite of their chips, namkeen or fryums bursts with flavour, crispiness and that irresistibly fun crunch. Their snacks didn't just satisfy my hunger — they turned ordinary tea-time into a joyride of taste. Whether it was a movie night, a road-trip or a simple break, YummFeast made it special."
+    }
+  ],
+  "ctaSection": {
+    "title": "Share Your Experience",
+    "subtitle": "We value your feedback. Let us know about your experience with our products."
+  },
+  "form": {
+    "whatsappNumber": "9334469489",
+    "labels": {
+      "name": "Your Name 👋",
+      "email": "Email Address 📧",
+      "product": "Product 🍟",
+      "rating": "Rating ⭐",
+      "feedback": "Your Feedback 📝"
+    },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "product": "Select a product",
+      "feedback": "Please share your experience with our product..."
+    },
+    "submitButton": "Submit Feedback"
+  }
+}

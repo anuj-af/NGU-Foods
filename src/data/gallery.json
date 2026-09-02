@@ -1,0 +1,189 @@
+{
+  "heroSection": {
+    "bg": "/images/bg.png",
+    "image1": "/images/banners/gallery/left.png",
+    "image2": "/images/banners/gallery/right.png"
+  },
+  "filters": [
+    {
+      "value": "all",
+      "label": "All"
+    },
+    {
+      "value": "Trip",
+      "label": "Trips"
+    },
+    {
+      "value": "Facilities",
+      "label": "Facilities"
+    },
+    {
+      "value": "Event",
+      "label": "Events"
+    }
+  ],
+  "galleryItems": [
+    {
+      "id": 1,
+      "title": "Goa Trip",
+      "image": "/images/gallery/pic1.png",
+      "category": "Trip"
+    },
+    {
+      "id": 2,
+      "title": "Goa Trip",
+      "image": "/images/gallery/pic2.png",
+      "category": "Trip"
+    },
+    {
+      "id": 3,
+      "title": "Goa Trip",
+      "image": "/images/gallery/pic3.png",
+      "category": "Trip"
+    },
+    {
+      "id": 4,
+      "title": "Kashmir Trip",
+      "image": "/images/gallery/pic4.png",
+      "category": "Trip"
+    },
+    {
+      "id": 5,
+      "title": "Kashmir Trip",
+      "image": "/images/gallery/pic5.png",
+      "category": "Trip"
+    },
+    {
+      "id": 6,
+      "title": "Kashmir Trip",
+      "image": "/images/gallery/pic6.png",
+      "category": "Trip"
+    },
+    {
+      "id": 7,
+      "title": "Dealer Meet",
+      "image": "/images/gallery/pic7.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 8,
+      "title": "Dealer Event",
+      "image": "/images/gallery/pic8.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 9,
+      "title": "Dealer Event",
+      "image": "/images/gallery/pic25.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 10,
+      "title": "Cordelia Cruise",
+      "image": "/images/gallery/pic10.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 11,
+      "title": "Cordelia Cruise",
+      "image": "/images/gallery/pic11.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 12,
+      "title": "Cordelia Cruise",
+      "image": "/images/gallery/pic12.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 13,
+      "title": "Laboratory",
+      "image": "/images/gallery/pic13.jpg",
+      "category": "Facilities"
+    },
+    {
+      "id": 14,
+      "title": "Laboratory",
+      "image": "/images/gallery/pic14.jpg",
+      "category": "Facilities"
+    },
+    {
+      "id": 15,
+      "title": "Laboratory",
+      "image": "/images/gallery/pic15.jpg",
+      "category": "Facilities"
+    },
+    {
+      "id": 16,
+      "title": "Manali Trip",
+      "image": "/images/gallery/pic16.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 17,
+      "title": "Manali Trip",
+      "image": "/images/gallery/pic17.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 18,
+      "title": "Manali Trip",
+      "image": "/images/gallery/pic18.jpg",
+      "category": "Trip"
+    },
+    {
+      "id": 19,
+      "title": "Dealer Meet",
+      "image": "/images/gallery/pic19.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 20,
+      "title": "Dealer Meet",
+      "image": "/images/gallery/pic20.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 21,
+      "title": "Dealer Meet",
+      "image": "/images/gallery/pic21.jpg",
+      "category": "Event"
+    },
+    {
+      "id": 22,
+      "title": "Thailand Trip",
+      "image": "/images/gallery/pic22.png",
+      "category": "Trip"
+    },
+    {
+      "id": 23,
+      "title": "Thailand Trip",
+      "image": "/images/gallery/pic23.png",
+      "category": "Trip"
+    },
+    {
+      "id": 24,
+      "title": "Thailand Trip",
+      "image": "/images/gallery/pic24.png",
+      "category": "Trip"
+    },
+    {
+      "id": 25,
+      "title": "Bihar Business Connect",
+      "image": "/images/gallery/pic25.png",
+      "category": "Event"
+    },
+     {
+      "id": 26,
+      "title": "Bihar Business Connect",
+      "image": "/images/gallery/pic26.png",
+      "category": "Event"
+    },
+     {
+      "id": 27,
+      "title": "Bihar Business Connect",
+      "image": "/images/gallery/pic27.png",
+      "category": "Event"
+    }
+  ]
+}

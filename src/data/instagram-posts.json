@@ -1,0 +1,70 @@
+{
+  "_instructions": [
+    "⚠️ READ BEFORE UPDATING ⚠️",
+
+    "➤ Update happens WEEKLY only.",
+    "➤ Remove the SAME NUMBER of posts from the BOTTOM.",
+    "➤ Add that SAME NUMBER of new posts at the TOP.",
+    "➤ NEVER change the order of existing posts.",
+    "➤ NEVER reuse or repeat an image file name.",
+    "➤ Image paths must be unique across the entire file.",
+
+    "➤ Allowed values for `type` ONLY:",
+    "   - \"image\"",
+    "   - \"video\"",
+    "   - \"carousel\"",
+    "➤ Do NOT use any other value for `type`.",
+
+    "Example update:",
+    "  - Remove last 3 posts from bottom",
+    "  - Add 3 new entries at TOP like:",
+    "      { \"img\": \"images/instagram/new1.png\", \"link\": \"...\", \"type\": \"image\" },",
+    "      { \"img\": \"images/instagram/new2.png\", \"link\": \"...\", \"type\": \"video\" },",
+    "      { \"img\": \"images/instagram/new3.png\", \"link\": \"...\", \"type\": \"carousel\" }",
+
+    "❗ The first item in the list always appears FIRST on the website."
+  ],
+
+  "posts": [
+    {
+      "img": "images/instagram/insta1.png",
+      "link": "https://www.instagram.com/reel/DTSW8R8jZRF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "video"
+    },
+    {
+      "img": "images/instagram/insta2.png",
+      "link": "https://www.instagram.com/p/DX_6VfVDXLQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "image"
+    },
+    {
+      "img": "images/instagram/insta3.png",
+      "link": "https://www.instagram.com/p/DX9T-LWtlGQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "image"
+    },
+    {
+      "img": "images/instagram/insta4.png",
+      "link": "https://www.instagram.com/p/DX1lF6zDRT7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "image"
+    },
+    {
+      "img": "images/instagram/insta5.png",
+      "link": "https://www.instagram.com/reel/DXt5QocjHv4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "video"
+    },
+    {
+      "img": "images/instagram/insta6.png",
+      "link": "https://www.instagram.com/reel/DXoxM5GjToN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "video"
+    },
+    {
+      "img": "images/instagram/insta7.png",
+      "link": "https://www.instagram.com/reel/DXjezYNjaIp/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "video"
+    },
+    {
+      "img": "images/instagram/insta8.png",
+      "link": "https://www.instagram.com/reel/DXedMtljUOc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "type": "video"
+    }
+  ]
+}

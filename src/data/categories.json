@@ -1,0 +1,28 @@
+{
+  "Namkeen": {
+    "label": "Namkeen",
+    "subcategories": {
+      "mix": "Mix Varieties",
+      "bhujia": "Bhujia",
+      "traditional": "Traditional"
+    }
+  },
+  "Chips": {
+    "label": "Chips",
+    "subcategories": {
+      "rings": "Rings",
+      "pasta": "Pasta Chips",
+      "classic": "Classic Chips"
+    }
+  },
+  "Fryums": {
+    "label": "Fryums",
+    "subcategories": {
+      "corn": "Corn Based",
+      "rice": "Rice Based",
+      "wheat": "Wheat Based",
+      "rings": "Rings",
+      "pasta": "Pasta Chips"
+    }
+  }
+}

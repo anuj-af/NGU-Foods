@@ -1,0 +1,209 @@
+{
+  "heroSection": {
+    "bg": "/images/bg.png",
+    "image1": "/images/banners/careers/left.png",
+    "image2": "/images/banners/careers/right.png"
+  },
+  "whyJoinUs": {
+    "title": "Why Join Our Team?",
+    "image": "/images/carrers/team.png",
+    "paragraphs": [
+      "At Yummfeast, we believe that our team is the backbone of our success. We're looking for passionate, driven individuals who are excited about our products and eager to help customers find the right solutions for their needs.",
+      "As a member of our team, you'll have the opportunity to grow professionally, earn competitive compensation, and work in a supportive, collaborative environment.",
+      "We invest in our team members through comprehensive training, mentorship programs, and clear paths for advancement."
+    ]
+  },
+  "benefits": {
+    "title": "Benefits & Perks",
+    "subtitle": "We take care of our team so they can focus on taking care of our customers.",
+    "items": [
+      {
+        "title": "Competitive Compensation",
+        "description": "Base salary plus commission structure that rewards performance and achievement.",
+        "color": "from-red-400 to-red-600",
+        "bgColor": "from-red-50 to-red-100",
+        "icon": "Star"
+      },
+      {
+        "title": "Professional Development",
+        "description": "Ongoing training, education stipends, and opportunities to attend industry conferences.",
+        "color": "from-purple-400 to-pink-400",
+        "bgColor": "from-purple-50 to-pink-50",
+        "icon": "Award"
+      },
+      {
+        "title": "Work-Life Balance",
+        "description": "Flexible scheduling options, paid time off, and company-sponsored wellness programs.",
+        "color": "from-yellow-400 to-amber-400",
+        "bgColor": "from-yellow-50 to-amber-50",
+        "icon": "Heart"
+      },
+      {
+        "title": "Health Benefits",
+        "description": "Comprehensive health, dental, and vision insurance for you and your dependents.",
+        "color": "from-green-400 to-teal-400",
+        "bgColor": "from-green-50 to-teal-50",
+        "icon": "Shield"
+      },
+      {
+        "title": "Retirement Planning",
+        "description": "Matching program to help you save for your future.",
+        "color": "from-blue-400 to-indigo-400",
+        "bgColor": "from-blue-50 to-indigo-50",
+        "icon": "TrendingUp"
+      },
+      {
+        "title": "Career Advancement",
+        "description": "Clear paths for growth and promotion based on performance and dedication.",
+        "color": "from-orange-400 to-red-400",
+        "bgColor": "from-orange-50 to-red-50",
+        "icon": "Rocket"
+      }
+    ]
+  },
+  "jobOpenings": {
+    "title": "Current Openings",
+    "subtitle": "Explore our available positions and find the right fit for your skills and career goals.",
+    "email": "customercare@yummfeast.in",
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Area Sales Manager – Gorakhpur, Uttar Pradesh",
+        "location": "Gorakhpur, Uttar Pradesh (Field-based)",
+        "type": "Full-Time",
+        "department": "Sales",
+        "shortDescription": "Lead and scale Yummfeast's sales and distribution operations in the Gorakhpur region.",
+        "about": "Yummfeast is a rapidly growing packaged snacks brand bringing delicious, affordable, and high-quality snacks to consumers across India. As we expand our national footprint, we are looking for dynamic professionals who thrive in fast-paced environments and are excited to grow with us.",
+        "roleOverview": "As the Area Sales Manager for Gorakhpur, you will be responsible for leading and scaling Yummfeast's sales and distribution operations in the region. You'll manage distributor networks, mentor sales teams, and drive strategic initiatives to enhance our market presence and boost revenue growth.",
+        "responsibilities": [
+          "Drive both primary and secondary sales to achieve volume and revenue targets.",
+          "Build and manage an efficient network of distributors and retailers across urban and rural Gorakhpur.",
+          "Recruit, train, and lead a team of Sales Officers/Executives, ensuring high performance.",
+          "Analyse market trends and competitor activities to modify our business strategy.",
+          "Implement trade promotions, visibility initiatives, and in-store merchandising plans.",
+          "Ensure adequate stock levels, timely collections, and operational compliance.",
+          "Maintain strong relationships with other channel partners and key customers.",
+          "Provide regular sales reports and insights to management."
+        ],
+        "qualifications": [
+          "Graduate/Postgraduate in Business, Marketing, or any such related field.",
+          "4–6 years of FMCG sales experience, with at least 2 years in a similar regional role.",
+          "Deep understanding of the Gorakhpur/U.P. market and its retail dynamics.",
+          "Strong experience in distributor/channel management and team leadership."
+        ],
+        "skills": [
+          "Excellent negotiation, communication, and interpersonal skills.",
+          "Strong leadership and team-building ability.",
+          "Analytical thinking and working knowledge of Excel and PowerPoint.",
+          "Target-driven, self-motivated, and adaptable to a fast-moving environment.",
+          "Willingness to travel extensively within the assigned area."
+        ],
+        "benefits": [
+          "Competitive compensation with performance-based incentives.",
+          "Growth opportunities in a high-impact role at a leading FMCG startup.",
+          "Collaborative, energetic, and entrepreneurial work culture."
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Retail Sales Manager – Bihar",
+        "location": "Bihar (Field-based, extensive intra-state travel)",
+        "type": "Full-Time",
+        "department": "Sales",
+        "shortDescription": "Execute end-to-end retail strategy across Bihar state and lead high-performing sales teams.",
+        "about": "Yummfeast is an innovative and fast-scaling brand in India's packaged snacks industry, focused on combining authentic flavours with modern convenience. We're expanding rapidly and looking for leaders who can accelerate our growth across various regions.",
+        "roleOverview": "As the Retail Sales Manager for Bihar, you will be responsible for the end-to-end execution of Yummfeast's retail strategy across the state. From increasing product visibility to building strong retail relationships and leading sales teams, you will play a key role in shaping our market presence in Bihar.",
+        "responsibilities": [
+          "Develop and execute retail sales strategies for market expansion and revenue growth.",
+          "Establish and nurture relationships with retailers across urban and rural Bihar.",
+          "Lead, train, and supervise a high-performing field sales team.",
+          "Monitor sales performance and implement corrective actions where necessary.",
+          "Coordinate with distributors and supply chain teams to ensure consistent stock availability.",
+          "Conduct regular market mapping, competitive analysis, and retail audits.",
+          "Drive visibility through in-store promotions, plans, and merchandising.",
+          "Prepare performance reports and contribute to strategic planning.",
+          "Ensure adherence to policies on credit, collections, and distributor compliance."
+        ],
+        "qualifications": [
+          "Graduate/Postgraduate in Business, Sales, or Marketing (MBA preferred).",
+          "4–7 years of experience in FMCG retail sales, with exposure to Bihar's trade landscape.",
+          "Proven expertise in retail expansion, sales team handling, and channel development."
+        ],
+        "skills": [
+          "Exceptional communication, leadership, and team management skills.",
+          "Strong negotiation and relationship-building capabilities.",
+          "Analytical, target-oriented, and capable of strategic problem-solving.",
+          "Fluent in MS Office tools, especially Excel and PowerPoint.",
+          "Open to extensive travel and on-ground execution across districts."
+        ],
+        "benefits": [
+          "Competitive salary with performance-driven incentives.",
+          "A key leadership opportunity in a high-growth FMCG brand.",
+          "Supportive and fast-paced work environment with growth potential."
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Toll-Free Customer Service Executive (Female)",
+        "location": "Darbhanga, Bihar (Office-based)",
+        "type": "Full-Time",
+        "department": "Customer Service",
+        "shortDescription": "Handle customer queries and provide exceptional service via toll-free helpline.",
+        "about": "Yummfeast is one of India's fastest-growing snack brands, known for quality, taste, and a strong customer focus. We are currently looking for a personable and dedicated Female Customer Service Executive to join our Darbhanga office and handle inbound calls via our toll-free helpline.",
+        "roleOverview": "As a Toll-Free Customer Service Executive, you'll be the first point of contact for customer queries, complaints, and feedback. Your role will be essential in building trust and ensuring a smooth, helpful, and professional communication experience for our consumers.",
+        "responsibilities": [
+          "Handle incoming customer calls on the toll-free helpline.",
+          "Provide accurate product information and resolve customer inquiries.",
+          "Log and maintain detailed records of all customer interactions.",
+          "Coordinate with internal teams (sales, logistics, quality) to resolve issues.",
+          "Follow up with customers to ensure problem resolution and satisfaction.",
+          "Maintain a positive and empathetic tone in all interactions.",
+          "Adhere to all internal protocols, including privacy and compliance policies."
+        ],
+        "qualifications": [
+          "1–3 years of experience in customer service or a call center environment.",
+          "Fluent in Hindi; familiarity with Maithili or regional dialects is an advantage.",
+          "Basic computer literacy, including MS Office and CRM systems.",
+          "Must be a female candidate (as per organisational requirements)."
+        ],
+        "skills": [
+          "Clear verbal communication and excellent listening skills.",
+          "Calm, patient, and professional under pressure.",
+          "Strong organizational and multitasking ability.",
+          "Customer-first mindset with attention to detail."
+        ],
+        "benefits": [
+          "Fixed salary with attractive performance incentives.",
+          "Friendly, professional, and inclusive office environment.",
+          "Career development opportunities within a rapidly growing FMCG company."
+        ]
+      }
+    ]
+  },
+  "applicationProcess": {
+    "title": "Our Application Process",
+    "subtitle": "Here's what to expect when you apply for a position with Yummfeast.",
+    "steps": [
+      {
+        "title": "Application Review",
+        "description": "Our hiring team reviews your application and resume."
+      },
+      {
+        "title": "Initial Interview",
+        "description": "A phone or video call to discuss your experience and interest in the role."
+      },
+      {
+        "title": "Skills Assessment",
+        "description": "Depending on the position, you may be asked to complete a skills assessment."
+      },
+      {
+        "title": "Team Interview",
+        "description": "Meet with potential team members and managers to ensure a good fit."
+      },
+      {
+        "title": "Offer & Onboarding",
+        "description": "If selected, you'll receive an offer and begin our comprehensive onboarding process."
+      }
+    ]
+  }
+}
