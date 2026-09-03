@@ -10,23 +10,23 @@ interface FooterProps {
 
 export default function Footer({ navigateTo }: FooterProps) {
   return (
-    <footer className="bg-blue-900 text-white py-12">
+    <footer style={{ backgroundColor: '#0D258D' }} className="text-white py-12">
       <div className="container mx-auto px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <div className="text-3xl font-bold text-white font-poetsenone mb-4">NGU Foods</div>
+              <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 mb-4">
-              Ready to snack with us? Join thousands of happy snackers who trust us for their cravings!
+              Crafting possibilities in every shape — from Fryums to Snack Pellets, we deliver quality snacks trusted by businesses across India.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-blue-800" asChild>
+              <Button variant="ghost" size="icon" className="text-white hover:text-white" style={{ backgroundColor: 'transparent' }} asChild>
                 <Link href="https://www.instagram.com/ngufoods.in/" external>
                   <Instagram className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-blue-800" asChild>
+              <Button variant="ghost" size="icon" className="text-white hover:text-white" style={{ backgroundColor: 'transparent' }} asChild>
                 <Link href="https://www.facebook.com/ngufoods" external>
                   <Facebook className="h-5 w-5" />
                 </Link>
@@ -34,7 +34,8 @@ export default function Footer({ navigateTo }: FooterProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:text-white hover:bg-blue-800"
+                className="text-white hover:text-white"
+                style={{ backgroundColor: 'transparent' }}
                 asChild
               >
                 <Link href="https://linkedin.com/company/ngufoods" external>
@@ -42,15 +43,14 @@ export default function Footer({ navigateTo }: FooterProps) {
                 </Link>
               </Button>
             </div>
-            <p className="text-blue-200 mt-4 mb-1">NGU Food Products</p>
-            <p className="text-blue-200 mt-4 mb-1">A Unit of Micro Commercial Pvt. Ltd.</p>
-            <p className="text-blue-200 mt-4 mb-4">
+            <p className="text-blue-200 mt-6 mb-1">NGU Foods & Beverages LLP</p>
+            <p className="text-blue-200 mb-4">
               ZED GOLD Certified Company <br />
               An ISO 9001:2015 Certified Company
             </p>
           </div>
           <div>
-            <h3 className="text-md mb-4">Quick Links</h3>
+            <h3 className="text-md mb-4 font-semibold" style={{ color: '#FCA801' }}>Quick Links</h3>
             <div className="grid grid-cols-2 md:grid-cols-1 gap-x-6 gap-y-2">
               <ul className="space-y-2">
                 <li>
@@ -124,7 +124,7 @@ export default function Footer({ navigateTo }: FooterProps) {
                     }}
                     className="text-blue-200 hover:text-white transition-colors"
                   >
-                    Infra
+                    Infrastructure
                   </a>
                 </li>
                 <li>
@@ -179,23 +179,28 @@ export default function Footer({ navigateTo }: FooterProps) {
             </div>
           </div>
           <div>
-            <h3 className="text-md mb-4">Contact Us</h3>
+            <h3 className="text-md mb-4 font-semibold" style={{ color: '#FCA801' }}>Contact Us</h3>
             <address className="not-italic text-blue-200">
-              <p className="mb-2">Work : NGU Food Products Plot no 55, B (53) P, B(58) P Industrial Area Donar Darbhanga Bihar 846004</p>
               <p className="mb-2">
-                Registered Office : Cabin-1, Unit No 2C, 2nd Floor, 36A, Bentick Street, Esplanade, Kolkata, West Bengal, India, 700069
+                <span className="font-medium text-white">Head Office:</span><br />
+                Ahmedabad, Gujarat, India
               </p>
-              <p className="mb-2">Email: customercare@ngufoods.in</p>
-              <p>Phone: 18001020602</p>
-              <br />
-              <p>Visit Us!</p>
-              <p>Mon-Sat: 10am - 6pm </p>
-              <p>Sunday: Closed (We're snacking!)</p>
+              <p className="mb-2">
+                <span className="font-medium text-white">Email:</span><br />
+                ngufoods27@gmail.com
+              </p>
+              <p className="mb-4">
+                <span className="font-medium text-white">Phone:</span><br />
+                +91 99250 21500
+              </p>
+              <p className="font-medium text-white">Visit Us!</p>
+              <p>Mon-Sat: 10am - 6pm</p>
+              <p>Sunday: Closed</p>
             </address>
           </div>
         </div>
-        <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
-          <p>&copy; {new Date().getFullYear()} NGU Foods. All rights reserved.</p>
+        <div className="mt-8 pt-8 text-center text-blue-200" style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+          <p>&copy; {new Date().getFullYear()} NGU Foods & Beverages LLP. All rights reserved.</p>
         </div>
       </div>
     </footer>

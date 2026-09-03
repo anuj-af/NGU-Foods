@@ -4,27 +4,27 @@
     "description": "Fun aeroplane shaped crunchy snacks",
     "image": "/images/NGU/AEROPLANE B.png",
     "price": "₹10",
-    "category": "Fryums"
+    "category": "Aeroplane Snacks"
   },
   {
     "name": "Alphabet Snacks",
     "description": "Learn and munch with alphabet shaped crisps",
     "image": "/images/NGU/ALPHABET B.png",
     "price": "₹5",
-    "category": "Fryums"
+    "category": "Alphabet Snacks"
   },
   {
     "name": "Aloo Tikki",
     "description": "Delicious aloo tikki flavor in every bite",
     "image": "/images/NGU/Aloo Tikki.png",
     "price": "₹10",
-    "category": "Chips"
+    "category": "Aloo Tikki"
   },
   {
     "name": "Baby Rings",
     "description": "Crunchy rings with a burst of tangy masala flavor",
     "image": "/images/NGU/BABY RING B.png",
     "price": "₹10",
-    "category": "Extruded"
+    "category": "Baby Ring"
   }
 ]

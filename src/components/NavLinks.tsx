@@ -1,9 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
 import { cn } from "../lib/utils"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 interface NavLinksProps {
   navigateTo: (page: string) => void
@@ -11,7 +8,6 @@ interface NavLinksProps {
 }
 
 export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
-  const [open, setOpen] = useState(false)
 
   // Primary navigation items to show directly in the navbar
   const primaryLinks = [
@@ -22,14 +18,6 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
     { name: "Testimonials", key: "testimonial" },
   ]
 
-  // Secondary navigation items to show in the dropdown
-  const secondaryLinks = [
-    { name: "Infra", key: "infra" },
-    { name: "Gallery", key: "gallery" },
-    { name: "Blogs", key: "blogs" },
-    { name: "Careers", key: "career" },
-  ]
-
   return (
     <>
       {primaryLinks.map((link) => (
@@ -38,7 +26,9 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
           href="#"
           onClick={(e) => {
             e.preventDefault()
-            navigateTo(link.key)
+            if (link.key !== "about") {
+              navigateTo(link.key)
+            }
           }}
           className={cn(
             "text-md font-normal transition-colors hover:text-blue-600",
@@ -48,26 +38,6 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
           {link.name}
         </a>
       ))}
-
-      <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger className="flex items-center text-md font-normal transition-colors hover:text-blue-600 text-muted-foreground">
-          More <ChevronDown className="ml-1 h-4 w-4" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {secondaryLinks.map((link) => (
-            <DropdownMenuItem
-              key={link.key}
-              className={cn("cursor-pointer", currentPage === link.key ? "text-blue-600" : "")}
-              onClick={() => {
-                navigateTo(link.key)
-                setOpen(false)
-              }}
-            >
-              {link.name}
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
 
       <a
         href="#"

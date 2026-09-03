@@ -175,3 +175,60 @@
     transform: translateX(100%) rotate(30deg);
   }
 }
+
+/* Rays background pan animation */
+@keyframes pan-rays {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-pan-rays {
+  animation: pan-rays 30s linear infinite;
+}
+
+/* Glow pulse for buttons */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(13, 37, 141, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(13, 37, 141, 0.6), 0 0 40px rgba(252, 168, 1, 0.2);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Floating animation for product cards */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Diagonal stripe pattern for section dividers */
+.diagonal-stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(13, 37, 141, 0.03) 10px,
+    rgba(13, 37, 141, 0.03) 20px
+  );
+}
+

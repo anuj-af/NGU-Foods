@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu, X, ShoppingBag } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent } from "./ui/sheet"
 import { Separator } from "./ui/separator"
@@ -19,22 +19,20 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-16 items-center justify-between px-8">
+        {/* Left: Logo */}
         <div className="flex items-center">
           <Button variant="ghost" size="icon" className="mr-2 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu className="h-6 w-6" />
           </Button>
           <div className="flex items-center cursor-pointer" onClick={() => navigateTo("home")}>
-            <div className="text-2xl font-bold text-blue-600 font-poetsenone">NGU Foods</div>
+            <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-12 w-auto object-contain" />
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:items-center md:space-x-6">
+        {/* Right: Desktop Navigation */}
+        <nav className="hidden md:flex md:items-center md:space-x-8">
           <NavLinks navigateTo={navigateTo} currentPage={currentPage} />
         </nav>
-
-        {/* Spacer to match logo width */}
-  <div className="h-16 w-[132px] hidden md:block" aria-hidden="true"></div>
       </div>
 
       {/* Mobile Navigation Sheet */}
@@ -43,11 +41,8 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center">
-                <div className="text-2xl font-bold text-blue-600 font-poetsenone">NGU Foods</div>
+                <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-10 w-auto object-contain" />
               </div>
-              {/* <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-                <X className="h-5 w-5" />
-              </Button> */}
             </div>
             <Separator />
             <nav className="flex flex-col space-y-4 py-6">
@@ -58,7 +53,8 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
                 <Link
                   href="https://www.instagram.com/ngufoods.in/"
                   external
-                  className="text-red-600 hover:text-red-700"
+                  className="hover:opacity-80 transition-opacity"
+                  style={{ color: '#d90429' }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +73,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                 </Link>
-                <Link href="https://www.facebook.com/ngufoods" external className="text-blue-600 hover:text-blue-700">
+                <Link href="https://www.facebook.com/ngufoods" external className="hover:opacity-80 transition-opacity" style={{ color: '#0D258D' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -96,7 +92,8 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
                 <Link
                   href="https://linkedin.com/company/ngufoods"
                   external
-                  className="text-blue-400 hover:text-blue-500"
+                  className="hover:opacity-80 transition-opacity"
+                  style={{ color: '#0D258D' }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
