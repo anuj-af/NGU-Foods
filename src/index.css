@@ -1,3 +1,14 @@
+/* Global font size bump */
+html {
+  font-size: 17px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -14,8 +14,7 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
     { name: "Home", key: "home" },
     { name: "About Us", key: "about" },
     { name: "Products", key: "product" },
-    { name: "Dealership", key: "query" },
-    { name: "Testimonials", key: "testimonial" },
+    { name: "Gallery", key: "gallery" },
   ]
 
   return (
@@ -26,13 +25,11 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
           href="#"
           onClick={(e) => {
             e.preventDefault()
-            if (link.key !== "about") {
-              navigateTo(link.key)
-            }
+            navigateTo(link.key)
           }}
           className={cn(
-            "text-md font-normal transition-colors hover:text-blue-600",
-            currentPage === link.key ? "text-blue-600" : "text-muted-foreground",
+            "text-base font-normal transition-colors hover:text-[#0D258D]",
+            currentPage === link.key ? "text-[#0D258D]" : "text-muted-foreground",
           )}
         >
           {link.name}
@@ -46,8 +43,8 @@ export default function NavLinks({ navigateTo, currentPage }: NavLinksProps) {
           navigateTo("contact")
         }}
         className={cn(
-          "text-md font-normal transition-colors hover:text-blue-600",
-          currentPage === "contact" ? "text-blue-600" : "text-muted-foreground",
+          "text-base font-normal transition-colors hover:text-[#0D258D]",
+          currentPage === "contact" ? "text-[#0D258D]" : "text-muted-foreground",
         )}
       >
         Contact Us

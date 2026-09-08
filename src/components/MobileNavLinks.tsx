@@ -14,7 +14,6 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
     { name: "Home", key: "home" },
     { name: "About Us", key: "about" },
     { name: "Products", key: "product" },
-    { name: "Dealership", key: "query" },
     { name: "Gallery", key: "gallery" }
   ]
 
@@ -26,13 +25,11 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
           href="#"
           onClick={(e) => {
             e.preventDefault()
-            if (link.key !== "about") {
-              navigateTo(link.key)
-            }
+            navigateTo(link.key)
           }}
           className={cn(
-            "text-lg font-normal transition-colors hover:text-blue-600 flex items-center justify-between",
-            currentPage === link.key ? "text-blue-600" : "text-muted-foreground",
+            "text-xl font-normal transition-colors hover:text-[#0D258D] flex items-center justify-between",
+            currentPage === link.key ? "text-[#0D258D]" : "text-muted-foreground",
           )}
         >
           {link.name}
@@ -47,8 +44,8 @@ export default function MobileNavLinks({ navigateTo, currentPage }: MobileNavLin
           navigateTo("contact")
         }}
         className={cn(
-          "text-lg font-normal transition-colors hover:text-blue-600 flex items-center justify-between",
-          currentPage === "contact" ? "text-blue-600" : "text-muted-foreground",
+          "text-xl font-normal transition-colors hover:text-[#0D258D] flex items-center justify-between",
+          currentPage === "contact" ? "text-[#0D258D]" : "text-muted-foreground",
         )}
       >
         Contact Us

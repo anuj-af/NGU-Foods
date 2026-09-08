@@ -39,9 +39,7 @@ export default function App() {
 
   // Function to handle page navigation
   const navigateTo = (page: string, category?:any) => {
-    if (page !== "home" && page !== "about") {
-      return;
-    }
+    // Allow navigation to all pages
     setCurrentPage(page);
     if(category){
       setCategory(category);

@@ -14,7 +14,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1600px",
       },
     },
     extend: {
@@ -25,6 +25,9 @@ module.exports = {
         // pinup: ['Pinup', 'sans-serif'],
       },
       colors: {
+        'ngu-blue': '#0D258D',
+        'ngu-yellow': '#FCA801',
+        'ngu-red': '#d90429',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

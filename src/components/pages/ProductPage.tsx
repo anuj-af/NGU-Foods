@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { PartyPopper, Search, Filter, X } from "lucide-react"
+import { Search, Filter, X } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import CustomButton from "@/components/ui/custom-button"
 import { Badge } from "@/components/ui/badge"
@@ -35,16 +35,19 @@ const ProductCircle = ({
   onClick: () => void
 }) => {
   return (
-    <div className="relative flex flex-col items-center gap-4 mb-4">
+    <div className="relative flex flex-col items-center gap-4">
       <motion.img
-        src="/images/patch3.png"
+        src="/images/patch-blue.png"
         alt=""
         className="absolute top-6 h-52 w-52"
-        animate={{ rotate: 360 }}
+        animate={{
+          scale: [1, 1.05, 1],
+          rotate: [0, 3, -3, 0],
+        }}
         transition={{
-          repeat: Number.POSITIVE_INFINITY,
-          duration: 2.5,
-          ease: "linear",
+          repeat: Infinity,
+          duration: 4,
+          ease: "easeInOut",
         }}
         style={{ transformOrigin: "center center" }}
       />
@@ -57,17 +60,13 @@ const ProductCircle = ({
         whileHover={{ scale: 1.2 }}
         src={product.image}
         alt={product.name}
-        className="w-48 h-48 object-contain -rotate-12 mb-12"
+        className="w-56 h-48 object-contain -rotate-12 mb-12"
       />
 
       {/* Label/Button */}
-      <div onClick={onClick}>
-        <CustomButton className="bg-orange-500 cursor-pointer" value={product.name} />
-      </div>
-
-      <div>
-        <p className="text-center mb-2">Price: {product.price}</p>
-        <p className="text-justify text-muted-foreground px-6">{product.description}</p>
+      <div onClick={onClick} className="relative z-10 flex flex-col items-center text-center w-full">
+        <CustomButton className="cursor-pointer" value={product.name} navigateTo={() => {}} />
+        <p className="text-sm text-gray-500 mt-4 max-w-[220px]">{product.description}</p>
       </div>
     </div>
   )
@@ -186,9 +185,9 @@ export default function ProductPage({category} : any) {
   }
 
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/products/left.png",
-    image2: "/images/banners/products/right.png"
+    bg: "/images/blue-bg.png",
+    image1: "/placeholder.svg",
+    image2: "/placeholder.svg"
   }
 
   return (
@@ -307,6 +306,9 @@ export default function ProductPage({category} : any) {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, margin: "-100px" }}
             >
+              <h2 className="text-3xl md:text-4xl font-normal mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-500">
+                Explore Our Snack Collection
+              </h2>
               <Badge variant="outline" className="mb-4 px-4 py-1 text-sm bg-red-50 border-red-200">
                 <motion.span
                   animate={{ scale: [1, 1.2, 1] }}
@@ -316,16 +318,13 @@ export default function ProductPage({category} : any) {
                 </motion.span>
                 TASTY TREATS
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-normal mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-500">
-                Our Delicious Range Of Products
-              </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Discover our most popular snacks that customers love. Quality and taste guaranteed in every bite!
+                Explore our delicious range of snacks, packed with flavour and made for every kind of craving.
               </p>
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             {filteredAndSortedProducts().map((product, index) => (
               <motion.div
                 key={product.id}
@@ -353,84 +352,7 @@ export default function ProductPage({category} : any) {
         </div>
       </section>
 
-      {/* CTA Section with animated background */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        {/* Animated floating products */}
-        <motion.div
-          className="absolute w-32 h-32 left-[5%] top-[3%] md:left-[10%] top-[20%]"
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 1,
-            y: [-5, 5, -5],
-            rotate: [0, 10, -10, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-          }}
-        >
-          <img
-            src={"/images/chip3 (1).png"}
-            alt="Floating product"
-            className="w-full h-full object-contain drop-shadow-lg"
-          />
-        </motion.div>
 
-        <motion.div
-          className="absolute w-24 h-24 right-[5%] bottom-[5%] md:right-[15%] bottom-[20%]"
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 1,
-            y: [20, -20, 20],
-            rotate: [0, -15, 15, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-            delay: 1,
-          }}
-        >
-          <img
-            src={"/images/chip4 (1).png"}
-            alt="Floating product"
-            className="w-full h-full object-contain drop-shadow-lg"
-          />
-        </motion.div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            className="max-w-3xl mx-auto text-center text-white"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
-              <PartyPopper className="w-12 h-12 mx-auto mb-4 text-yellow-300 mt-6" />
-            </motion.div>
-            <h2 className="text-3xl md:text-5xl font-normal mb-6">Can't Find What You're Looking For?</h2>
-            <p className="text-xl mb-8">Contact our team for bulk orders or to inquire about our full product range.</p>
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-white/90 group relative overflow-hidden"
-              onClick={() => {
-                triggerConfetti()
-                window.location.href = "mailto:customercare@ngufoods.in"
-              }}
-            >
-              <span className="relative z-10 group-hover:text-blue-600">Contact Us</span>
-              <motion.span
-                className="absolute inset-0 bg-yellow-300 transform origin-left"
-                initial={{ scaleX: 0 }}
-                whileHover={{ scaleX: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
     </div>
   )
 }

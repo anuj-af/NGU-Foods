@@ -1,485 +1,378 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Eye, Award, CheckCircle, Calendar, MapPin } from "lucide-react"
-import React, { useRef } from "react";
+import { Shield, Lightbulb, Check, Target, Award } from "lucide-react";
+import React from "react";
 import HeroSection from "../HeroSection";
 
-
 export default function AboutPage() {
-
   const bannerData = {
     bg: "/images/blue-bg.png",
-    image1: "/images/banners/about/left-blue1.png",
-    image2: "/images/banners/about/right.png"
-  }
+    image1: "/placeholder.svg",
+    image2: "/placeholder.svg"
+  };
 
   return (
     <div className="relative overflow-hidden">
-      {/* Hero Section with enhanced effects */}
+      {/* Hero Section */}
       <HeroSection banner={bannerData} />
 
-      {/* Crafting Possibilities in Every Shape with distressed border */}
-      <section className="py-16 relative"
-      style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 1,
-        }}>
-        <div className="container mx-auto p-4">
+      {/* ============================================ */}
+      {/* 1. CRAFTING POSSIBILITIES & OUR JOURNEY (White) */}
+      {/* ============================================ */}
+      <section className="py-16 md:py-24 relative diagonal-stripes">
+        <div className="container mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-normal mb-6 relative text-blue-600 inline-block">
+              <motion.span
+                className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
+                style={{ backgroundColor: '#0D258D', color: 'white' }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                OUR STORY
+              </motion.span>
+
+              <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ color: '#FCA801' }}>
                 Crafting Possibilities in Every Shape
-                {/* Handwritten underline effect */}
-                <svg
-                  className="absolute -bottom-2 left-0 w-full"
-                  height="10"
-                  viewBox="0 0 100 10"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M0,5 C20,0 40,10 60,5 S80,0 100,5"
-                    stroke="#FF6B6B"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
               </h2>
-              <p className="text-muted-foreground mb-4">At NGU Foods & Beverages LLP, we bring together decades of experience, innovation and manufacturing excellence to create high-quality snack products that meet the evolving needs of modern food businesses.</p>
-              <p className="text-muted-foreground mb-4">Operating under the brand N.G.U. Creative Snacks, we specialize in the manufacturing of Fryums, Snack Pellets, Papad, Pasta Shapes and Ready-to-Fry Products. With a strong focus on quality, consistency and product innovation, we serve customers across India and cater to the requirements of international markets.</p>
-              <p className="text-muted-foreground">Our journey began in 1996, with a vision to create quality snack products backed by reliable manufacturing and a commitment to customer satisfaction. For nearly three decades, our commitment has remained constant — to manufacture products that deliver consistent quality, excellent performance and dependable value to our customers.</p>
+
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                At <strong>NGU Foods & Beverages LLP</strong>, we bring together decades of experience, innovation and manufacturing excellence to create high-quality snack products that meet the evolving needs of modern food businesses.
+              </p>
+              <p className="text-gray-600 mb-10 leading-relaxed">
+                Operating under the brand <strong>N.G.U. Creative Snacks</strong>, we specialize in the manufacturing of <strong>Fryums, Snack Pellets, Papad, Pasta Shapes and Ready-to-Fry Products</strong>. With a strong focus on quality, consistency and product innovation, we serve customers across India and cater to the requirements of international markets.
+              </p>
+
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4" style={{ color: '#0D258D' }}>
+                Our Journey — Since 1996
+              </h3>
+              
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Our journey began in <strong>1996</strong>, with a vision to create quality snack products backed by reliable manufacturing and a commitment to customer satisfaction.
+              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                What started as a focused manufacturing venture has, over the years, evolved into a growing food manufacturing enterprise. Since our inception, we have continuously adapted to changing consumer preferences, emerging market trends and the evolving requirements of our customers, while remaining firmly committed to the values on which our journey began.
+              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                For nearly three decades, our commitment has remained constant — <strong>to manufacture products that deliver consistent quality, excellent performance and dependable value to our customers.</strong>
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Today, NGU combines the experience built since 1996 with modern manufacturing capabilities to offer a diverse portfolio of snack products across a wide range of shapes, formats and specifications.
+              </p>
             </motion.div>
+
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative h-full flex flex-col justify-center"
             >
-              <div className="aspect-video mt-4 rounded-lg overflow-hidden relative z-10">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/placeholder.svg"
                   alt="Crafting Possibilities in Every Shape"
-                  className="h-full object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#0D258D]/20 to-transparent"></div>
               </div>
+              {/* Decorative elements */}
+              <motion.div
+                className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl -z-10"
+                style={{ backgroundColor: '#FCA801' }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              />
+              <motion.div
+                className="absolute -top-4 -left-4 w-16 h-16 rounded-2xl -z-10"
+                style={{ backgroundColor: '#0D258D' }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+              />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Mission */}
-      <section className="relative overflow-hidden py-16 bg-blue-600">
+      {/* ============================================ */}
+      {/* 2. MANUFACTURING EXCELLENCE & INNOVATION (Dark Blue) */}
+      {/* ============================================ */}
+      <section
+        className="py-16 md:py-24 relative overflow-hidden"
+        style={{ backgroundColor: '#0D258D' }}
+      >
+        {/* Background pattern */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
-            animate={{ x: [-20, 0], y: [-20, 0] }}
-            transition={{
-              duration: 60,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
+            className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-15 animate-pan-rays"
+            style={{ backgroundSize: '200px 200px' }}
           />
         </div>
-        <motion.div
-          className="absolute top-20 right-0 w-64 h-64 rounded-full bg-white/10 opacity-30 blur-3xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-          }}
-        />
-        <div className="container mx-auto px-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-normal text-white mb-4 relative inline-block">
-              Our Mission
-              {/* Cartoon stroke underline */}
-              <svg
-                className="absolute -bottom-3 left-0 w-full"
-                height="12"
-                viewBox="0 0 100 12"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,5 C10,10 30,2 50,5 S80,10 100,5"
-                  stroke="#F29C1F"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </h2>
-            <p className="text-white max-w-2xl mx-auto">Innovation, manufacturing excellence, and customer-focused solutions.</p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            {[
-              {
-                title: "Quality is our recipe. ❤️",
-                description:
-                  "To deliver high-quality snack products through innovation, manufacturing excellence, disciplined quality practices and customer-focused solutions, while continuously expanding our capabilities to meet the evolving requirements of domestic and international markets.",
-                icon: <Heart className="w-8 h-8" />,
-                color: "from-red-400 to-pink-400",
-                bgColor: "from-red-50 to-pink-50",
-              },
-            ].map((mission, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group"
-              >
-                <Card className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  <div className={`h-2 bg-gradient-to-r ${mission.color}`}></div>
-                  <CardContent
-                    className={`p-8 bg-gradient-to-br ${mission.bgColor} group-hover:shadow-inner transition-all duration-300`}
-                  >
-                    <div className="text-center mb-6">
-                      <div
-                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${mission.color} text-white shadow-lg mb-4`}
-                      >
-                        {mission.icon}
-                      </div>
-                      <h3 className="font-normal text-2xl mb-4 text-gray-800">{mission.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{mission.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Vision */}
-      <section className="relative overflow-hidden py-16 bg-white"
-      style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 1,
-        }}>
-        <div className="container mx-auto px-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-normal text-gray-800 mb-4 relative inline-block">
-              Our Vision
-              {/* Cartoon stroke underline */}
-              <svg
-                className="absolute -bottom-3 left-0 w-full"
-                height="12"
-                viewBox="0 0 100 12"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,5 C10,10 30,2 50,5 S80,10 100,5"
-                  stroke="#F29C1F"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">To become a trusted and innovative food manufacturing partner.</p>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            {[
-              {
-                title: "Trust is our brand. 👁️",
-                description:
-                  "To become a trusted and innovative food manufacturing partner, recognized for quality, reliability and the ability to transform ideas into products that create lasting value for customers and consumers.",
-                icon: <Eye className="w-8 h-8" />,
-                color: "from-blue-400 to-indigo-400",
-                bgColor: "from-blue-50 to-indigo-50",
-              },
-            ].map((vision, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="group"
-              >
-                <Card className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  <div className={`h-2 bg-gradient-to-r ${vision.color}`}></div>
-                  <CardContent
-                    className={`p-8 bg-gradient-to-br ${vision.bgColor} group-hover:shadow-inner transition-all duration-300`}
-                  >
-                    <div className="text-center mb-6">
-                      <div
-                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${vision.color} text-white shadow-lg mb-4`}
-                      >
-                        {vision.icon}
-                      </div>
-                      <h3 className="font-normal text-2xl mb-4 text-gray-800">{vision.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{vision.description}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {false && ( <>
-{/* certificate section */}
-      <section className="relative overflow-hidden py-16 bg-blue-600">
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
-            animate={{ x: [-20, 0], y: [-20, 0] }}
-            transition={{
-              duration: 60,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
+        
+        {/* featureBg overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="/images/featureBg.png"
+            alt=""
+            className="w-full h-full object-cover"
           />
         </div>
-        <motion.div
-          className="absolute top-20 left-0 w-64 h-64 rounded-full bg-white/10 opacity-30 blur-3xl"
-          animate={{
-            x: [0, -30, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Number.POSITIVE_INFINITY,
-            repeatType: "reverse",
-          }}
-        />
-        <div className="container mx-auto px-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-normal text-white mb-4 relative inline-block">
-              Our Certification
-              {/* Cartoon stroke underline */}
-              <svg
-                className="absolute -bottom-3 left-0 w-full"
-                height="12"
-                viewBox="0 0 100 12"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,5 C10,10 30,2 50,5 S80,10 100,5"
-                  stroke="#F29C1F"
-                  strokeWidth="4"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </h2>
-            <p className="text-white max-w-2xl mx-auto">
-              Recognized for excellence in sustainable manufacturing practices with ZED Gold Certification.
-            </p>
-          </div>
 
-          <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.7 }}
               viewport={{ once: true }}
-              className="relative"
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
             >
-              <Card className="border-0 shadow-2xl overflow-hidden bg-gradient-to-br from-white to-gray-50">
-                <div className="bg-gradient-to-r from-amber-400 to-yellow-400 p-6 text-center relative overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-20"
-                    animate={{ x: [0, 10, 0] }}
-                    transition={{
-                      duration: 20,
-                      repeat: Number.POSITIVE_INFINITY,
-                      repeatType: "reverse",
-                    }}
-                  />
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <Award className="w-8 h-8 text-amber-600" />
-                      </div>
-                      <div className="text-left">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2">ZED GOLD CERTIFICATION</h3>
-                        <p className="text-gray-700 text-sm">ZERO DEFECT ZERO EFFECT</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-800 font-medium">MSME Sustainable (ZED) Certification Scheme</p>
-                  </div>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FCA801]/20 shadow-lg">
+                  <Shield className="w-7 h-7 text-[#FCA801]" />
                 </div>
+                <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
+                  Manufacturing Excellence
+                </h2>
+              </div>
+              
+              <p className="text-white/90 mb-4 leading-relaxed text-lg">
+                Our manufacturing capability is one of our key strengths.
+              </p>
+              <p className="text-white/90 mb-4 leading-relaxed">
+                With <strong>40+ product shapes</strong> and a production capacity of <strong>70,000+ kg per day</strong>, we are equipped to handle diverse and scalable requirements while maintaining consistency across production.
+              </p>
+              <p className="text-white/90 leading-relaxed">
+                Our processes are designed with a strong emphasis on <strong>quality, hygiene, efficiency and consistency</strong>. From the selection of raw materials to production, quality control and final dispatch, we follow a disciplined approach to ensure that every batch meets the expected standards.
+              </p>
+            </motion.div>
 
-                <CardContent className="p-8">
-                  <div className="flex justify-center mb-8">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6 }}
-                      viewport={{ once: true }}
-                      whileHover={{ scale: 1.02 }}
-                      className="relative group cursor-pointer"
-                    >
-                      <div className="relative overflow-hidden rounded-lg shadow-2xl border-4 border-amber-400 bg-white p-2">
-                        {/* Decorative corner elements */}
-                        <div className="absolute top-0 left-0 w-8 h-8 border-l-4 border-t-4 border-amber-500 rounded-tl-lg"></div>
-                        <div className="absolute top-0 right-0 w-8 h-8 border-r-4 border-t-4 border-amber-500 rounded-tr-lg"></div>
-                        <div className="absolute bottom-0 left-0 w-8 h-8 border-l-4 border-b-4 border-amber-500 rounded-bl-lg"></div>
-                        <div className="absolute bottom-0 right-0 w-8 h-8 border-r-4 border-b-4 border-amber-500 rounded-br-lg"></div>
-
-                        {/* Actual certificate image */}
-                        <img
-                          src="/placeholder.svg"
-                          alt="ZED Gold Certificate - MICRO COMMERCIAL PVT. LTD."
-                          className="w-full max-w-md h-auto rounded-md transition-transform duration-300 group-hover:scale-105"
-                        />
-
-                        {/* Subtle overlay for better presentation */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent rounded-md pointer-events-none"></div>
-                      </div>
-
-                      {/* Floating badge */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        viewport={{ once: true }}
-                        className="absolute -bottom-4 left-1/2 transform -translate-x-1/2"
-                      >
-                      </motion.div>
-                    </motion.div>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-6 mt-12">
-                    <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg">
-                      <div className="w-12 h-12 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Award className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Certification Level</h4>
-                      <p className="text-sm text-gray-600">ZED Gold Standard</p>
-                      <p className="text-xs text-gray-500 mt-1">Zero Defect Zero Effect</p>
-                    </div>
-
-                    <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Calendar className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Validity Period</h4>
-                      <p className="text-sm text-gray-600">September 11, 2023</p>
-                      <p className="text-xs text-gray-500 mt-1">Valid for 3 years</p>
-                    </div>
-
-                    <div className="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg">
-                      <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <CheckCircle className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-2">Certificate No.</h4>
-                      <p className="text-sm text-gray-600 font-mono">11092023_037835</p>
-                      <p className="text-xs text-gray-500 mt-1">UDYAM-BR-10-0003790</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FCA801]/20 shadow-lg">
+                  <Lightbulb className="w-7 h-7 text-[#FCA801]" />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
+                  Innovation That Takes Shape
+                </h2>
+              </div>
+              
+              <p className="text-white/90 mb-4 leading-relaxed">
+                At NGU, we believe that innovation is not limited to creating new products — <strong>it is about creating new possibilities.</strong>
+              </p>
+              <p className="text-white/90 leading-relaxed">
+                Our extensive range of product shapes and manufacturing capabilities enables us to respond to changing market trends and customer requirements. We continuously work towards developing products that offer the right combination of <strong>shape, texture, quality and performance</strong>, helping our customers create distinctive snack offerings for their markets.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-
-      {/* Team Section with ink blob frames */}
-      <section className="bg-white py-8 relative" style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 1,
-        }}>
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="w-[120%] h-[120%] bg-[url('/images/pattern.svg')] opacity-10"
-            animate={{ x: [-20, 0], y: [-20, 0] }}
-            transition={{
-              duration: 60,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
-          />
-          </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl text-black font-normal text-blue-600 mb-4 relative inline-block">
-              Meet Our Team
-              {/* Handwritten underline */}
-              <svg
-                className="absolute -bottom-2 left-0 w-full"
-                height="10"
-                viewBox="0 0 100 10"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,5 C30,2 50,8 100,5"
-                  stroke="#FF6B6B"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </h2>
-            <p className="text-muted-foreground  max-w-2xl mx-auto">
-              The dedicated professionals who work tirelessly to bring you the best snacks and services.
-            </p>
+      {/* ============================================ */}
+      {/* 3. MORE THAN A MANUFACTURER (White) */}
+      {/* ============================================ */}
+      <section className="py-16 md:py-24 relative" style={{ background: 'linear-gradient(180deg, #f8f9ff 0%, #ffffff 50%, #f8f9ff 100%)' }}>
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-5xl font-semibold mb-6" style={{ color: '#0D258D' }}>
+                More Than a Manufacturer
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+                We see ourselves as a <strong>long-term manufacturing partner</strong>, not simply a supplier.
+              </p>
+              <p className="text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+                We understand that every food business has different requirements. Whether it is product variety, consistent quality, production volumes, customization or dependable supply, our approach begins with understanding our customers' needs and delivering solutions accordingly.
+              </p>
+              <p className="text-[#FCA801] font-semibold mt-6 text-xl">
+                Our commitment to our customers is reflected in:
+              </p>
+            </motion.div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              {
-                name: "Mr. Manish Pansari",
-                role: "CEO & Managing Director",
-                image:
-                  "/images/team/team1.jpeg",
-              }
-            ].map((member, index) => (
+              "Consistent product quality",
+              "Reliable manufacturing capabilities",
+              "Diverse product portfolio",
+              "Product development and customization",
+              "Scalable production",
+              "Stringent hygiene practices",
+              "Timely and dependable supply",
+              "Long-term business relationships"
+            ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center text-white relative"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                {/* Ink blob frame for image */}
-                <div className="relative mx-auto max-w-[200px] mb-4">
-                  <div className="aspect-square rounded-full overflow-hidden relative z-10 mx-auto max-w-[180px]">
-                    <img
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[#0D258D]/10 text-[#0D258D]">
+                  <Check className="w-5 h-5" />
                 </div>
-                <h3 className="font-normal text-black text-xl">{member.name}</h3>
-                <p className="text-muted-foreground ">{member.role}</p>
+                <span className="text-gray-700 font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-    
-</> )}
-</div>
+
+      {/* ============================================ */}
+      {/* 4. QUALITY IS OUR RECIPE & MISSION/VISION (Dark Blue) */}
+      {/* ============================================ */}
+      <section
+        className="py-16 md:py-24 relative overflow-hidden"
+        style={{ backgroundColor: '#0D258D' }}
+      >
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-10 animate-pan-rays"
+            style={{ backgroundSize: '200px 200px' }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-[#FCA801]">
+                Quality Is Our Recipe
+              </h2>
+              
+              <p className="text-white/90 max-w-3xl mx-auto mt-4 text-lg leading-relaxed">
+                For us, quality is not a final checkpoint — <strong>it is an integral part of our entire manufacturing process.</strong>
+              </p>
+              <p className="text-white/80 max-w-4xl mx-auto mt-4 leading-relaxed">
+                We focus on maintaining consistency in <strong>taste, texture, appearance, product performance and hygiene</strong>, because we understand that the quality of our products ultimately becomes a reflection of our customers' brands.
+              </p>
+              <p className="text-white/80 max-w-4xl mx-auto mt-4 leading-relaxed">
+                Since <strong>1996</strong>, this commitment to quality has remained at the heart of our journey and continues to guide the way we manufacture, innovate and grow.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Mission & Vision Cards */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Vision Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex items-center justify-center w-16 h-16 rounded-2xl shadow-lg bg-[#FCA801]/20"
+                >
+                  <Target className="w-8 h-8 text-[#FCA801]" />
+                </motion.div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white">Our Vision</h3>
+                </div>
+              </div>
+              <p className="text-white/80 leading-relaxed">
+                To become a <strong>trusted and innovative food manufacturing partner</strong>, recognized for quality, reliability and the ability to transform ideas into products that create lasting value for customers and consumers.
+              </p>
+            </motion.div>
+
+            {/* Mission Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex items-center justify-center w-16 h-16 rounded-2xl shadow-lg bg-[#FCA801]/20"
+                >
+                  <Award className="w-8 h-8 text-[#FCA801]" />
+                </motion.div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white">Our Mission</h3>
+                </div>
+              </div>
+              <p className="text-white/80 leading-relaxed">
+                To deliver high-quality snack products through <strong>innovation, manufacturing excellence, disciplined quality practices and customer-focused solutions</strong>, while continuously expanding our capabilities to meet the evolving requirements of domestic and international markets.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* 5. THE NGU PROMISE (White) */}
+      {/* ============================================ */}
+      <section className="py-16 md:py-24 relative diagonal-stripes">
+        <div className="container mx-auto px-4 md:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-[#0D258D]">
+              The NGU Promise
+            </h2>
+            
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-[#FCA801]">
+              Quality is our recipe. Trust is our brand.
+            </h3>
+            
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-gray-600 text-lg leading-relaxed">
+                From our beginnings in <strong>1996</strong> to where we stand today, our journey has been shaped by experience, strengthened by trust and driven by a passion for continuous improvement.
+              </p>
+              
+              <p className="text-gray-600 text-lg leading-relaxed">
+                With experience behind us, innovation ahead of us and quality at the heart of everything we do, <strong>NGU Foods & Beverages LLP</strong> continues to create products, partnerships and possibilities for the future of the snack industry.
+              </p>
+              
+              <div className="pt-8">
+                <p className="text-xl md:text-2xl font-bold text-[#0D258D] leading-relaxed">
+                  N.G.U. Creative Snacks — Creating Quality. Inspiring Innovation. Building Trust.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

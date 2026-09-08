@@ -28,7 +28,7 @@ export async function POST(request) {
 
     await transporter.sendMail({
       from: `"Website Forms" <${process.env.MAIL_USER}>`,
-      to: process.env.MAIL_USER,
+      to: "customercare@ngufoods.in, ngufoods27@gmail.com",
       replyTo: email,
       subject: `New ${type || "Contact"} Form Submission`,
       text: `

@@ -14,7 +14,6 @@ import {
   PartyPopper,
   Factory,
   ExternalLink,
-  MessageCircle,
   Download,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -388,7 +387,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       {/* ============================================ */}
       <section
         ref={heroRef}
-        className="relative min-h-[45vh] md:min-h-[75vh] flex place-items-center justify-between px-6 md:px-60 overflow-hidden"
+        className="relative w-full overflow-hidden"
         style={{ backgroundColor: '#0D258D' }}
       >
         {/* Navigation Buttons */}
@@ -411,7 +410,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             // First banner: single fullscreen image
             <motion.div
               key={currentBanner}
-              className="flex absolute left-0 top-0 w-full h-full flex items-center justify-center z-10"
+              className="w-full z-10"
               initial="hidden"
               animate="visible"
               exit="exit"
@@ -422,7 +421,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                     ? banners[currentBanner].image2
                     : banners[currentBanner].image1
                 }
-                className="w-full h-full object-cover"
+                className="w-full h-auto block"
                 alt="Banner Image"
                 initial={{ scale: 0.98, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -551,14 +550,21 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       </section>
 
       {/* ============================================ */}
-      {/* WHY CHOOSE NGU SECTION - Restyled */}
+      {/* HISTORY AND MILESTONES SECTION */}
       {/* ============================================ */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
         style={{ backgroundColor: '#0D258D' }}
       >
-        {/* featureBg background overlay */}
-        <div className="absolute inset-0 opacity-15">
+        {/* pattern-rays background overlay */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-15 animate-pan-rays"
+            style={{ backgroundSize: '200px 200px' }}
+          />
+        </div>
+        {/* featureBg overlay */}
+        <div className="absolute inset-0 opacity-10">
           <img
             src="/images/featureBg.png"
             alt=""
@@ -566,71 +572,61 @@ export default function HomePage({ navigateTo }: HomePageProps) {
           />
         </div>
 
-        {/* Decorative floating orbs */}
-        <motion.div
-          className="absolute top-20 -right-20 w-80 h-80 rounded-full bg-white/5"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full opacity-10"
-          style={{ backgroundColor: '#FCA801' }}
-          animate={{ scale: [1, 1.17, 1] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-
         <div className="container mx-auto px-4 relative z-10">
-          {/* Header Section */}
-          <div className="text-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            
+            {/* Left side: Text */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: "-100px" }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl md:text-5xl font-semibold mb-4"
-                style={{ color: '#FCA801' }}
-              >
-                Why Choose NGU Foods?
-              </motion.h2>
+              <h2 className="text-3xl md:text-4xl font-semibold mb-2" style={{ color: '#FCA801' }}>
+                History & Milestones
+              </h2>
+              <p className="text-xl text-white mb-6 font-medium">
+                From humble beginnings to snacking greatness
+              </p>
 
-              <motion.span
-                className="inline-block px-5 py-2 rounded-full text-sm font-medium mb-6 bg-white/10 text-white border border-white/20"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <motion.span
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                  className="inline-block mr-2"
-                >
-                  <Sparkles className="w-4 h-4 inline" style={{ color: '#FCA801' }} />
-                </motion.span>
-                WHY CHOOSE US
-              </motion.span>
+              <div className="mb-8">
+                <p className="text-white/80 mb-4 leading-relaxed">
+                  From humble beginnings, NGU Foods & Beverages LLP has risen to snacking greatness. 
+                  Since 1996, we have marked key milestones, from launching our flagship brand to 
+                  solidifying our place among the top food companies in India.
+                </p>
+                <p className="text-white/80 leading-relaxed">
+                  As one of the biggest snack companies, we continue to set benchmarks in taste and quality, 
+                  driven by our vision to remain at the forefront of the snacks industry globally.
+                </p>
+              </div>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg max-w-3xl mx-auto leading-relaxed text-white/80 mt-4"
+              <motion.button
+                onClick={() => navigateTo("about")}
+                className="px-8 py-3 rounded-full font-medium transition-all duration-300"
+                style={{ backgroundColor: '#FCA801', color: '#0D258D' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(252, 168, 1, 0.3)' }}
+                whileTap={{ scale: 0.95 }}
               >
-                We bring you snacks that combine incredible taste with uncompromising quality.
-              </motion.p>
+                Read More
+              </motion.button>
             </motion.div>
-          </div>
 
-          {/* Features Grid - glassmorphism cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} feature={feature} index={index} />
-            ))}
+            {/* Right side: Illustration (Placeholder) */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <img 
+                src="/placeholder.svg" 
+                alt="Milestones Illustration" 
+                className="max-w-full h-auto drop-shadow-2xl rounded-2xl w-3/4 object-cover object-center aspect-square"
+              />
+            </motion.div>
+
           </div>
         </div>
       </section>
@@ -835,10 +831,147 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       </div>
 
       {/* ============================================ */}
-      {/* FUN FACTS / SNACK TIME SECTION - Restyled */}
+      {/* WHY CHOOSE NGU SECTION - Restyled */}
       {/* ============================================ */}
       <section
         className="py-16 md:py-24 relative overflow-hidden"
+        style={{ backgroundColor: '#0D258D' }}
+      >
+        {/* featureBg background overlay */}
+        <div className="absolute inset-0 opacity-15">
+          <img
+            src="/images/featureBg.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Decorative floating orbs */}
+        <motion.div
+          className="absolute top-20 -right-20 w-80 h-80 rounded-full bg-white/5"
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full opacity-10"
+          style={{ backgroundColor: '#FCA801' }}
+          animate={{ scale: [1, 1.17, 1] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <motion.h2
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl md:text-5xl font-semibold mb-4"
+                style={{ color: '#FCA801' }}
+              >
+                Why Choose NGU Foods?
+              </motion.h2>
+
+              <motion.span
+                className="inline-block px-5 py-2 rounded-full text-sm font-medium mb-6 bg-white/10 text-white border border-white/20"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <motion.span
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                  className="inline-block mr-2"
+                >
+                  <Sparkles className="w-4 h-4 inline" style={{ color: '#FCA801' }} />
+                </motion.span>
+                WHY CHOOSE US
+              </motion.span>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg max-w-3xl mx-auto leading-relaxed text-white/80 mt-4"
+              >
+                We bring you snacks that combine incredible taste with uncompromising quality.
+              </motion.p>
+            </motion.div>
+          </div>
+
+          {/* Features Grid - glassmorphism cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <FeatureCard key={index} feature={feature} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* BRAND LOGO CAROUSEL */}
+      {/* ============================================ */}
+      <section className="py-12 md:py-16 relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 mb-8">
+          <div className="text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2" style={{ color: '#FCA801' }}>
+              Trusted By Brands
+            </h2>
+            <p className="text-gray-500 text-sm">Partnering with leading names in the snack industry</p>
+          </div>
+        </div>
+
+        {/* Infinite scroll container */}
+        <div className="relative w-full overflow-hidden">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+
+          <motion.div
+            className="flex items-center gap-16 w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25,
+                ease: "linear",
+              },
+            }}
+          >
+            {/* Duplicate logos for seamless loop */}
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={setIndex} className="flex items-center gap-16">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                  <div
+                    key={`${setIndex}-${num}`}
+                    className="flex-shrink-0 w-28 h-16 md:w-36 md:h-20 bg-gray-100 rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <img
+                      src="/placeholder.svg"
+                      alt={`Brand ${num}`}
+                      className="w-20 h-12 md:w-24 md:h-14 object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* FUN FACTS / SNACK TIME SECTION - Restyled */}
+      {/* ============================================ */}
+      <section
+        className="py-16 md:py-40 relative overflow-hidden"
         style={{ backgroundColor: '#0D258D' }}
       >
         {/* Rays pattern background */}
@@ -869,8 +1002,24 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10"
+              className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 relative"
             >
+              {/* Slide image overlay */}
+              <motion.img
+                src="/images/slide.png"
+                alt="Slide"
+                className="absolute -top-16 -left-8 md:-top-24 md:-left-16 w-32 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
+                animate={{
+                  y: [-10, 10, -10],
+                  rotate: [-2, 2, -2]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+
               <div className="text-center mb-8">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
@@ -945,9 +1094,9 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="text-4xl font-semibold mb-2 relative z-10" style={{ color: '#FCA801' }}>
-                    Since <Counter target={1996} duration={2.5} suffix="" />
+                    <Counter target={28} duration={2.5} suffix="+" />
                   </div>
-                  <p className="relative z-10 text-white/80">28+ Years</p>
+                  <p className="relative z-10 text-white/80">Years of Excellence</p>
                 </motion.div>
               </motion.div>
 
@@ -1125,47 +1274,6 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   </svg>
                   Follow on Facebook
                 </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: '0 8px 25px rgba(13, 37, 141, 0.3)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 rounded-full text-white font-medium flex items-center gap-2 transition-all duration-300 shadow-md"
-                  style={{ backgroundColor: '#0D258D' }}
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/company/ngufoods/",
-                      "_blank"
-                    )
-                  }
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.264 2.367 4.264 5.451v6.29zM5.337 7.433c-1.144 0-2.068-.928-2.068-2.07 0-1.144.924-2.07 2.068-2.07 1.144 0 2.07.926 2.07 2.07 0 1.142-.926 2.07-2.07 2.07zM6.823 20.452H3.851V9h2.972v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                  </svg>
-                  View LinkedIn
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05, boxShadow: '0 8px 25px rgba(217, 4, 41, 0.3)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 rounded-full text-white font-medium flex items-center gap-2 transition-all duration-300 shadow-md"
-                  style={{ backgroundColor: '#d90429' }}
-                  onClick={() =>
-                    window.open("https://www.youtube.com/@ngufoods", "_blank")
-                  }
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19.615 3.184C18.474 2.9 12 2.9 12 2.9s-6.474 0-7.615.284C2.23 3.45 1.5 4.187 1.5 6.241v11.518c0 2.054.73 2.791 2.885 3.057C5.526 20.9 12 20.9 12 20.9s6.474 0 7.615-.284C21.77 20.55 22.5 19.813 22.5 17.759V6.241c0-2.054-.73-2.791-2.885-3.057zM9.75 15.568V8.432L15.818 12 9.75 15.568z" />
-                  </svg>
-                  Subscribe on YouTube
-                </motion.button>
               </div>
             </motion.div>
           </div>
@@ -1261,7 +1369,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(37, 211, 102, 0.4)' }}
                 whileTap={{ scale: 0.95 }}
               >
-                <MessageCircle className="w-5 h-5" />
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 Enquire Now
               </motion.a>
             </div>

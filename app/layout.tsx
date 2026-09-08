@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: 'NGU Foods',
   description: '',
   generator: '',
-  
+  icons: {
+    icon: '/images/ngu-logo.png',
+    apple: '/images/ngu-logo.png',
+  },
 }
 
 export default function RootLayout({

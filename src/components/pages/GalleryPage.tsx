@@ -51,10 +51,16 @@ export default function GalleryPage() {
     if (e.key === "ArrowRight") navigateImage("next");
   };
 
+  const bannerData = {
+    bg: "/images/blue-bg.png",
+    image1: "/placeholder.svg",
+    image2: "/placeholder.svg"
+  }
+
   return (
     <div>
       {/* Hero Section */}
-      <HeroSection banner={heroSection} />
+      <HeroSection banner={bannerData} />
 
       {/* Gallery Filters */}
       <section className="py-8 border-b">

@@ -51,7 +51,7 @@ export default function Footer({ navigateTo }: FooterProps) {
           </div>
           <div>
             <h3 className="text-md mb-4 font-semibold" style={{ color: '#FCA801' }}>Quick Links</h3>
-            <div className="grid grid-cols-2 md:grid-cols-1 gap-x-6 gap-y-2">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2">
               <ul className="space-y-2">
                 <li>
                   <a
@@ -94,73 +94,11 @@ export default function Footer({ navigateTo }: FooterProps) {
                     href="#"
                     onClick={(e) => {
                       e.preventDefault()
-                      navigateTo("query")
-                    }}
-                    className="text-blue-200 hover:text-white transition-colors"
-                  >
-                    Dealership
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      navigateTo("testimonial")
-                    }}
-                    className="text-blue-200 hover:text-white transition-colors"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-              </ul>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      navigateTo("infra")
-                    }}
-                    className="text-blue-200 hover:text-white transition-colors"
-                  >
-                    Infrastructure
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault()
                       navigateTo("gallery")
                     }}
                     className="text-blue-200 hover:text-white transition-colors"
                   >
                     Gallery
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      navigateTo("blogs")
-                    }}
-                    className="text-blue-200 hover:text-white transition-colors"
-                  >
-                    Blogs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault()
-                      navigateTo("career")
-                    }}
-                    className="text-blue-200 hover:text-white transition-colors"
-                  >
-                    Careers
                   </a>
                 </li>
                 <li>
