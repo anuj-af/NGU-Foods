@@ -5,7 +5,7 @@ import HeroSection from "../HeroSection";
 
 export default function AboutPage() {
   const bannerData = {
-    bg: "/images/blue-bg.png",
+    bg: "/images/banners/about-us-banner.png",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   };
@@ -76,9 +76,9 @@ export default function AboutPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/placeholder.svg"
+                  src="/images/banners/snacks-top-view.png"
                   alt="Crafting Possibilities in Every Shape"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0D258D]/20 to-transparent"></div>
               </div>
@@ -118,28 +118,19 @@ export default function AboutPage() {
             style={{ backgroundSize: '200px 200px' }}
           />
         </div>
-        
-        {/* featureBg overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="/images/featureBg.png"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
-
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.7 }}
               viewport={{ once: true }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FCA801]/20 shadow-lg">
-                  <Shield className="w-7 h-7 text-[#FCA801]" />
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
+                  <img src="/images/banners/manufacturing-icon.png" alt="Manufacturing" className="w-8 h-8 object-contain" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
                   Manufacturing Excellence
@@ -160,13 +151,14 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[#FCA801]/20 shadow-lg">
-                  <Lightbulb className="w-7 h-7 text-[#FCA801]" />
+                <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
+                  <img src="/images/banners/innovation-icon.png" alt="Innovation" className="w-8 h-8 object-contain" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
                   Innovation That Takes Shape
@@ -229,12 +221,13 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-4 p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300"
+                style={{ backgroundColor: '#0D258D' }}
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[#0D258D]/10 text-[#0D258D]">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-white/20 text-white">
                   <Check className="w-5 h-5" />
                 </div>
-                <span className="text-gray-700 font-medium">{item}</span>
+                <span className="text-white font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
@@ -287,7 +280,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -8, scale: 1.05 }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
@@ -313,7 +306,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -8, scale: 1.05 }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">

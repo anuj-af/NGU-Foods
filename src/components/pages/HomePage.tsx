@@ -28,114 +28,8 @@ import Autoplay from "embla-carousel-autoplay";
 import CustomButton from "../ui/custom-button";
 import { Counter } from "../counter";
 import CursorGlow from "@/components/ui/cursor-glow";
-import newsItems from "../../data/news.json";
 import instagramData from "@/data/instagram-posts.json";
 import products from "@/data/ourDeliciousRange.json";
-
-interface NewsItem {
-  title: string;
-  image: string;
-  alt: string;
-  date: string;
-  slug: string;
-  description: string;
-  content: string;
-}
-
-const NewsModal = ({
-  news,
-  isOpen,
-  onClose,
-}: {
-  news: NewsItem | null;
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  if (!news) return null;
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            className="fixed inset-0 bg-black/50 z-40"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-          />
-
-          {/* Modal */}
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 mt-8"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-            onClick={onClose}
-          >
-            <motion.div
-              className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[85vh] overflow-y-auto"
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              exit={{ y: 20 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Image Section */}
-              <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-t-2xl bg-gray-200">
-                <img
-                  src={news.image || "/placeholder.svg"}
-                  alt={news.alt}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-
-              {/* Content Section */}
-              <div className="p-6 md:p-8">
-                {/* Date and Title */}
-                <div className="mb-6">
-                  <p className="text-sm font-medium mb-2 uppercase tracking-wide" style={{ color: '#0D258D' }}>
-                    {news.date}
-                  </p>
-                  <h2 className="text-2xl md:text-3xl font-normal text-gray-900 mb-4 leading-tight">
-                    {news.title}
-                  </h2>
-                  <div className="w-12 h-1 rounded-full" style={{ backgroundColor: '#0D258D' }}></div>
-                </div>
-
-                {/* Description */}
-                <div className="mb-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {news.description}
-                  </p>
-                </div>
-
-                {/* Content/Markup Area */}
-                <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                  <div className="prose prose-sm max-w-none text-gray-700 whitespace-pre-wrap">
-                    {news.content}
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <Button
-                  className="w-full md:w-auto text-white py-2 px-6 rounded-lg transition-colors"
-                  style={{ backgroundColor: '#0D258D' }}
-                  onClick={onClose}
-                >
-                  Close
-                </Button>
-              </div>
-            </motion.div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-};
-
 // Define types for our components
 interface Product {
   name: string;
@@ -214,6 +108,44 @@ const funFacts = [
   "The crunch sound of chips is designed to make snacks sound fresher.",
 ];
 
+// Snack sider component — shows individual product images between sections
+const SnackSider = ({ position, index }: { position: 'left' | 'right'; index: number }) => {
+  // 9 snacks in the sprite, each takes ~11.11% of the width
+  const offsetPercent = (index % 9) * 11.11;
+  return (
+    <div className={`hidden md:block relative h-16 w-full pointer-events-none z-10`}>
+      <motion.div
+        className={`absolute ${position === 'left' ? '-left-4 lg:left-8' : '-right-4 lg:right-8'} -top-8`}
+        initial={{ opacity: 0, x: position === 'left' ? -40 : 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        animate={{
+          y: [-4, 4, -4],
+          rotate: position === 'left' ? [-5, 5, -5] : [5, -5, 5],
+        }}
+        // @ts-ignore
+        transition={{
+          y: { duration: 5 + index, repeat: Infinity, ease: "easeInOut" },
+          rotate: { duration: 6 + index, repeat: Infinity, ease: "easeInOut" },
+        }}
+      >
+        <div className="w-20 h-20 lg:w-24 lg:h-24 overflow-hidden">
+          <img
+            src="/images/banners/siders.png"
+            alt=""
+            className="h-full object-cover"
+            style={{
+              width: '900%',
+              objectPosition: `${offsetPercent}% center`,
+            }}
+          />
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
 // Feature card with glassmorphism hover — completely restyled
 const FeatureCard = ({
   feature,
@@ -250,7 +182,11 @@ const FeatureCard = ({
         transition={{ type: "spring", stiffness: 300 }}
         className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${feature.iconBg} mb-6 shadow-lg`}
       >
-        <feature.icon className={`w-10 h-10 ${feature.iconColor}`} />
+        {typeof feature.icon === 'string' ? (
+          <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
+        ) : (
+          <feature.icon className={`w-10 h-10 ${feature.iconColor}`} />
+        )}
       </motion.div>
 
       {/* Title */}
@@ -287,8 +223,6 @@ export default function HomePage({ navigateTo }: HomePageProps) {
   const [currentFactIndex, setCurrentFactIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
-  const [isNewsModalOpen, setIsNewsModalOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -329,21 +263,21 @@ export default function HomePage({ navigateTo }: HomePageProps) {
 
   const features = [
     {
-      icon: Sparkles,
+      icon: "/images/banners/variety-icon.png",
       title: "Incredible Variety",
       description: "From classic to exotic, we offer an incredible variety of flavors to satisfy every craving.",
       iconColor: "text-ngu-yellow",
       iconBg: "bg-amber-50",
     },
     {
-      icon: Heart,
+      icon: "/images/banners/sharing-icon.png",
       title: "Great for Sharing",
       description: "Our snacks bring people together, creating precious moments of joy and connection with loved ones.",
       iconColor: "text-ngu-red",
       iconBg: "bg-red-50",
     },
     {
-      icon: Factory,
+      icon: "/images/banners/quality-icon.png",
       title: "Premium Quality",
       description: "State-of-the-art facilities and rigorous quality control ensure every pack meets our highest standards.",
       iconColor: "text-ngu-blue",
@@ -356,6 +290,16 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       id: 0,
       image1: "/images/Banner.jpg",
       image2: "/images/Banner.jpg",
+    },
+    {
+      id: 1,
+      image1: "/images/banners/banner1.png",
+      image2: "/images/banners/banner1.png",
+    },
+    {
+      id: 2,
+      image1: "/images/banners/banner2.png",
+      image2: "/images/banners/banner2.png",
     }
   ];
 
@@ -406,8 +350,6 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </button>
 
         <AnimatePresence mode="wait">
-          {currentBanner === 0 ? (
-            // First banner: single fullscreen image
             <motion.div
               key={currentBanner}
               className="w-full z-10"
@@ -429,37 +371,6 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 transition={{ duration: 0.8, ease: "easeInOut" }}
               />
             </motion.div>
-          ) : (
-            // 2nd/3rd banners: two side-by-side images
-            <motion.div
-              key={currentBanner}
-              className="flex place-items-center justify-between w-full"
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              {/* Left image - Slide in from left */}
-              <motion.img
-                src={banners[currentBanner].image1}
-                className="w-1/2 ms-0 md:w-2/5 md:me-16 md:mt-10 drop-shadow-2xl"
-                alt="Left Banner Image"
-                initial={{ x: -200, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -200, opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-              />
-              {/* Right image - Drop in from top */}
-              <motion.img
-                src={banners[currentBanner].image2}
-                className="w-1/2 md:w-2/5 md:h-4/5 me-8 md:mx-16 md:mt-10 drop-shadow-2xl"
-                alt="Right Banner Image"
-                initial={{ y: -200, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 200, opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-              />
-            </motion.div>
-          )}
         </AnimatePresence>
 
       </section>
@@ -478,14 +389,12 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               viewport={{ once: true, margin: "-100px" }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center" style={{ backgroundColor: '#0D258D' }}>
                 <img
-                  src="/images/about-us.png"
-                  alt="About NGU Foods"
-                  className="w-full h-72 md:h-96 object-cover"
+                  src="/images/banners/world.png"
+                  alt="NGU Foods Global Reach"
+                  className="w-full h-72 md:h-[400px] object-contain"
                 />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#0D258D]/20 to-transparent"></div>
               </div>
               {/* Decorative element */}
               <motion.div
@@ -524,7 +433,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 ABOUT US
               </motion.span>
 
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ color: '#FCA801' }}>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-wide mb-6" style={{ color: '#FCA801' }}>
                 Crafting Possibilities in Every Shape
               </h2>
 
@@ -549,6 +458,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </div>
       </section>
 
+
       {/* ============================================ */}
       {/* HISTORY AND MILESTONES SECTION */}
       {/* ============================================ */}
@@ -556,19 +466,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         className="py-16 md:py-24 relative overflow-hidden"
         style={{ backgroundColor: '#0D258D' }}
       >
-        {/* pattern-rays background overlay */}
+        {/* Rays pattern background */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-15 animate-pan-rays"
             style={{ backgroundSize: '200px 200px' }}
-          />
-        </div>
-        {/* featureBg overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="/images/featureBg.png"
-            alt=""
-            className="w-full h-full object-cover"
           />
         </div>
 
@@ -582,7 +484,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-semibold mb-2" style={{ color: '#FCA801' }}>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-wide mb-2" style={{ color: '#FCA801' }}>
                 History & Milestones
               </h2>
               <p className="text-xl text-white mb-6 font-medium">
@@ -612,7 +514,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               </motion.button>
             </motion.div>
 
-            {/* Right side: Illustration (Placeholder) */}
+            {/* Right side: Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -620,16 +522,19 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               viewport={{ once: true }}
               className="flex justify-center"
             >
-              <img 
-                src="/placeholder.svg" 
-                alt="Milestones Illustration" 
-                className="max-w-full h-auto drop-shadow-2xl rounded-2xl w-3/4 object-cover object-center aspect-square"
-              />
+              <div className="bg-white rounded-2xl p-4 shadow-xl">
+                <img 
+                  src="/images/banners/history-milestone.png" 
+                  alt="NGU History & Milestones" 
+                  className="w-full h-76 md:h-[400px] rounded-xl object-contain"
+                />
+              </div>
             </motion.div>
 
           </div>
         </div>
       </section>
+
 
       {/* ============================================ */}
       {/* NGU FOODS PREMIUM COLLECTION - Restyled */}
@@ -648,7 +553,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-3xl md:text-5xl font-semibold mb-4" style={{ color: '#FCA801' }}>
+              <h2 className="text-3xl md:text-5xl font-medium tracking-wide mb-4" style={{ color: '#FCA801' }}>
                 NGU Foods Premium Collection
               </h2>
               <motion.span
@@ -703,132 +608,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         {/* Cursor glow effect */}
         <CursorGlow />
 
-        {false && ( <>
-<section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#0D258D' }}>
-          {/* Subtle background elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <motion.div
-              className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-15"
-              animate={{ x: [-20, 0], y: [-20, 0] }}
-              transition={{
-                duration: 60,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "reverse",
-              }}
-            />
-          </div>
-          <motion.div
-            className="absolute top-20 right-0 w-64 h-64 rounded-full bg-white/10 opacity-30 blur-3xl"
-            animate={{
-              x: [0, 30, 0],
-              y: [0, 20, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
-          />
-
-          <motion.div
-            className="absolute bottom-20 left-0 w-80 h-80 rounded-full bg-white/10 opacity-30 blur-3xl"
-            animate={{
-              x: [0, -20, 0],
-              y: [0, 30, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              repeatType: "reverse",
-            }}
-          />
-
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col lg:flex-row items-start gap-8">
-              {/* Left side - Title */}
-              <div className="lg:w-1/4 mb-8 lg:mb-0">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <h2 className="text-4xl lg:text-5xl font-normal text-white mb-4">
-                    Recent
-                  </h2>
-                  <p className="text-2xl lg:text-3xl text-white/90 font-normal">
-                    News and updates
-                  </p>
-                  <div className="w-16 h-1 mt-4" style={{ backgroundColor: '#FCA801' }}></div>
-                </motion.div>
-              </div>
-
-              {/* Right side - News Cards Carousel */}
-              <div className="w-full relative">
-                <Carousel
-                  isOverflow={true}
-                  className="w-full"
-                  opts={{ loop: true }}
-                  plugins={[Autoplay({ delay: 4000 })]}
-                >
-                  <CarouselContent className="-ml-4 mt-2 mb-2">
-                    {newsItems.map((item, index) => (
-                      <CarouselItem
-                        key={index}
-                        className="pl-4 md:basis-1/2 lg:basis-1/3 mt-4 md:mt-0"
-                      >
-                        <motion.div
-                          initial={{ opacity: 0, y: 30 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                          viewport={{ once: true }}
-                          whileHover={{ y: -5 }}
-                          onClick={() => {
-                            setSelectedNews(item);
-                            setIsNewsModalOpen(true);
-                          }}
-                          className="bg-white rounded-xl overflow-hidden shadow-lg h-full cursor-pointer transition-all"
-                        >
-                          <div className="h-48  bg-white relative overflow-hidden flex items-center justify-center">
-                            <img
-                              src={item.image || "/placeholder.svg"}
-                              alt={item.alt}
-                              className="w-full h-full object-fit"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                          </div>
-                          <div className="p-4 opacity-90" style={{ backgroundColor: '#0D258D' }}>
-                            <p className=" font-normal text-md line-clamp-2 text-white">
-                              {item.title}
-                            </p>
-                          </div>
-                        </motion.div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  {/* Mobile arrows */}
-                  <CarouselPrevious className="left-2 sm:hidden" />
-                  <CarouselNext className="right-2 sm:hidden" />
-
-                  {/* Desktop arrows */}
-                  <CarouselPrevious className="-left-12" />
-                  <CarouselNext className="-right-12" />
-                </Carousel>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <NewsModal
-          news={selectedNews}
-          isOpen={isNewsModalOpen}
-          onClose={() => {
-            setIsNewsModalOpen(false);
-            setSelectedNews(null);
-          }}
-        />
-</> )}
       </div>
+
 
       {/* ============================================ */}
       {/* WHY CHOOSE NGU SECTION - Restyled */}
@@ -837,12 +618,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         className="py-16 md:py-24 relative overflow-hidden"
         style={{ backgroundColor: '#0D258D' }}
       >
-        {/* featureBg background overlay */}
-        <div className="absolute inset-0 opacity-15">
-          <img
-            src="/images/featureBg.png"
-            alt=""
-            className="w-full h-full object-cover"
+        {/* Rays pattern background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="w-[120%] h-[120%] bg-[url('/images/pattern-rays.svg')] opacity-15 animate-pan-rays"
+            style={{ backgroundSize: '200px 200px' }}
           />
         </div>
 
@@ -872,7 +652,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl md:text-5xl font-semibold mb-4"
+                className="text-3xl md:text-5xl font-medium tracking-wide mb-4"
                 style={{ color: '#FCA801' }}
               >
                 Why Choose NGU Foods?
@@ -915,13 +695,14 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </div>
       </section>
 
+
       {/* ============================================ */}
       {/* BRAND LOGO CAROUSEL */}
       {/* ============================================ */}
       <section className="py-12 md:py-16 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 mb-8">
           <div className="text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-2" style={{ color: '#FCA801' }}>
+            <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-2" style={{ color: '#FCA801' }}>
               Trusted By Brands
             </h2>
             <p className="text-gray-500 text-sm">Partnering with leading names in the snack industry</p>
@@ -941,7 +722,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 25,
+                duration: 30,
                 ease: "linear",
               },
             }}
@@ -949,15 +730,20 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             {/* Duplicate logos for seamless loop */}
             {[...Array(2)].map((_, setIndex) => (
               <div key={setIndex} className="flex items-center gap-16">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                {[
+                  "420 NAMKEEN", "AKASHNJI", "BABLU", "CLASSIC", "DARSHAN", "DEVARPAN",
+                  "FUN FINE", "GME", "GWALIA", "HALDIRAMS", "JAYANTI", "KHUSH HAL",
+                  "KISHLAY", "LACY", "MODI'S", "MUNCH ONN", "NEZONE", "NOVICE",
+                  "SATMOLA", "SHYAM G", "SUNDER", "SUPER AMAL", "YUMMFEAST"
+                ].map((brand) => (
                   <div
-                    key={`${setIndex}-${num}`}
-                    className="flex-shrink-0 w-28 h-16 md:w-36 md:h-20 bg-gray-100 rounded-xl flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
+                    key={`${setIndex}-${brand}`}
+                    className="flex-shrink-0 w-28 h-16 md:w-36 md:h-20 bg-gray-50 rounded-xl flex items-center justify-center "
                   >
                     <img
-                      src="/placeholder.svg"
-                      alt={`Brand ${num}`}
-                      className="w-20 h-12 md:w-24 md:h-14 object-contain"
+                      src={`/images/brand-logos/${brand}.png`}
+                      alt={brand}
+                      className="w-20 h-12 md:w-28 md:h-16 object-contain"
                     />
                   </div>
                 ))}
@@ -966,6 +752,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
           </motion.div>
         </div>
       </section>
+
 
       {/* ============================================ */}
       {/* FUN FACTS / SNACK TIME SECTION - Restyled */}
@@ -983,17 +770,6 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </div>
 
         {/* Floating decorative orbs */}
-        <motion.div
-          className="absolute top-20 -right-20 w-80 h-80 rounded-full bg-white/5"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 5, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full opacity-10"
-          style={{ backgroundColor: '#FCA801' }}
-          animate={{ scale: [1, 1.17, 1] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -1004,19 +780,35 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               viewport={{ once: true, margin: "-100px" }}
               className="bg-white/5 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10 relative"
             >
-              {/* Slide image overlay */}
+              {/* Fun fact graphic - right top */}
               <motion.img
-                src="/images/slide.png"
-                alt="Slide"
-                className="absolute -top-16 -left-8 md:-top-24 md:-left-16 w-32 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
+                src="/images/banners/funfact-right-top.png"
+                alt=""
+                className="absolute -top-12 -right-8 md:-top-40 md:-right-40 w-28 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
                 animate={{
-                  y: [-10, 10, -10],
-                  rotate: [-2, 2, -2]
+                  y: [-8, 8, -8],
+                  rotate: [-3, 3, -3]
                 }}
                 transition={{
                   duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut"
+                }}
+              />
+              {/* Fun fact graphic - left bottom */}
+              <motion.img
+                src="/images/banners/funfact-left-bottom.png"
+                alt=""
+                className="absolute -bottom-10 -left-6 md:-bottom-24 md:-left-28 w-24 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
+                animate={{
+                  y: [6, -6, 6],
+                  rotate: [2, -2, 2]
+                }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
                 }}
               />
 
@@ -1033,7 +825,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   >
                     <PartyPopper className="w-12 h-12 mx-auto mb-4" style={{ color: '#FCA801' }} />
                   </motion.div>
-                  <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-white z-30">
+                  <h2 className="text-3xl md:text-4xl font-medium tracking-wide mb-4 text-white z-30">
                     Snack Time Fun Facts
                   </h2>
                   <motion.div
@@ -1122,6 +914,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </div>
       </section>
 
+
       {/* ============================================ */}
       {/* SOCIAL MEDIA SECTION - Restyled */}
       {/* ============================================ */}
@@ -1139,7 +932,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <h2 className="text-3xl md:text-5xl pb-2 mb-4 font-semibold" style={{ color: '#FCA801' }}>
+              <h2 className="text-3xl md:text-5xl pb-2 mb-4 font-medium tracking-wide" style={{ color: '#FCA801' }}>
                 @ngufoods
               </h2>
               <motion.span
@@ -1280,6 +1073,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
         </div>
       </section>
 
+
       {/* ============================================ */}
       {/* BROCHURE CTA SECTION - Restyled + Enquire Button */}
       {/* ============================================ */}
@@ -1336,7 +1130,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               <Download className="w-12 h-12" style={{ color: '#FCA801' }} />
             </motion.div>
 
-            <h2 className="text-3xl md:text-5xl font-semibold mb-6" style={{ color: '#FCA801' }}>
+            <h2 className="text-3xl md:text-5xl font-medium tracking-wide mb-6" style={{ color: '#FCA801' }}>
               Discover the NGU Foods Brochure
             </h2>
             <p className="text-xl mb-10 text-white/80">

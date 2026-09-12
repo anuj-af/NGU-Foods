@@ -10,8 +10,9 @@ interface FooterProps {
 
 export default function Footer({ navigateTo }: FooterProps) {
   return (
-    <footer style={{ backgroundColor: '#0D258D' }} className="text-white py-12">
-      <div className="container mx-auto px-12">
+    <footer className="text-white py-12 relative" style={{ backgroundImage: "url('/images/banners/background.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="absolute inset-0 bg-[#0D258D]/85" />
+      <div className="container mx-auto px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">

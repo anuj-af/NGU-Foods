@@ -185,7 +185,7 @@ export default function ProductPage({category} : any) {
   }
 
   const bannerData = {
-    bg: "/images/blue-bg.png",
+    bg: "/images/banners/products-banner.png",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   }

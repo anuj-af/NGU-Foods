@@ -52,7 +52,7 @@ export default function GalleryPage() {
   };
 
   const bannerData = {
-    bg: "/images/blue-bg.png",
+    bg: "/images/banners/gallery-banner.png",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   }

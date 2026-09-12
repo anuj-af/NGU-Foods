@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 type Banner = {
   bg: string;
@@ -17,39 +17,20 @@ export default function HeroSection({ banner }: HeroSectionProps) {
   return (
     <section
       ref={heroRef}
-      style={{ backgroundImage: `url(${banner.bg})` }}
-      className="relative min-h-[45vh] md:min-h-[60vh] flex place-items-center justify-between px-6 md:px-60 overflow-hidden bg-cover bg-center"
+      className="relative min-h-[45vh] md:min-h-[60vh] flex place-items-center justify-between px-6 md:px-60 overflow-hidden"
     >
-      <AnimatePresence mode="wait">
-        <motion.div
-          className="flex place-items-center justify-between w-full"
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          {/* Left image - Slide in from left */}
-          <motion.img
-            src={banner.image1}
-            className="w-1/2 ms-0 md:w-2/5 md:me-16 md:mt-10 drop-shadow-2xl"
-            alt="Left Banner Image"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -200, opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-          />
+      {/* Animated Background */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url('${banner.bg}')` }}
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      />
 
-          {/* Right image - Drop in from top */}
-          <motion.img
-            src={banner.image2}
-            className="w-1/2 md:w-2/5 md:h-2/5 me-8 mb-16 md:mx-16 md:mt-10 drop-shadow-2xl"
-            alt="Right Banner Image"
-            initial={{ y: -200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 200, opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-          />
-        </motion.div>
-      </AnimatePresence>
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        {/* Banner content can go here if needed in the future */}
+      </div>
 
       {/* SVG Wave decorations – unchanged from your code */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 transform rotate-180 z-10">
