@@ -2,21 +2,21 @@
   {
     "name": "Aeroplane Snacks",
     "description": "Fun aeroplane shaped crunchy snacks",
-    "image": "/images/products/AEROPLANE B.png",
+    "image": "/images/products/AEROPLANE B.webp",
     "price": "\u20b910",
     "category": "Aeroplane Snacks"
   },
   {
     "name": "Alphabet Snacks",
     "description": "Learn and munch with alphabet shaped crisps",
-    "image": "/images/products/ALPHABET B.png",
+    "image": "/images/products/ALPHABET B.webp",
     "price": "\u20b95",
     "category": "Alphabet Snacks"
   },
   {
     "name": "Aloo Tikki",
     "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 185 - 195 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Rice Flour, Topica Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder.",
-    "image": "/images/products/Aloo Tikki.png",
+    "image": "/images/products/Aloo Tikki.webp",
     "price": "\u20b910",
     "category": "Aloo Tikki",
     "fryTime": "25 - 35 sec",
@@ -26,7 +26,7 @@
   {
     "name": "Baby Rings",
     "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 190 - 195 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
-    "image": "/images/products/BABY RING B.png",
+    "image": "/images/products/BABY RING B.webp",
     "price": "\u20b910",
     "category": "Baby Ring",
     "fryTime": "25 - 35 sec",

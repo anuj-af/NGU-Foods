@@ -53,7 +53,7 @@ export default function GalleryPage() {
   };
 
   const bannerData = {
-    bg: "/images/banners/gallery-banner.png",
+    bg: "/images/banners/gallery-banner.webp",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   }
@@ -93,7 +93,7 @@ export default function GalleryPage() {
                 onClick={() => openModal(index)}
               >
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden relative">
-                  <Image
+                  <Image priority
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
                     fill
@@ -157,7 +157,7 @@ export default function GalleryPage() {
               </button>
 
               {/* Image */}
-              <Image
+              <Image priority
                 src={filteredGallery[selectedImage]?.image || "/placeholder.svg"}
                 alt={filteredGallery[selectedImage]?.title}
                 fill

@@ -44,9 +44,9 @@ export default function BlogsPage() {
   };
 
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/blogs/left.png",
-    image2: "/images/banners/blogs/right.png"
+    bg: "/images/bg.webp",
+    image1: "/images/banners/blogs/left.webp",
+    image2: "/images/banners/blogs/right.webp"
   }
 
   return (
@@ -57,7 +57,7 @@ export default function BlogsPage() {
       {featuredBlog && selectedCategory === "All" && !searchQuery && (
         <section className="font-sans py-20"
         style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -245,7 +245,7 @@ export default function BlogsPage() {
       {/* Newsletter Section - reverted to blue colors */}
       <section className="py-20 bg-white"
       style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",

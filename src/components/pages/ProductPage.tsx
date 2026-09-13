@@ -50,7 +50,7 @@ const ProductCircle = ({
         }}
         style={{ transformOrigin: "center center" }}
       >
-        <Image src="/images/patch-blue.png" alt="" fill className="object-contain" sizes="208px" />
+        <Image src="/images/patch-blue.webp" alt="" fill className="object-contain" sizes="208px" />
       </motion.div>
 
       <motion.div
@@ -233,7 +233,7 @@ export default function ProductPage({category} : any) {
   }
 
   const bannerData = {
-    bg: "/images/banners/products-banner.png",
+    bg: "/images/banners/products-banner.webp",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   }
@@ -339,7 +339,7 @@ export default function ProductPage({category} : any) {
       <section
         className="py-16 relative"
         style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",

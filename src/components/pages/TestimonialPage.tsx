@@ -23,9 +23,9 @@ export default function TestimonialPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/testimonial/left.png",
-    image2: "/images/banners/testimonial/right.png",
+    bg: "/images/bg.webp",
+    image1: "/images/banners/testimonial/left.webp",
+    image2: "/images/banners/testimonial/right.webp",
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -86,7 +86,7 @@ ${feedback}
       <section
         className="py-16 relative"
         style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -149,7 +149,7 @@ ${feedback}
                       </blockquote>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4 relative">
-                          <Image width={800} height={600}
+                          <Image priority width={800} height={600}
                             src={testimonial.image || "/placeholder.svg"}
                             alt={testimonial.name}
                             className="w-full h-full object-cover relative z-10"

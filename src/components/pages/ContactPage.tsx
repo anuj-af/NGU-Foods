@@ -13,7 +13,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   
   const bannerData = {
-    bg: "/images/banners/contact-banner.png",
+    bg: "/images/banners/contact-banner.webp",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   }

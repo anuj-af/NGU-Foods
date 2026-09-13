@@ -24,9 +24,9 @@ export default function QueryPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/dealership/left.png",
-    image2: "/images/banners/dealership/right.png",
+    bg: "/images/bg.webp",
+    image1: "/images/banners/dealership/left.webp",
+    image2: "/images/banners/dealership/right.webp",
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -520,7 +520,7 @@ ${message}
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-red-600 bg-[url('/images/bg.png')] text-white text-center">
+      <section className="py-16 bg-red-600 bg-[url('/images/bg.webp')] text-white text-center">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

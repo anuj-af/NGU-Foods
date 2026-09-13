@@ -1,21 +1,22 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Import components
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+const Footer = dynamic(() => import("./components/Footer"));
 import HomePage from "./components/pages/HomePage";
-import AboutPage from "./components/pages/AboutPage";
+const AboutPage = dynamic(() => import("./components/pages/AboutPage"));
 import ProductPage from "./components/pages/ProductPage";
-import TestimonialPage from "./components/pages/TestimonialPage";
-import InfraPage from "./components/pages/InfraPage";
-import GalleryPage from "./components/pages/GalleryPage";
-import QueryPage from "./components/pages/QueryPage";
-import BlogsPage from "./components/pages/BlogsPage";
-import CareerPage from "./components/pages/CareerPage";
-import ContactPage from "./components/pages/ContactPage";
+const TestimonialPage = dynamic(() => import("./components/pages/TestimonialPage"));
+const InfraPage = dynamic(() => import("./components/pages/InfraPage"));
+const GalleryPage = dynamic(() => import("./components/pages/GalleryPage"));
+const QueryPage = dynamic(() => import("./components/pages/QueryPage"));
+const BlogsPage = dynamic(() => import("./components/pages/BlogsPage"));
+const CareerPage = dynamic(() => import("./components/pages/CareerPage"));
+const ContactPage = dynamic(() => import("./components/pages/ContactPage"));
 import { AccessRestriction } from "./components/access-restriction";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";

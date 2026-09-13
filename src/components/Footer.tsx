@@ -12,13 +12,13 @@ interface FooterProps {
 
 export default function Footer({ navigateTo }: FooterProps) {
   return (
-    <footer className="text-white py-12 relative" style={{ backgroundImage: "url('/images/banners/background.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <footer className="text-white py-12 relative" style={{ backgroundImage: "url('/images/banners/background.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="absolute inset-0 bg-[#0D258D]/85" />
       <div className="container mx-auto px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Image src="/images/ngu-logo.png" alt="NGU Foods" width={160} height={64} className="h-16 w-auto object-contain" />
+              <Image priority src="/images/ngu-logo.webp" alt="NGU Foods" width={160} height={64} className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 mb-4">
               Crafting possibilities in every shape — from Fryums to Snack Pellets, we deliver quality snacks trusted by businesses across India.

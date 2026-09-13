@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Shield, Lightbulb, Check, Target, Award } from "lucide-react";
@@ -6,7 +7,7 @@ import HeroSection from "../HeroSection";
 
 export default function AboutPage() {
   const bannerData = {
-    bg: "/images/banners/about-us-banner.png",
+    bg: "/images/banners/about-us-banner.webp",
     image1: "/placeholder.svg",
     image2: "/placeholder.svg"
   };
@@ -76,8 +77,8 @@ export default function AboutPage() {
               className="relative h-full flex flex-col justify-center"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/banners/snacks-top-view.png"
+                <Image priority
+                  src="/images/banners/snacks-top-view.webp"
                   alt="Crafting Possibilities in Every Shape"
                   width={800}
                   height={800}
@@ -133,7 +134,7 @@ export default function AboutPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
-                  <Image src="/images/banners/manufacturing-icon.png" alt="Manufacturing" width={32} height={32} className="object-contain" />
+                  <Image priority src="/images/banners/manufacturing-icon.webp" alt="Manufacturing" width={32} height={32} className="object-contain" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-[#FCA801]">
                   Manufacturing Excellence
@@ -161,7 +162,7 @@ export default function AboutPage() {
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
-                  <Image src="/images/banners/innovation-icon.png" alt="Innovation" width={32} height={32} className="object-contain" />
+                  <Image priority src="/images/banners/innovation-icon.webp" alt="Innovation" width={32} height={32} className="object-contain" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-[#FCA801]">
                   Innovation That Takes Shape

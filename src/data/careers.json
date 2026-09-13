@@ -1,12 +1,12 @@
 {
   "heroSection": {
-    "bg": "/images/bg.png",
-    "image1": "/images/banners/careers/left.png",
-    "image2": "/images/banners/careers/right.png"
+    "bg": "/images/bg.webp",
+    "image1": "/images/banners/careers/left.webp",
+    "image2": "/images/banners/careers/right.webp"
   },
   "whyJoinUs": {
     "title": "Why Join Our Team?",
-    "image": "/images/carrers/team.png",
+    "image": "/images/carrers/team.webp",
     "paragraphs": [
       "At NGU Foods, we believe that our team is the backbone of our success. We're looking for passionate, driven individuals who are excited about our products and eager to help customers find the right solutions for their needs.",
       "As a member of our team, you'll have the opportunity to grow professionally, earn competitive compensation, and work in a supportive, collaborative environment.",

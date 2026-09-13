@@ -55,7 +55,7 @@ export default function HeroSection({ banner }: HeroSectionProps) {
             </clipPath>
           </defs>
           <image
-            href="/images/white-bg1.jpg"
+            href="/images/white-bg1.webp"
             width="1200"
             height="120"
             preserveAspectRatio="none"

@@ -67,7 +67,7 @@ const ProductCircle = ({
         }}
         style={{ transformOrigin: "center center" }}
       >
-        <Image src="/images/patch-blue.png" alt="" fill className="object-contain" sizes="208px" />
+        <Image priority src="/images/patch-blue.webp" alt="" fill className="object-contain" sizes="208px" />
       </motion.div>
 
       <motion.div
@@ -78,7 +78,7 @@ const ProductCircle = ({
         whileHover={{ scale: 1.2 }}
         className="w-56 h-48 -rotate-12 mb-12 relative z-10"
       >
-        <Image src={product.image} alt={product.name} fill className="object-contain" sizes="224px" />
+        <Image priority src={product.image} alt={product.name} fill className="object-contain" sizes="224px" />
       </motion.div>
 
       {/* Label/Button */}
@@ -135,8 +135,8 @@ const SnackSider = ({ position, index }: { position: 'left' | 'right'; index: nu
         }}
       >
         <div className="w-20 h-20 lg:w-24 lg:h-24 overflow-hidden">
-          <Image
-            src="/images/banners/siders.png"
+          <Image priority
+            src="/images/banners/siders.webp"
             alt=""
             width={864}
             height={96}
@@ -189,7 +189,7 @@ const FeatureCard = ({
         className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${feature.iconBg} mb-6 shadow-lg`}
       >
         {typeof feature.icon === 'string' ? (
-          <Image src={feature.icon as string} alt={feature.title} width={48} height={48} className="object-contain" />
+          <Image priority src={feature.icon as string} alt={feature.title} width={48} height={48} className="object-contain" />
         ) : (
           <feature.icon className={`w-10 h-10 ${feature.iconColor}`} />
         )}
@@ -250,10 +250,10 @@ export default function HomePage({ navigateTo }: HomePageProps) {
   }, []);
 
   const chipVariants = [
-    "images/chips1.png",
-    "images/chips2.png",
-    "images/chips3.png",
-    "images/chips4.png",
+    "images/chips1.webp",
+    "images/chips2.webp",
+    "images/chips3.webp",
+    "images/chips4.webp",
   ];
 
   useEffect(() => {
@@ -269,21 +269,21 @@ export default function HomePage({ navigateTo }: HomePageProps) {
 
   const features = [
     {
-      icon: "/images/banners/variety-icon.png",
+      icon: "/images/banners/variety-icon.webp",
       title: "Incredible Variety",
       description: "From classic to exotic, we offer an incredible variety of flavors to satisfy every craving.",
       iconColor: "text-ngu-yellow",
       iconBg: "bg-amber-50",
     },
     {
-      icon: "/images/banners/sharing-icon.png",
+      icon: "/images/banners/sharing-icon.webp",
       title: "Great for Sharing",
       description: "Our snacks bring people together, creating precious moments of joy and connection with loved ones.",
       iconColor: "text-ngu-red",
       iconBg: "bg-red-50",
     },
     {
-      icon: "/images/banners/quality-icon.png",
+      icon: "/images/banners/quality-icon.webp",
       title: "Premium Quality",
       description: "State-of-the-art facilities and rigorous quality control ensure every pack meets our highest standards.",
       iconColor: "text-ngu-blue",
@@ -294,18 +294,18 @@ export default function HomePage({ navigateTo }: HomePageProps) {
   const banners = [
     {
       id: 0,
-      image1: "/images/Banner.jpg",
-      image2: "/images/Banner.jpg",
+      image1: "/images/Banner.webp",
+      image2: "/images/Banner.webp",
     },
     {
       id: 1,
-      image1: "/images/banners/banner1.png",
-      image2: "/images/banners/banner1.png",
+      image1: "/images/banners/banner1.webp",
+      image2: "/images/banners/banner1.webp",
     },
     {
       id: 2,
-      image1: "/images/banners/banner2.png",
-      image2: "/images/banners/banner2.png",
+      image1: "/images/banners/banner2.webp",
+      image2: "/images/banners/banner2.webp",
     }
   ];
 
@@ -396,8 +396,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center" style={{ backgroundColor: '#0D258D' }}>
-                <Image
-                  src="/images/banners/world.png"
+                <Image priority
+                  src="/images/banners/world.webp"
                   alt="NGU Foods Global Reach"
                   width={800}
                   height={400}
@@ -531,8 +531,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               className="flex justify-center"
             >
               <div className="bg-white rounded-2xl p-4 shadow-xl">
-                <Image 
-                  src="/images/banners/history-milestone.png" 
+                <Image priority 
+                  src="/images/banners/history-milestone.webp" 
                   alt="NGU History & Milestones" 
                   width={800}
                   height={400}
@@ -750,8 +750,8 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                     key={`${setIndex}-${brand}`}
                     className="flex-shrink-0 w-28 h-16 md:w-36 md:h-20 bg-gray-50 rounded-xl flex items-center justify-center "
                   >
-                    <Image
-                      src={`/images/brand-logos/${brand}.png`}
+                    <Image priority
+                      src={`/images/brand-logos/${brand}.webp`}
                       alt={brand}
                       width={112}
                       height={64}
@@ -794,7 +794,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             >
               {/* Fun fact graphic - right top */}
               <motion.img
-                src="/images/banners/funfact-right-top.png"
+                src="/images/banners/funfact-right-top.webp"
                 alt=""
                 className="absolute -top-12 -right-8 md:-top-40 md:-right-40 w-28 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
                 animate={{
@@ -809,7 +809,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               />
               {/* Fun fact graphic - left bottom */}
               <motion.img
-                src="/images/banners/funfact-left-bottom.png"
+                src="/images/banners/funfact-left-bottom.webp"
                 alt=""
                 className="absolute -bottom-10 -left-6 md:-bottom-24 md:-left-28 w-24 md:w-56 object-contain z-20 pointer-events-none drop-shadow-2xl"
                 animate={{
@@ -982,7 +982,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   onClick={() => window.open(post.link, "_blank")}
                 >
                   <div className="aspect-square relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #dbeafe 100%)' }}>
-                    <Image
+                    <Image priority
                       src={"/placeholder.svg"}
                       alt="Instagram Post"
                       fill

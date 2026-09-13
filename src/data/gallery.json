@@ -1,6 +1,6 @@
 {
   "heroSection": {
-    "bg": "/images/blue-bg.png",
+    "bg": "/images/blue-bg.webp",
     "image1": "/placeholder.svg",
     "image2": "/placeholder.svg"
   },
@@ -26,55 +26,55 @@
     {
       "id": 1,
       "title": "Facility Overview",
-      "image": "/images/gallery/ngu-1x1.png",
+      "image": "/images/gallery/ngu-1x1.webp",
       "category": "Manufacturing"
     },
     {
       "id": 2,
       "title": "Production Line",
-      "image": "/images/gallery/factory-2.jpg",
+      "image": "/images/gallery/factory-2.webp",
       "category": "Manufacturing"
     },
     {
       "id": 3,
       "title": "Quality Control",
-      "image": "/images/gallery/factory-3.jpg",
+      "image": "/images/gallery/factory-3.webp",
       "category": "Manufacturing"
     },
     {
       "id": 4,
       "title": "Annual Expo",
-      "image": "/images/gallery/factory-4.jpg",
+      "image": "/images/gallery/factory-4.webp",
       "category": "Exhibitions"
     },
     {
       "id": 5,
       "title": "Trade Show",
-      "image": "/images/gallery/ngu-1x1.png",
+      "image": "/images/gallery/ngu-1x1.webp",
       "category": "Exhibitions"
     },
     {
       "id": 6,
       "title": "Global Summit",
-      "image": "/images/gallery/factory-2.jpg",
+      "image": "/images/gallery/factory-2.webp",
       "category": "Exhibitions"
     },
     {
       "id": 7,
       "title": "Local Outreach",
-      "image": "/images/gallery/factory-3.jpg",
+      "image": "/images/gallery/factory-3.webp",
       "category": "Community"
     },
     {
       "id": 8,
       "title": "Team Building",
-      "image": "/images/gallery/factory-4.jpg",
+      "image": "/images/gallery/factory-4.webp",
       "category": "Community"
     },
     {
       "id": 9,
       "title": "Sustainability Drive",
-      "image": "/images/gallery/ngu-1x1.png",
+      "image": "/images/gallery/ngu-1x1.webp",
       "category": "Community"
     }
   ]

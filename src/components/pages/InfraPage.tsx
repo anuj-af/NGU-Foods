@@ -9,9 +9,9 @@ import HeroSection from "../HeroSection";
 
 export default function InfraPage() {
   const bannerData = {
-    bg: "/images/bg.png",
-    image1: "/images/banners/infra/left.png",
-    image2: "/images/banners/infra/right.png"
+    bg: "/images/bg.webp",
+    image1: "/images/banners/infra/left.webp",
+    image2: "/images/banners/infra/right.webp"
   }
 
   return (
@@ -22,7 +22,7 @@ export default function InfraPage() {
       {/* Facilities Section */}
       <section className="text-muted-foreground py-16"
       style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -68,7 +68,7 @@ export default function InfraPage() {
               viewport={{ once: true }}
               className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              {/* <Image width={800} height={600} src="/images/infra1.jpg" alt="Manufacturing Facility" className="w-full h-full object-cover" /> */}
+              {/* <Image priority width={800} height={600} src="/images/infra1.webp" alt="Manufacturing Facility" className="w-full h-full object-cover" /> */}
               <video
                 src="/videos/vid1.mp4"
                 controls
@@ -166,7 +166,7 @@ export default function InfraPage() {
       {/* Distribution Network */}
       <section className="text-muted-foreground py-16"
       style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -181,7 +181,7 @@ export default function InfraPage() {
               viewport={{ once: true }}
               className="order-2 md:order-1 aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              <Image width={800} height={600}
+              <Image priority width={800} height={600}
                 src="/images/infra2.jpeg"
                 alt="Distribution Network"
                 className="w-full h-full object-cover"

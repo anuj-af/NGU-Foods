@@ -37,7 +37,7 @@ export default function CareerPage() {
       <section
         className="py-16"
         style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -68,7 +68,7 @@ export default function CareerPage() {
               viewport={{ once: true }}
               className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              <Image width={800} height={600}
+              <Image priority width={800} height={600}
                 src={whyJoinUs.image}
                 alt="Sales Team"
                 className="w-full h-full object-cover"
@@ -158,7 +158,7 @@ export default function CareerPage() {
       <section
         className="py-16"
         style={{
-          backgroundImage: "url('/images/white-bg.jpg')",
+          backgroundImage: "url('/images/white-bg.webp')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "top",
