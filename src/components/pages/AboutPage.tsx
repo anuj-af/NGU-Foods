@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Shield, Lightbulb, Check, Target, Award } from "lucide-react";
 import React from "react";
