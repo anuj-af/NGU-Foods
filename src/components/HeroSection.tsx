@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
@@ -21,12 +22,13 @@ export default function HeroSection({ banner }: HeroSectionProps) {
     >
       {/* Animated Background */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: `url('${banner.bg}')` }}
+        className="absolute inset-0 z-0"
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-      />
+      >
+        <Image src={banner.bg} alt="Banner" fill priority className="object-cover object-center" sizes="100vw" />
+      </motion.div>
 
       <div className="relative z-10 w-full h-full flex items-center justify-center">
         {/* Banner content can go here if needed in the future */}

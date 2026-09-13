@@ -1,4 +1,6 @@
 "use client"
+import Image from "next/image";
+
 
 import { Instagram, Facebook, Linkedin } from "lucide-react"
 import { Button } from "./ui/button"
@@ -16,7 +18,7 @@ export default function Footer({ navigateTo }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-16 w-auto object-contain" />
+              <Image src="/images/ngu-logo.png" alt="NGU Foods" width={160} height={64} className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 mb-4">
               Crafting possibilities in every shape — from Fryums to Snack Pellets, we deliver quality snacks trusted by businesses across India.

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import type React from "react";
 
@@ -92,10 +93,12 @@ export default function GalleryPage() {
                 onClick={() => openModal(index)}
               >
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden relative">
-                  <img
+                  <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-white text-center p-4">
@@ -154,10 +157,12 @@ export default function GalleryPage() {
               </button>
 
               {/* Image */}
-              <img
+              <Image
                 src={filteredGallery[selectedImage]?.image || "/placeholder.svg"}
                 alt={filteredGallery[selectedImage]?.title}
-                className="w-full h-full object-contain rounded-lg"
+                fill
+                className="object-contain rounded-lg"
+                sizes="100vw"
               />
             </motion.div>
           </motion.div>

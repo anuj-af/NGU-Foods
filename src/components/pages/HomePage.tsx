@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
@@ -13,7 +14,7 @@ import {
   Heart,
   PartyPopper,
   Factory,
-  ExternalLink,
+  ExternalLink, Clock, Thermometer, PieChart,
   Download,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -33,10 +34,13 @@ import products from "@/data/ourDeliciousRange.json";
 // Define types for our components
 interface Product {
   name: string;
-  description: string;
+  description?: string;
   image: string;
   price: string;
   category: string;
+  fryTime?: string;
+  fryTemp?: string;
+  ingredients?: string;
 }
 
 const ProductCircle = ({
@@ -49,11 +53,9 @@ const ProductCircle = ({
   navigateTo: (page: string, category?: any) => void;
 }) => {
   return (
-    <div className="flex flex-col items-center gap-4">
-      <motion.img
-        src="/images/patch-blue.png"
-        alt=""
-        className="absolute top-6 h-52 w-52"
+    <div className="relative flex flex-col items-center gap-4 group">
+      <motion.div
+        className="absolute top-6 h-52 w-52 z-0"
         animate={{
           scale: [1, 1.05, 1],
           rotate: [0, 3, -3, 0],
@@ -64,18 +66,20 @@ const ProductCircle = ({
           ease: "easeInOut",
         }}
         style={{ transformOrigin: "center center" }}
-      />
+      >
+        <Image src="/images/patch-blue.png" alt="" fill className="object-contain" sizes="208px" />
+      </motion.div>
 
-      <motion.img
+      <motion.div
         key={index}
         initial={{ opacity: 0, scale: 0, rotate: -15 }}
         animate={{ opacity: 1, scale: 1, rotate: -15 }}
         transition={{ duration: 0.4 }}
         whileHover={{ scale: 1.2 }}
-        src={product.image}
-        alt={product.name}
-        className="w-56 h-48 object-contain -rotate-12 mb-12"
-      />
+        className="w-56 h-48 -rotate-12 mb-12 relative z-10"
+      >
+        <Image src={product.image} alt={product.name} fill className="object-contain" sizes="224px" />
+      </motion.div>
 
       {/* Label/Button */}
       <CustomButton
@@ -131,10 +135,12 @@ const SnackSider = ({ position, index }: { position: 'left' | 'right'; index: nu
         }}
       >
         <div className="w-20 h-20 lg:w-24 lg:h-24 overflow-hidden">
-          <img
+          <Image
             src="/images/banners/siders.png"
             alt=""
-            className="h-full object-cover"
+            width={864}
+            height={96}
+            className="h-full object-cover max-w-none"
             style={{
               width: '900%',
               objectPosition: `${offsetPercent}% center`,
@@ -183,7 +189,7 @@ const FeatureCard = ({
         className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl ${feature.iconBg} mb-6 shadow-lg`}
       >
         {typeof feature.icon === 'string' ? (
-          <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
+          <Image src={feature.icon as string} alt={feature.title} width={48} height={48} className="object-contain" />
         ) : (
           <feature.icon className={`w-10 h-10 ${feature.iconColor}`} />
         )}
@@ -331,7 +337,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       {/* ============================================ */}
       <section
         ref={heroRef}
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden aspect-[1920/900]"
         style={{ backgroundColor: '#0D258D' }}
       >
         {/* Navigation Buttons */}
@@ -349,26 +355,26 @@ export default function HomePage({ navigateTo }: HomePageProps) {
           <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
         </button>
 
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
             <motion.div
               key={currentBanner}
-              className="w-full z-10"
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              className="absolute inset-0 w-full h-full z-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <motion.img
+              <Image
                 src={
                   isMobile
                     ? banners[currentBanner].image2
                     : banners[currentBanner].image1
                 }
-                className="w-full h-auto block"
+                className="object-cover"
                 alt="Banner Image"
-                initial={{ scale: 0.98, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.98, opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
+                fill
+                priority
+                sizes="100vw"
               />
             </motion.div>
         </AnimatePresence>
@@ -390,9 +396,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center" style={{ backgroundColor: '#0D258D' }}>
-                <img
+                <Image
                   src="/images/banners/world.png"
                   alt="NGU Foods Global Reach"
+                  width={800}
+                  height={400}
                   className="w-full h-72 md:h-[400px] object-contain"
                 />
               </div>
@@ -523,9 +531,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
               className="flex justify-center"
             >
               <div className="bg-white rounded-2xl p-4 shadow-xl">
-                <img 
+                <Image 
                   src="/images/banners/history-milestone.png" 
                   alt="NGU History & Milestones" 
+                  width={800}
+                  height={400}
                   className="w-full h-76 md:h-[400px] rounded-xl object-contain"
                 />
               </div>
@@ -740,9 +750,11 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                     key={`${setIndex}-${brand}`}
                     className="flex-shrink-0 w-28 h-16 md:w-36 md:h-20 bg-gray-50 rounded-xl flex items-center justify-center "
                   >
-                    <img
+                    <Image
                       src={`/images/brand-logos/${brand}.png`}
                       alt={brand}
+                      width={112}
+                      height={64}
                       className="w-20 h-12 md:w-28 md:h-16 object-contain"
                     />
                   </div>
@@ -970,9 +982,12 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   onClick={() => window.open(post.link, "_blank")}
                 >
                   <div className="aspect-square relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #eef2ff 0%, #dbeafe 100%)' }}>
-                    <img
+                    <Image
                       src={"/placeholder.svg"}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      alt="Instagram Post"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
 
                     {/* Overlay on hover */}

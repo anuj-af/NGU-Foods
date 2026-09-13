@@ -89,9 +89,6 @@ ${message}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-semibold mb-4" style={{ color: '#FCA801' }}>
-                Get In Touch
-              </h2>
               <p className="text-lg max-w-2xl mx-auto text-white/80">
                 We'd love to hear from you. Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.
               </p>
@@ -110,7 +107,7 @@ ${message}
             >
               <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 shadow-xl h-full flex flex-col">
                 <div>
-                  <h3 className="text-2xl font-semibold text-white mb-8">Contact Information</h3>
+                  <h3 className="text-2xl font-medium tracking-wide text-white mb-8">Contact Information</h3>
                   
                   <div className="space-y-8">
                     <div className="flex items-start">
@@ -182,7 +179,7 @@ ${message}
             >
               <Card className="border-0 shadow-2xl overflow-hidden rounded-3xl h-full">
                 <CardContent className="p-8 md:p-10 bg-white">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-6" style={{ color: '#0D258D' }}>Send us a Message</h3>
+                  <h3 className="text-2xl font-medium tracking-wide text-gray-800 mb-6" style={{ color: '#0D258D' }}>Send us a Message</h3>
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">

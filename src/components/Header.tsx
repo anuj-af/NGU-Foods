@@ -1,4 +1,6 @@
 "use client"
+import Image from "next/image";
+
 
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
@@ -25,7 +27,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
             <Menu className="h-6 w-6" />
           </Button>
           <div className="flex items-center cursor-pointer" onClick={() => navigateTo("home")}>
-            <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-12 w-auto object-contain" />
+            <Image src="/images/ngu-logo.png" alt="NGU Foods" width={120} height={48} className="h-12 w-auto object-contain" />
           </div>
         </div>
 
@@ -41,7 +43,7 @@ export default function Header({ navigateTo, currentPage, isMenuOpen, setIsMenuO
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center">
-                <img src="/images/ngu-logo.png" alt="NGU Foods" className="h-10 w-auto object-contain" />
+                <Image src="/images/ngu-logo.png" alt="NGU Foods" width={100} height={40} className="h-10 w-auto object-contain" />
               </div>
             </div>
             <Separator />

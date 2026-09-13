@@ -1,9 +1,10 @@
 "use client"
+import Image from "next/image";
 
 import { useState, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Search, Filter, X } from "lucide-react"
+import { Search, Filter, X, Clock, Thermometer, PieChart } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import CustomButton from "@/components/ui/custom-button"
 import { Badge } from "@/components/ui/badge"
@@ -12,7 +13,7 @@ import HeroSection from "../HeroSection"
 import productData from "../../../src/data/products.json";
 import categoryStructure from "../../../src/data/categories.json"
 
-const products = productData.products;
+const products = productData.products.filter((p: any) => p.fryTime && p.fryTemp && p.ingredients);
 
 interface Product {
   id: number
@@ -30,16 +31,14 @@ const ProductCircle = ({
   index,
   onClick,
 }: {
-  product: { name: string; image: string; price: string; description: string }
+  product: { name: string; image: string; price: string; description?: string; fryTime?: string; fryTemp?: string; ingredients?: string }
   index: number
   onClick: () => void
 }) => {
   return (
-    <div className="relative flex flex-col items-center gap-4">
-      <motion.img
-        src="/images/patch-blue.png"
-        alt=""
-        className="absolute top-6 h-52 w-52"
+    <div className="relative flex flex-col items-center gap-4 group">
+      <motion.div
+        className="absolute top-6 h-52 w-52 z-0"
         animate={{
           scale: [1, 1.05, 1],
           rotate: [0, 3, -3, 0],
@@ -50,23 +49,72 @@ const ProductCircle = ({
           ease: "easeInOut",
         }}
         style={{ transformOrigin: "center center" }}
-      />
+      >
+        <Image src="/images/patch-blue.png" alt="" fill className="object-contain" sizes="208px" />
+      </motion.div>
 
-      <motion.img
+      <motion.div
         key={index}
         initial={{ opacity: 0, scale: 0, rotate: -15 }}
         animate={{ opacity: 1, scale: 1, rotate: -15 }}
         transition={{ duration: 0.4 }}
         whileHover={{ scale: 1.2 }}
-        src={product.image}
-        alt={product.name}
-        className="w-56 h-48 object-contain -rotate-12 mb-12"
-      />
+        className="w-56 h-48 -rotate-12 mb-12 relative z-10"
+      >
+        <Image src={product.image} alt={product.name} fill className="object-contain" sizes="224px" />
+      </motion.div>
 
       {/* Label/Button */}
       <div onClick={onClick} className="relative z-10 flex flex-col items-center text-center w-full">
         <CustomButton className="cursor-pointer" value={product.name} navigateTo={() => {}} />
-        <p className="text-sm text-gray-500 mt-4 max-w-[220px]">{product.description}</p>
+        
+        {/* Product Details Section */}
+        <div className="mt-6 w-full max-w-[280px] bg-white/95 shadow-xl rounded-xl p-3 border border-gray-100 flex flex-col gap-3 text-left transition-all duration-300">
+          
+          {product.fryTime && (
+            <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+              <div className="flex items-center gap-3">
+                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                  <Clock className="w-5 h-5 text-[#FCA801]" />
+                </div>
+                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Fry Time</span>
+              </div>
+              <span className="font-semibold text-[#0D258D] text-sm">{product.fryTime}</span>
+            </div>
+          )}
+
+          {product.fryTemp && (
+            <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+              <div className="flex items-center gap-3">
+                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                  <Thermometer className="w-5 h-5 text-[#FCA801]" />
+                </div>
+                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Frying Temp.</span>
+              </div>
+              <span className="font-semibold text-[#0D258D] text-sm">{product.fryTemp}</span>
+            </div>
+          )}
+
+          {product.ingredients && (
+            <div className="flex flex-col gap-2 pt-1">
+              <div className="flex items-center gap-3 mb-1">
+                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                  <PieChart className="w-5 h-5 text-[#FCA801]" />
+                </div>
+                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Ingredients</span>
+              </div>
+              <p className="text-sm font-medium text-[#0D258D] leading-relaxed ml-11">
+                {product.ingredients}
+              </p>
+            </div>
+          )}
+
+          {/* Fallback for products without structured data */}
+          {!product.fryTime && !product.ingredients && product.description && (
+            <p className="text-sm text-gray-500 whitespace-pre-line text-center">{product.description}</p>
+          )}
+
+        </div>
       </div>
     </div>
   )

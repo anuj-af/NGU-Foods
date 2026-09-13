@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { Award, Factory, Cpu } from "lucide-react"
@@ -67,7 +68,7 @@ export default function InfraPage() {
               viewport={{ once: true }}
               className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              {/* <img src="/images/infra1.jpg" alt="Manufacturing Facility" className="w-full h-full object-cover" /> */}
+              {/* <Image width={800} height={600} src="/images/infra1.jpg" alt="Manufacturing Facility" className="w-full h-full object-cover" /> */}
               <video
                 src="/videos/vid1.mp4"
                 controls
@@ -180,7 +181,7 @@ export default function InfraPage() {
               viewport={{ once: true }}
               className="order-2 md:order-1 aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              <img
+              <Image width={800} height={600}
                 src="/images/infra2.jpeg"
                 alt="Distribution Network"
                 className="w-full h-full object-cover"

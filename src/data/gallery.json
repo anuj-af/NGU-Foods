@@ -26,55 +26,55 @@
     {
       "id": 1,
       "title": "Facility Overview",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/ngu-1x1.png",
       "category": "Manufacturing"
     },
     {
       "id": 2,
       "title": "Production Line",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-2.jpg",
       "category": "Manufacturing"
     },
     {
       "id": 3,
       "title": "Quality Control",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-3.jpg",
       "category": "Manufacturing"
     },
     {
       "id": 4,
       "title": "Annual Expo",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-4.jpg",
       "category": "Exhibitions"
     },
     {
       "id": 5,
       "title": "Trade Show",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/ngu-1x1.png",
       "category": "Exhibitions"
     },
     {
       "id": 6,
       "title": "Global Summit",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-2.jpg",
       "category": "Exhibitions"
     },
     {
       "id": 7,
       "title": "Local Outreach",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-3.jpg",
       "category": "Community"
     },
     {
       "id": 8,
       "title": "Team Building",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/factory-4.jpg",
       "category": "Community"
     },
     {
       "id": 9,
       "title": "Sustainability Drive",
-      "image": "/placeholder.svg",
+      "image": "/images/gallery/ngu-1x1.png",
       "category": "Community"
     }
   ]

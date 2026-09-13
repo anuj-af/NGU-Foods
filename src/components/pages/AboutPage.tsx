@@ -38,7 +38,7 @@ export default function AboutPage() {
                 OUR STORY
               </motion.span>
 
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ color: '#FCA801' }}>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-wide mb-6" style={{ color: '#FCA801' }}>
                 Crafting Possibilities in Every Shape
               </h2>
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 Operating under the brand <strong>N.G.U. Creative Snacks</strong>, we specialize in the manufacturing of <strong>Fryums, Snack Pellets, Papad, Pasta Shapes and Ready-to-Fry Products</strong>. With a strong focus on quality, consistency and product innovation, we serve customers across India and cater to the requirements of international markets.
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4" style={{ color: '#0D258D' }}>
+              <h3 className="text-2xl md:text-3xl font-medium tracking-wide mb-4" style={{ color: '#0D258D' }}>
                 Our Journey — Since 1996
               </h3>
               
@@ -75,9 +75,11 @@ export default function AboutPage() {
               className="relative h-full flex flex-col justify-center"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
+                <Image
                   src="/images/banners/snacks-top-view.png"
                   alt="Crafting Possibilities in Every Shape"
+                  width={800}
+                  height={800}
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#0D258D]/20 to-transparent"></div>
@@ -124,15 +126,15 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.05 }}
               viewport={{ once: true }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
-                  <img src="/images/banners/manufacturing-icon.png" alt="Manufacturing" className="w-8 h-8 object-contain" />
+                  <Image src="/images/banners/manufacturing-icon.png" alt="Manufacturing" width={32} height={32} className="object-contain" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
+                <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-[#FCA801]">
                   Manufacturing Excellence
                 </h2>
               </div>
@@ -152,15 +154,15 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              transition={{ duration: 0.05, delay: 0.2 }}
               viewport={{ once: true }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 h-full hover:border-white/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg bg-[#FCA801]/20">
-                  <img src="/images/banners/innovation-icon.png" alt="Innovation" className="w-8 h-8 object-contain" />
+                  <Image src="/images/banners/innovation-icon.png" alt="Innovation" width={32} height={32} className="object-contain" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-semibold text-[#FCA801]">
+                <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-[#FCA801]">
                   Innovation That Takes Shape
                 </h2>
               </div>
@@ -188,7 +190,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-semibold mb-6" style={{ color: '#0D258D' }}>
+              <h2 className="text-3xl md:text-5xl font-medium tracking-wide mb-6" style={{ color: '#0D258D' }}>
                 More Than a Manufacturer
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -218,7 +220,7 @@ export default function AboutPage() {
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.05, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="flex items-center gap-4 p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300"
@@ -256,7 +258,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-[#FCA801]">
+              <h2 className="text-3xl md:text-5xl font-medium tracking-wide mb-6 text-[#FCA801]">
                 Quality Is Our Recipe
               </h2>
               
@@ -278,7 +280,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
+              transition={{ duration: 0.05, delay: 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.05 }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
@@ -292,7 +294,7 @@ export default function AboutPage() {
                   <Target className="w-8 h-8 text-[#FCA801]" />
                 </motion.div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-white">Our Vision</h3>
+                  <h3 className="text-2xl font-medium tracking-wide text-white">Our Vision</h3>
                 </div>
               </div>
               <p className="text-white/80 leading-relaxed">
@@ -304,7 +306,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 0.05, delay: 0.4 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.05 }}
               className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/15 hover:border-white/30 transition-all duration-500"
@@ -318,7 +320,7 @@ export default function AboutPage() {
                   <Award className="w-8 h-8 text-[#FCA801]" />
                 </motion.div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-white">Our Mission</h3>
+                  <h3 className="text-2xl font-medium tracking-wide text-white">Our Mission</h3>
                 </div>
               </div>
               <p className="text-white/80 leading-relaxed">
@@ -340,7 +342,7 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-[#0D258D]">
+            <h2 className="text-3xl md:text-5xl font-medium tracking-wide mb-6 text-[#0D258D]">
               The NGU Promise
             </h2>
             

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -148,7 +149,7 @@ ${feedback}
                       </blockquote>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full overflow-hidden mr-4 relative">
-                          <img
+                          <Image width={800} height={600}
                             src={testimonial.image || "/placeholder.svg"}
                             alt={testimonial.name}
                             className="w-full h-full object-cover relative z-10"

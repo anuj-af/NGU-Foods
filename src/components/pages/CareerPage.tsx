@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -67,7 +68,7 @@ export default function CareerPage() {
               viewport={{ once: true }}
               className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              <img
+              <Image width={800} height={600}
                 src={whyJoinUs.image}
                 alt="Sales Team"
                 className="w-full h-full object-cover"
