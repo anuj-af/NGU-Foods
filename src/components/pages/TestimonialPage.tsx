@@ -86,9 +86,6 @@ ${feedback}
       <section
         className="py-16 relative"
         style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           minHeight: "100vh",
           opacity: 1,

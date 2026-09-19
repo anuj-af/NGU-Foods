@@ -162,7 +162,7 @@
     },
     {
       "id": 15,
-      "name": "Cracker",
+      "name": "Potato Cracker",
       "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 175 - 180 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
       "price": "\u20b910",
       "category": "Fryums",
@@ -679,6 +679,26 @@
       "fryTime": "25 - 35 sec",
       "fryTemp": "185 - 195 C",
       "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+    },
+    {
+      "id": 59,
+      "name": "Jali",
+      "description": "Delicious Jali Snacks",
+      "price": "\u20b910",
+      "category": "Other",
+      "subcategory": "Snacks",
+      "image": "/images/products/Jali.webp",
+      "comingSoon": false
+    },
+    {
+      "id": 60,
+      "name": "Spring Roll",
+      "description": "Delicious Spring Roll Snacks",
+      "price": "\u20b910",
+      "category": "Other",
+      "subcategory": "Snacks",
+      "image": "/images/products/Spring roll.webp",
+      "comingSoon": false
     }
   ]
 }

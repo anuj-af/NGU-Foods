@@ -122,17 +122,29 @@ export default function Footer({ navigateTo }: FooterProps) {
           <div>
             <h3 className="text-md mb-4 font-semibold" style={{ color: '#FCA801' }}>Contact Us</h3>
             <address className="not-italic text-blue-200">
-              <p className="mb-2">
-                <span className="font-medium text-white">Head Office:</span><br />
-                Ahmedabad, Gujarat, India
-              </p>
+              
+              <div className="space-y-4 mb-4 text-sm">
+                <p>
+                  <span className="font-semibold text-[#FCA801]">Unit 1:</span><br />
+                  Plot No. 608, Nr. Royal W/Bridge, Opp. Laxmi Decoration, Bareja-Nava Gav Road, Bareja - 382425. Di. : Ahmedabad, Gujarat, INDIA
+                </p>
+                <p>
+                  <span className="font-semibold text-[#FCA801]">Unit 2:</span><br />
+                  Plot No. 1377/001, Opp. Fire Brigade, Bareja-Nava Gav Road, Nr. Muktipura BusStop, Muktipura - 382425, Di. : Ahmedabad, Gujarat, INDIA
+                </p>
+                <p>
+                  <span className="font-semibold text-[#FCA801]">Unit 3:</span><br />
+                  B 21 P, NR. SRI HANUMAN DHARAMKATA, DONAR INDUSTRIAL AREA, DARBHANGA, BIHAR - 846004. MO. 8460280534.
+                </p>
+              </div>
+
               <p className="mb-2">
                 <span className="font-medium text-white">Email:</span><br />
                 ngufoods27@gmail.com
               </p>
               <p className="mb-4">
                 <span className="font-medium text-white">Phone:</span><br />
-                +91 99250 21500
+                +91 99250 21500 <br /> +91 72268 22666
               </p>
               <p className="font-medium text-white">Visit Us!</p>
               <p>Mon-Sat: 10am - 6pm</p>

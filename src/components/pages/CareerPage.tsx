@@ -37,9 +37,6 @@ export default function CareerPage() {
       <section
         className="py-16"
         style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}
@@ -158,9 +155,6 @@ export default function CareerPage() {
       <section
         className="py-16"
         style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}

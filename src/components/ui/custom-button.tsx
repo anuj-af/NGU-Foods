@@ -14,7 +14,7 @@ export default function CustomButton({ value, className, navigateTo }: CustomBut
       "relative inline-block text-white text-lg font-normal px-6 py-2 rounded-full border-2 border-black bg-[#d90429] hover:bg-[#0D258D] shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]",
       className
     )}
-    onClick={(navigateTo)}
+    onClick={() => navigateTo("home")}
   >
     {value}
   </div>

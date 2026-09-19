@@ -13,7 +13,7 @@ import HeroSection from "../HeroSection"
 import productData from "../../../src/data/products.json";
 import categoryStructure from "../../../src/data/categories.json"
 
-const products = productData.products.filter((p: any) => p.fryTime && p.fryTemp && p.ingredients);
+const products = productData.products;
 
 interface Product {
   id: number
@@ -71,48 +71,38 @@ const ProductCircle = ({
         {/* Product Details Section */}
         <div className="mt-6 w-full max-w-[280px] bg-white/95 shadow-xl rounded-xl p-3 border border-gray-100 flex flex-col gap-3 text-left transition-all duration-300">
           
-          {product.fryTime && (
-            <div className="flex items-center justify-between border-b border-gray-200 pb-3">
-              <div className="flex items-center gap-3">
-                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
-                  <Clock className="w-5 h-5 text-[#FCA801]" />
-                </div>
-                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Fry Time</span>
+          <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+            <div className="flex items-center gap-3">
+              <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                <Clock className="w-5 h-5 text-[#FCA801]" />
               </div>
-              <span className="font-semibold text-[#0D258D] text-sm">{product.fryTime}</span>
+              <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Fry Time</span>
             </div>
-          )}
+            <span className="font-semibold text-[#0D258D] text-sm">{product.fryTime || "ABC"}</span>
+          </div>
 
-          {product.fryTemp && (
-            <div className="flex items-center justify-between border-b border-gray-200 pb-3">
-              <div className="flex items-center gap-3">
-                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
-                  <Thermometer className="w-5 h-5 text-[#FCA801]" />
-                </div>
-                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Frying Temp.</span>
+          <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+            <div className="flex items-center gap-3">
+              <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                <Thermometer className="w-5 h-5 text-[#FCA801]" />
               </div>
-              <span className="font-semibold text-[#0D258D] text-sm">{product.fryTemp}</span>
+              <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Frying Temp.</span>
             </div>
-          )}
+            <span className="font-semibold text-[#0D258D] text-sm">{product.fryTemp || "ABC"}</span>
+          </div>
 
-          {product.ingredients && (
-            <div className="flex flex-col gap-2 pt-1">
-              <div className="flex items-center gap-3 mb-1">
-                <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
-                  <PieChart className="w-5 h-5 text-[#FCA801]" />
-                </div>
-                <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Ingredients</span>
+          <div className="flex flex-col gap-2 pt-1">
+            <div className="flex items-center gap-3 mb-1">
+              <div className="p-1.5 rounded-full border-2 border-[#0D258D]">
+                <PieChart className="w-5 h-5 text-[#FCA801]" />
               </div>
-              <p className="text-sm font-medium text-[#0D258D] leading-relaxed ml-11">
-                {product.ingredients}
-              </p>
+              <span className="font-bold text-[#0D258D] uppercase tracking-wide text-sm">Ingredients</span>
             </div>
-          )}
+            <p className="text-sm font-medium text-[#0D258D] leading-relaxed ml-11">
+              {product.ingredients || "ABC"}
+            </p>
+          </div>
 
-          {/* Fallback for products without structured data */}
-          {!product.fryTime && !product.ingredients && product.description && (
-            <p className="text-sm text-gray-500 whitespace-pre-line text-center">{product.description}</p>
-          )}
 
         </div>
       </div>
@@ -123,7 +113,7 @@ const ProductCircle = ({
 
 export default function ProductPage({category} : any) {
   const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState(category)
+  const [selectedCategory, setSelectedCategory] = useState("all")
   const [selectedSubcategory, setSelectedSubcategory] = useState("all")
   const [sortBy, setSortBy] = useState("name")
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
@@ -148,8 +138,8 @@ export default function ProductPage({category} : any) {
         searchTerm === "" ||
         product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         product.description.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === "all" || product.category === selectedCategory
-      const matchesSubcategory = selectedSubcategory === "all" || product.subcategory === selectedSubcategory
+      const matchesCategory = true;
+      const matchesSubcategory = true;
 
       return matchesSearch && matchesCategory && matchesSubcategory
     })
@@ -263,86 +253,19 @@ export default function ProductPage({category} : any) {
                 />
               </div>
 
-              {/* Filters */}
-              <div className="flex gap-3 items-center">
-                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                  <SelectTrigger className="w-40">
-                    <SelectValue placeholder="Category" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Categories</SelectItem>
-                    <SelectItem value="Chips">Chips</SelectItem>
-                    <SelectItem value="Namkeen">Namkeen</SelectItem>
-                    <SelectItem value="Fryums">Fryums</SelectItem>
-                  </SelectContent>
-                </Select>
-
-                {selectedCategory !== "all" && (
-                  <Select value={selectedSubcategory} onValueChange={setSelectedSubcategory}>
-                    <SelectTrigger className="w-40">
-                      <SelectValue placeholder="Subcategory" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All Types</SelectItem>
-                      {Object.entries(getSubcategories()).map(([key, label]) => (
-                        <SelectItem key={key} value={key}>
-                          {label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                )}
-
-                <Select value={sortBy} onValueChange={setSortBy}>
-                  <SelectTrigger className="w-40">
-                    <SelectValue placeholder="Sort by" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="name">Name</SelectItem>
-                    <SelectItem value="price-low">Price: Low to High</SelectItem>
-                    <SelectItem value="price-high">Price: High to Low</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            {/* Active Filters */}
-            {activeFiltersCount > 0 && (
-              <div className="flex items-center gap-2 mb-4">
-                <Filter className="w-4 h-4 text-gray-500" />
-                <span className="text-sm text-gray-600">Active filters:</span>
-                {selectedCategory !== "all" && (
-                  <Badge variant="secondary" className="capitalize">
-                    {selectedCategory}
-                  </Badge>
-                )}
-                {selectedSubcategory !== "all" && (
-                  <Badge variant="secondary" className="capitalize">
-                    {getSubcategories()[selectedSubcategory]}
-                  </Badge>
-                )}
-                {searchTerm && <Badge variant="secondary">Search: {searchTerm}</Badge>}
-                <Button variant="ghost" size="sm" onClick={clearFilters} className="text-red-600 hover:text-red-700">
-                  <X className="w-3 h-3 mr-1" />
-                  Clear all
-                </Button>
-              </div>
-            )}
+              
 
             <div className="text-sm text-gray-600">
               Showing {filteredAndSortedProducts().length} of {currentProducts.length} products
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       <section
         className="py-16 relative"
         style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           opacity: 1,
         }}
       >

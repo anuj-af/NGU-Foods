@@ -13,7 +13,7 @@ import HeroSection from "../HeroSection";
 export default function BlogsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [selectedBlog, setSelectedBlog] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { siteConfig, blogs } = blogData;
@@ -31,7 +31,7 @@ export default function BlogsPage() {
   const featuredBlog = blogs.find((blog) => blog.featured);
   const regularBlogs = filteredBlogs.filter((blog) => !blog.featured);
 
-  const openModal = (blog) => {
+  const openModal = (blog: any) => {
     setSelectedBlog(blog);
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
@@ -57,9 +57,6 @@ export default function BlogsPage() {
       {featuredBlog && selectedCategory === "All" && !searchQuery && (
         <section className="font-sans py-20"
         style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}>
@@ -245,9 +242,6 @@ export default function BlogsPage() {
       {/* Newsletter Section - reverted to blue colors */}
       <section className="py-20 bg-white"
       style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}>

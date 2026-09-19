@@ -82,11 +82,11 @@ const ProductCircle = ({
       </motion.div>
 
       {/* Label/Button */}
-      <CustomButton
-        navigateTo={navigateTo}
-        className="bg-ngu-red"
-        value={product.category}
-      />
+      <div onClick={() => navigateTo('product')} className="inline-block transition-transform duration-100 hover:scale-[1.1] hover:cursor-pointer">
+        <div className="relative inline-block text-white text-lg font-normal px-6 py-2 rounded-full border-2 border-black bg-[#d90429] hover:bg-[#0D258D] shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+          {product.category}
+        </div>
+      </div>
     </div>
   );
 };
@@ -590,9 +590,10 @@ export default function HomePage({ navigateTo }: HomePageProps) {
             className="w-full"
             opts={{
               loop: true,
-              dragFree: true,
+              dragFree: false,
+              align: "start"
             }}
-            plugins={[Autoplay({ delay: 2500 })]}
+            plugins={[Autoplay({ delay: 2500, stopOnInteraction: false, stopOnMouseEnter: true })]}
           >
             <CarouselContent className="mt-2 mb-2 px-4 md:px-16">
               {products.map((product, index) => (
@@ -600,7 +601,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   <ProductCircle
                     product={product}
                     index={index}
-                    navigateTo={() => navigateTo("product", product.category)}
+                    navigateTo={() => navigateTo("product")}
                   />
                 </CarouselItem>
               ))}
@@ -1170,7 +1171,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
 
               {/* Enquire Now Button - WhatsApp */}
               <motion.a
-                href="https://wa.me/919925021500?text=Hi%2C%20I%20am%20interested%20in%20NGU%20Foods%20products.%20Please%20share%20more%20details."
+                href="https://wa.me/918460280534?text=Hi%2C%20I%20am%20interested%20in%20NGU%20Foods%20products.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3.5 rounded-full font-medium inline-flex items-center gap-2 transition-all duration-300 shadow-lg text-white"

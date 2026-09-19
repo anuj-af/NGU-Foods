@@ -116,7 +116,20 @@ ${message}
                       </div>
                       <div>
                         <p className="font-semibold text-white mb-1">Head Office</p>
-                        <p className="text-white/70">Ahmedabad, Gujarat, India</p>
+                        <div className="text-white/70 space-y-3 mt-2 text-sm">
+                          <p>
+                            <span className="font-semibold text-[#FCA801]">Unit 1:</span><br />
+                            Plot No. 608, Nr. Royal W/Bridge, Opp. Laxmi Decoration, Bareja-Nava Gav Road, Bareja - 382425. Di. : Ahmedabad, Gujarat, INDIA
+                          </p>
+                          <p>
+                            <span className="font-semibold text-[#FCA801]">Unit 2:</span><br />
+                            Plot No. 1377/001, Opp. Fire Brigade, Bareja-Nava Gav Road, Nr. Muktipura BusStop, Muktipura - 382425, Di. : Ahmedabad, Gujarat, INDIA
+                          </p>
+                          <p>
+                            <span className="font-semibold text-[#FCA801]">Unit 3:</span><br />
+                            B 21 P, NR. SRI HANUMAN DHARAMKATA, DONAR INDUSTRIAL AREA, DARBHANGA, BIHAR - 846004. MO. 8460280534.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
@@ -126,7 +139,8 @@ ${message}
                       </div>
                       <div>
                         <p className="font-semibold text-white mb-1">Phone</p>
-                        <a href="tel:+919925021500" className="text-white/70 hover:text-white transition-colors">+91 99250 21500</a>
+                        <a href="tel:+919925021500" className="text-white/70 hover:text-white transition-colors block">+91 99250 21500</a>
+                        <a href="tel:+917226822666" className="text-white/70 hover:text-white transition-colors block mt-1">+91 72268 22666</a>
                       </div>
                     </div>
 
@@ -155,7 +169,7 @@ ${message}
 
                 <div className="mt-auto pt-8 border-t border-white/15">
                   <motion.a
-                    href="https://wa.me/919925021500?text=Hi%2C%20I%20am%20interested%20in%20NGU%20Foods%20products.%20Please%20share%20more%20details."
+                    href="https://wa.me/918460280534?text=Hi%2C%20I%20am%20interested%20in%20NGU%20Foods%20products.%20Please%20share%20more%20details."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full text-white font-medium py-3 rounded-full text-lg inline-flex items-center justify-center gap-2 transition-all duration-300 transform shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] border-2 border-black hover:scale-[1.02]"

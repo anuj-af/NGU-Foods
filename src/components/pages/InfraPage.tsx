@@ -22,9 +22,6 @@ export default function InfraPage() {
       {/* Facilities Section */}
       <section className="text-muted-foreground py-16"
       style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}>
@@ -166,9 +163,6 @@ export default function InfraPage() {
       {/* Distribution Network */}
       <section className="text-muted-foreground py-16"
       style={{
-          backgroundImage: "url('/images/white-bg.webp')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
           backgroundPosition: "top",
           opacity: 1,
         }}>
