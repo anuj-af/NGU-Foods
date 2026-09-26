@@ -99,7 +99,7 @@ export default function App() {
           left: 0,
           right: 0,
           height: "4px",
-          background: "linear-gradient(90deg, #facc15, #ec4899, #ef4444)",
+          background: "linear-gradient(90deg, #0D258D, #3b82f6)",
           backgroundSize: "200% 100%",
           backgroundPosition: "0% 50%",
           zIndex: 9999,

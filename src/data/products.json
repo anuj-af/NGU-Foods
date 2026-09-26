@@ -8,7 +8,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/AEROPLANE B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "185 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Rice Flour, Topica Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Rice Flour, Topica Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder.",
+      "order": 5
     },
     {
       "id": 4,
@@ -47,7 +50,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 5,
@@ -60,7 +64,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 6,
@@ -73,7 +78,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 200 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 7,
@@ -86,7 +92,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder.",
+      "order": 999
     },
     {
       "id": 8,
@@ -99,7 +106,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 9,
@@ -112,7 +120,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 10,
@@ -122,7 +131,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/BIRIYANI B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 12,
@@ -135,7 +145,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 13,
@@ -145,7 +156,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/CONE B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 14,
@@ -158,7 +170,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Turmeric &/ or Corn Flour if product is yellow, Corn Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Turmeric &/ or Corn Flour if product is yellow, Corn Starch, Iodised Salt, Backing Powder.",
+      "order": 999
     },
     {
       "id": 15,
@@ -171,7 +184,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 16,
@@ -181,7 +195,8 @@
       "category": "Chips",
       "subcategory": "all",
       "image": "/images/products/CRINKLE CHIPS B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 17,
@@ -191,7 +206,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/Chokadi.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 18,
@@ -204,7 +220,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Potato Starch, Tapioca Starch, Iodized Salt, Sugar, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Potato Starch, Tapioca Starch, Iodized Salt, Sugar, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 19,
@@ -217,7 +234,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "195 - 200 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 20,
@@ -227,7 +245,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/HEXAGONE B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 21,
@@ -237,7 +256,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/IDALI.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 22,
@@ -247,7 +267,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/KABAB.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 23,
@@ -257,7 +278,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/KACHORI B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 24,
@@ -267,7 +289,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/LOLLIPOP B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 25,
@@ -280,11 +303,12 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 26,
-      "name": "Maxi Chips",
+      "name": "Wavy Chips",
       "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 190 - 195 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
       "price": "\u20b910",
       "category": "Chips",
@@ -293,7 +317,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 27,
@@ -306,7 +331,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder.",
+      "order": 999
     },
     {
       "id": 28,
@@ -319,7 +345,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 29,
@@ -329,7 +356,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/MR SMILE B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 30,
@@ -342,7 +370,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 31,
@@ -355,7 +384,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 32,
@@ -368,7 +398,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 33,
@@ -381,7 +412,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Whole Wheat Flour (Atta), Maize Starch, Tapioca Starch, Raising Agent (INS500(ii)), Sugar, Salt, Edible Vegetable Oil."
+      "ingredients": "Whole Wheat Flour (Atta), Maize Starch, Tapioca Starch, Raising Agent (INS500(ii)), Sugar, Salt, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 34,
@@ -394,7 +426,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 36,
@@ -407,7 +440,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Corn Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Corn Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 37,
@@ -420,7 +454,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 38,
@@ -433,7 +468,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 39,
@@ -446,7 +482,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "185 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 40,
@@ -456,7 +493,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/Papadi.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 41,
@@ -469,11 +507,12 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 42,
-      "name": "Polo Ring Or Vada",
+      "name": "Polo ring",
       "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 175 - 180 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Topica Starch, Corn Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
       "price": "\u20b910",
       "category": "Fryums",
@@ -482,7 +521,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Corn Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Corn Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 43,
@@ -495,7 +535,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "185 - 190 C",
-      "ingredients": "Rice Flour, Rice Flakes, Cumin, Iodised Salt, Papad Khar."
+      "ingredients": "Rice Flour, Rice Flakes, Cumin, Iodised Salt, Papad Khar.",
+      "order": 999
     },
     {
       "id": 44,
@@ -508,7 +549,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 45,
@@ -518,7 +560,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/RINGA RING.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 46,
@@ -531,7 +574,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 47,
@@ -544,7 +588,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Rice Flour, Topica Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Rice Flour, Topica Starch, Potato Flakes, Potato Starch, Iodised Salt, Backing Powder.",
+      "order": 1
     },
     {
       "id": 48,
@@ -557,7 +602,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder.",
+      "order": 2
     },
     {
       "id": 49,
@@ -570,7 +616,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 50,
@@ -583,7 +630,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Tapioca Starch, Corn Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Tapioca Starch, Corn Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 51,
@@ -596,7 +644,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "190 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topica Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 52,
@@ -609,7 +658,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "180 - 185 C",
-      "ingredients": "Refined Wheat Flour (Maida), Topiaca Starch, Corn Starch, Iodized Salt, Baking Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Topiaca Starch, Corn Starch, Iodized Salt, Baking Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 53,
@@ -619,7 +669,8 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/TWIN RING B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 54,
@@ -629,7 +680,8 @@
       "category": "Chips",
       "subcategory": "all",
       "image": "/images/products/WAFFEL CHIPS B.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 55,
@@ -642,7 +694,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 56,
@@ -652,7 +705,8 @@
       "category": "Chips",
       "subcategory": "all",
       "image": "/images/products/Wvey Chips A.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 57,
@@ -665,7 +719,8 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "175 - 180 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 58,
@@ -678,17 +733,19 @@
       "comingSoon": false,
       "fryTime": "25 - 35 sec",
       "fryTemp": "185 - 195 C",
-      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil."
+      "ingredients": "Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Corn Starch, Edible Vegetable Oil.",
+      "order": 999
     },
     {
       "id": 59,
-      "name": "Jali",
+      "name": "Window",
       "description": "Delicious Jali Snacks",
       "price": "\u20b910",
       "category": "Other",
       "subcategory": "Snacks",
       "image": "/images/products/Jali.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 999
     },
     {
       "id": 60,
@@ -698,7 +755,30 @@
       "category": "Other",
       "subcategory": "Snacks",
       "image": "/images/products/Spring roll.webp",
-      "comingSoon": false
+      "comingSoon": false,
+      "order": 3
+    },
+    {
+      "id": 61,
+      "name": "7 Star",
+      "description": "7 Star Snacks",
+      "price": "\u20b910",
+      "category": "Other",
+      "subcategory": "Snacks",
+      "image": "/images/products/7Star.webp",
+      "comingSoon": false,
+      "order": 4
+    },
+    {
+      "id": 62,
+      "name": "Potato Chips",
+      "description": "Crispy Potato Chips",
+      "price": "\u20b910",
+      "category": "Chips",
+      "subcategory": "Potato",
+      "image": "/images/products/POTATO STICKS B.webp",
+      "comingSoon": false,
+      "order": 6
     }
   ]
 }

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import TestimonialSection from '../TestimonialSection';
 
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
@@ -710,6 +711,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
       {/* ============================================ */}
       {/* BRAND LOGO CAROUSEL */}
       {/* ============================================ */}
+      <TestimonialSection />
       <section className="py-12 md:py-16 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 mb-8">
           <div className="text-center">
@@ -745,7 +747,7 @@ export default function HomePage({ navigateTo }: HomePageProps) {
                   "420 NAMKEEN", "AKASHNJI", "BABLU", "CLASSIC", "DARSHAN", "DEVARPAN",
                   "FUN FINE", "GME", "GWALIA", "HALDIRAMS", "JAYANTI", "KHUSH HAL",
                   "KISHLAY", "LACY", "MODI'S", "MUNCH ONN", "NEZONE", "NOVICE",
-                  "SATMOLA", "SHYAM G", "SUNDER", "SUPER AMAL", "YUMMFEAST"
+                  "SATMOLA", "SHYAM G", "SUNDER", "SUPER AMAL"
                 ].map((brand) => (
                   <div
                     key={`${setIndex}-${brand}`}

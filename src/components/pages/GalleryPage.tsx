@@ -127,7 +127,7 @@ export default function GalleryPage() {
             tabIndex={0}
           >
             <motion.div
-              className="relative max-w-4xl max-h-[90vh] w-full"
+              className="relative max-w-5xl h-[85vh] w-full"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}

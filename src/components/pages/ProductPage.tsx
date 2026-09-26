@@ -145,13 +145,20 @@ export default function ProductPage({category} : any) {
     })
 
     filtered.sort((a, b) => {
+      // First sort by order (1-6 for priority, 999 for others)
+      const orderA = a.order || 999;
+      const orderB = b.order || 999;
+      if (orderA !== orderB) {
+        return orderA - orderB;
+      }
+      
       switch (sortBy) {
         case "name":
           return a.name.localeCompare(b.name)
         case "price-low":
-          return Number.parseInt(a.price.replace("₹", "")) - Number.parseInt(b.price.replace("₹", ""))
+          return Number.parseInt((a.price||"0").replace("₹", "")) - Number.parseInt((b.price||"0").replace("₹", ""))
         case "price-high":
-          return Number.parseInt(b.price.replace("₹", "")) - Number.parseInt(a.price.replace("₹", ""))
+          return Number.parseInt((b.price||"0").replace("₹", "")) - Number.parseInt((a.price||"0").replace("₹", ""))
         default:
           return 0
       }

@@ -126,25 +126,26 @@ export default function Footer({ navigateTo }: FooterProps) {
               <div className="space-y-4 mb-4 text-sm">
                 <p>
                   <span className="font-semibold text-[#FCA801]">Unit 1:</span><br />
-                  Plot No. 608, Nr. Royal W/Bridge, Opp. Laxmi Decoration, Bareja-Nava Gav Road, Bareja - 382425. Di. : Ahmedabad, Gujarat, INDIA
+                  <a href="https://www.google.com/maps/search/?api=1&query=Plot+No.+608,+Nr.+Royal+W%2FBridge,+Opp.+Laxmi+Decoration,+Bareja-Nava+Gav+Road,+Bareja+-+382425.+Di.+:+Ahmedabad,+Gujarat,+INDIA" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Plot No. 608, Nr. Royal W/Bridge, Opp. Laxmi Decoration, Bareja-Nava Gav Road, Bareja - 382425. Di. : Ahmedabad, Gujarat, INDIA</a>
                 </p>
                 <p>
                   <span className="font-semibold text-[#FCA801]">Unit 2:</span><br />
-                  Plot No. 1377/001, Opp. Fire Brigade, Bareja-Nava Gav Road, Nr. Muktipura BusStop, Muktipura - 382425, Di. : Ahmedabad, Gujarat, INDIA
+                  <a href="https://www.google.com/maps/search/?api=1&query=Plot+No.+1377%2F001,+Opp.+Fire+Brigade,+Bareja-Nava+Gav+Road,+Nr.+Muktipura+BusStop,+Muktipura+-+382425,+Di.+:+Ahmedabad,+Gujarat,+INDIA" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Plot No. 1377/001, Opp. Fire Brigade, Bareja-Nava Gav Road, Nr. Muktipura BusStop, Muktipura - 382425, Di. : Ahmedabad, Gujarat, INDIA</a>
                 </p>
                 <p>
                   <span className="font-semibold text-[#FCA801]">Unit 3:</span><br />
-                  B 21 P, NR. SRI HANUMAN DHARAMKATA, DONAR INDUSTRIAL AREA, DARBHANGA, BIHAR - 846004. MO. 8460280534.
+                  <a href="https://www.google.com/maps/search/?api=1&query=B+21+P+,+NR.+SRI+HANUMAN+DHARAMKATA,+DONAR+INDUSTRIAL+AREA,+DARBHANGA,+BIHAR+-+846004" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">B 21 P, NR. SRI HANUMAN DHARAMKATA, DONAR INDUSTRIAL AREA, DARBHANGA, BIHAR - 846004. MO. 8460280534.</a>
                 </p>
               </div>
 
               <p className="mb-2">
                 <span className="font-medium text-white">Email:</span><br />
-                ngufoods27@gmail.com
+                <a href="mailto:ngufoods27@gmail.com" className="hover:text-white transition-colors">ngufoods27@gmail.com</a>
               </p>
               <p className="mb-4">
                 <span className="font-medium text-white">Phone:</span><br />
-                +91 99250 21500 <br /> +91 72268 22666
+                <a href="tel:+919925021500" className="hover:text-white transition-colors">+91 99250 21500</a> <br /> 
+                <a href="tel:+917226822666" className="hover:text-white transition-colors">+91 72268 22666</a>
               </p>
               <p className="font-medium text-white">Visit Us!</p>
               <p>Mon-Sat: 10am - 6pm</p>
