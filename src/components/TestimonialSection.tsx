@@ -52,7 +52,7 @@ export default function TestimonialSection() {
             TESTIMONIALS
           </span>
           <h2 className="text-3xl md:text-4xl font-medium tracking-wide mb-4" style={{ color: '#FCA801' }}>
-            What Our Partners Say
+            What Our Clients Say
           </h2>
           <p className="text-gray-600">
             Hear from businesses that trust NGU Foods for their snack manufacturing needs.
