@@ -1,17 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Aeroplane",
-      "description": "Delicious and crispy aeroplane, perfect for any snacking occasion.",
-      "price": "\u20b910",
-      "category": "Fryums",
-      "subcategory": "all",
-      "image": "/images/products/AEROPLANE B.webp",
-      "comingSoon": false,
-      "order": 999
-    },
-    {
       "id": 2,
       "name": "Alphabet",
       "description": "\u23f1\ufe0f Time: 25 - 35 sec  |  \ud83c\udf21\ufe0f Temp: 175 - 180 C\n\ud83c\udf3e Ingredients: Refined Wheat Flour (Maida), Edible Starch, Iodised Salt, Backing Powder, Edible Vegetable Oil.",
@@ -256,17 +245,6 @@
       "category": "Fryums",
       "subcategory": "all",
       "image": "/images/products/IDALI.webp",
-      "comingSoon": false,
-      "order": 999
-    },
-    {
-      "id": 22,
-      "name": "Kabab",
-      "description": "Delicious and crispy kabab, perfect for any snacking occasion.",
-      "price": "\u20b910",
-      "category": "Fryums",
-      "subcategory": "all",
-      "image": "/images/products/KABAB.webp",
       "comingSoon": false,
       "order": 999
     },
@@ -768,17 +746,6 @@
       "image": "/images/products/7Star.webp",
       "comingSoon": false,
       "order": 4
-    },
-    {
-      "id": 62,
-      "name": "Potato Chips",
-      "description": "Crispy Potato Chips",
-      "price": "\u20b910",
-      "category": "Chips",
-      "subcategory": "Potato",
-      "image": "/images/products/POTATO STICKS B.webp",
-      "comingSoon": false,
-      "order": 6
     }
   ]
 }
